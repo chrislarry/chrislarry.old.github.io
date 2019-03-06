@@ -1,7 +1,8 @@
 @charset "utf-8";
  
  html, body {
- margin: 0px;
+
+ margin: 10px;
  padding: 0px;
  border: 0px;
  color: #454545;
@@ -37,3 +38,4 @@ border-radius: 0px;
 -webkit-box-shadow: 4px 4px 14px #000;
 box-shadow: 4px 4px 14px #000;
 }
+
