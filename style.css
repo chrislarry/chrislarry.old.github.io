@@ -24,3 +24,8 @@
  a:visited { color: #009; }
  a:hover { color: #06f; }
 a:active { color: #0cf; }
+table
+{ 
+margin-left: 30px;
+margin-right: 30px;
+}
