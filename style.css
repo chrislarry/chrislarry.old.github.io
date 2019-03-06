@@ -30,3 +30,11 @@ margin-left: 30px;
 margin-right: 30px;
 margin-top: 50px;
 }
+
+
+#content p{
+    font-size: 2em;
+    display: inline-block;
+    background-color: magenta;
+}
+
