@@ -8,6 +8,11 @@
     enable_page_level_ads: true
   });
 </script>
+    <script> 
+    $(function(){
+      $("#DivContent").load("postx.html"); 
+    });
+    </script> 
     <link href="style1.css" rel="stylesheet">
   </head>
   <body>
@@ -56,5 +61,6 @@
       <ui:include src="postx.html" />
   <br><Br>Περισσότερα σύντομα ...<br>    <img src="https://www.python.org/static/img/python-logo.png" heght=40><br>
       Επικοινωνία: chris_larry@riseup.net <br><a href="postx.html">test</a>
+          <br> <div id="DivContent"></div>
   </body>
 </html>
