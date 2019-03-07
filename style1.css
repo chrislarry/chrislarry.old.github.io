@@ -13,9 +13,10 @@ border-radius: 0px;
 -webkit-box-shadow: 1px 1px 4px #000;
 box-shadow: 1px 1px 4px #000;
  }
- body, p, th, td, li, dd, dt {
+ body, th, td, li, dd, dt {
  font: "TimesNewRoman", "Helvetica Neue", "Arial", sans-serif;
  color: #464646;
+  background: #808080; 
  margin-top: 0px;
  margin: 0px;
  }
