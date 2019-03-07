@@ -8,15 +8,15 @@
  background: #efefef;
  }
  html, body, th, td, li, dd, dt {
- font: TimesNewRoman, 1em Arial, Helvetica, sans-serif;
+ font: "TimesNewRoman", 1em "Arial", "Helvetica", "sans-serif";
  }
  h1, h2, h3, h4, h5, h6 {
- font-family: TimesNewRoman, Arial, Helvetica, sans-serif;
+ font-family: "TimesNewRoman", "Arial", "Helvetica", "sans-serif";
  color: #4c4c4c;
  }
 p {
   margin: 10 auto;
-  font-family: TimesNewRoman, "Helvetica Neue", "Arial",  sans-serif;
+  font-family: "TimesNewRoman", "Helvetica Neue", "Arial", "sans-serif";
   font-weight: 12;
   font-variant-ligatures: normal;
   font-size: 12;
@@ -39,11 +39,3 @@ margin-left: 30px;
 margin-right: 30px;
 margin-top: 40px;
 }
-
-
-#content p{
-    font-size: 2em;
-    display: inline-block;
-    background-color: magenta;
-}
-
