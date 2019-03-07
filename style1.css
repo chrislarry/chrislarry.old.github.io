@@ -50,6 +50,20 @@ p {
  a:hover { color: #06f; }
  a:active { color: #0cf; }
 
+object {
+  margin-top: 15px;
+background: #ededed;
+color: 454545;
+-moz-border-radius: 12px;
+-webkit-border-radius: 12px;
+border-radius: 0px;
+-moz-box-shadow: 4px 4px 14px #000;
+-webkit-box-shadow: 4px 4px 14px #000;
+box-shadow: 4px 4px 14px #000;
+height: 800px;
+width: 590px;
+}
+
 iframe {
   margin-top: 15px;
 background: #ededed;
