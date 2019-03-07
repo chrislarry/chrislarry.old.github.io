@@ -8,7 +8,7 @@
  background: #979797;
  width: 900;
  }
- html, body, p, th, td, li, dd, dt {
+ body, p, th, td, li, dd, dt {
  font: 1em Arial, Helvetica, sans-serif;
  color: #5a5a5a;
  background: #454545; 
