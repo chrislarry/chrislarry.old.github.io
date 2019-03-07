@@ -1,7 +1,7 @@
 @charset "utf-8";
  
  html, body {
- margin: 30px;
+ margin: 0;
  padding: 0px;
  margin-left: 30px;
  margin-right: 30px;
@@ -35,10 +35,5 @@ p {
  a:link { color: #00f; }
  a:visited { color: #009; }
  a:hover { color: #06f; }
-a:active { color: #0cf; }
-table
-{ 
-margin-left: 30px;
-margin-right: 30px;
-margin-top: 40px;
-}
+ a:active { color: #0cf; }
+
