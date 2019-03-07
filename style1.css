@@ -10,7 +10,8 @@
  }
  html, body, p, th, td, li, dd, dt {
  font: 1em Arial, Helvetica, sans-serif;
-  
+ color: #5a5a5a;
+ background: #454545; 
  }
  h1, h2, h3, h4, h5, h6 {
  font-family: Arial, Helvetica, sans-serif;
