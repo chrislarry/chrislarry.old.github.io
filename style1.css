@@ -65,7 +65,7 @@ box-shadow: 4px 4px 14px #000;
 
 width: 590px;
 }
-tr { background-color: #ededed; }
+tr { background-color: #ededed;  margin-top: 35px; }
 td { background-color: #ededed; 
  margin-left: 30px;
  margin-right: 30px ;
