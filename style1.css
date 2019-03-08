@@ -6,12 +6,7 @@
  background: #e9ebee;
  width: 900;
  margin-top: 0px;
- -moz-border-radius: 6px;
--webkit-border-radius: 6px;
-border-radius: 0px;
--moz-box-shadow: 1px 1px 4px #000;
--webkit-box-shadow: 1px 1px 4px #000;
-box-shadow: 1px 1px 4px #000;
+
  }
  body, th, td, li, dd, dt {
  font: "TimesNewRoman", "Helvetica Neue", "Arial", sans-serif;
