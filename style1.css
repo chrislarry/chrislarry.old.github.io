@@ -3,7 +3,7 @@
  html {
  margin: 0 auto;
  color: #454545;
- background: #808080;
+ background: #e9ebee;
  width: 900;
  margin-top: 0px;
  -moz-border-radius: 6px;
@@ -16,7 +16,7 @@ box-shadow: 1px 1px 4px #000;
  body, th, td, li, dd, dt {
  font: "TimesNewRoman", "Helvetica Neue", "Arial", sans-serif;
  color: #464646;
-  background: #dadada; 
+  background: #e9ebee; 
  margin-top: 0px;
  margin: 0px;
  }
@@ -60,12 +60,8 @@ table {
   margin-top: 35px;
 background-color: #ededed;
 color: #454545;
--moz-border-radius: 12px;
--webkit-border-radius: 12px;
-border-radius: 0px;
--moz-box-shadow: 4px 4px 14px #000;
--webkit-box-shadow: 4px 4px 14px #000;
-box-shadow: 4px 4px 14px #000;
+border: 1px solid #ebedf0;
+ 
 
 width: 590px;
 }
