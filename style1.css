@@ -3,7 +3,7 @@
  html { scroll-behavior: smooth; } 
  html {
  margin: 0 auto;
- color: #454545;
+ color: #4c4c4c;
  background: #525252;
  width: 90%;
  margin-top: 0px;
@@ -13,7 +13,7 @@
  }
  body, th, td, li, dd, dt {
  font: "Arial", "TimesNewRoman", "Helvetica Neue", "Arial", sans-serif;
- color: #464646;
+ color: #4c4c4c;
   background: #e9ebee; 
  margin-top: 0px;
  margin: 0px;
