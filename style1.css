@@ -50,6 +50,27 @@ p {
  a:hover { color: #06f; }
  a:active { color: #0cf; }
 
+a:link {
+    color: #0c0c0c;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: #0c0c0c;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: #0c0c0c;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: #0c0c0c;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
 
 table {
   margin: 30 auto;
