@@ -39,16 +39,19 @@
    /* Navbar container */
 .navbar {
   overflow: hidden;
+  float: right;
   background-color: #999;
   font-family: Arial;
+  padding-right: 20px;
   padding-left: 20px;
   color: white;
   border-bottom: 1px solid black;
+  border-left: 1px solid black;
  }
 
 /* Links inside the navbar */
 .navbar a {
-  float: left;
+  float: right;
   font-size: 13px;
   color: black;
   text-align: center;
@@ -122,6 +125,9 @@
   border-top: 1px solid black;
  text-align: center;
 }
+.iconify {
+	color: black;
+}
 
  body, th, td, li, dd, dt, footer {
  font: "Arial", "TimesNewRoman", "Helvetica Neue", "Arial", sans-serif;
@@ -170,11 +176,13 @@ a:link {
     color: #0c0c0c;
     background-color: transparent;
     text-decoration: none;
+    text-decoration: underline;
 }
 a:visited {
     color: #0c0c0c;
     background-color: transparent;
     text-decoration: none;
+    text-decoration: underline;
 }
 a:hover {
     color: #0c0c0c;
