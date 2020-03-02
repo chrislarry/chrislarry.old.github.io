@@ -6,10 +6,11 @@
 <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
 <link href="style-mob.css" rel="stylesheet">
   </head>
-  <body>
+  <body >
     <a name="top"></a>
 <img src="rick.jpg" width=100%>
 
+<input type="button" onclick="myip();" value="Find my IP">
 
 
 <div class="navbar">
@@ -59,11 +60,11 @@
 		<i class="fa fa-caret-down"></i>
     </button>
      <div class="dropdown-content">
-	<a href="drake.html">Drake Equation</a>
 	<a href="#commands">Commands</a>
 	<a href="#videos">My videos</a>
 	<a href="grmovies/index.html">Movies</a>
-     </div>
+	<a href="#email">Email</a>     
+</div>
  </div>
 
 
@@ -385,7 +386,10 @@ dd διαγράφει σειρές (όχι σειρές του Netflix. Δεν �
     <p>Η εξίσωση του Ντρέηκ είναι φυσική εξίσωση που χρησιμοποιείται ως μέσο εκτίμησης για τον αριθμό των πιθανών εξωγήινων πολιτισμών στον Γαλαξία. <a href="https://el.wikipedia.org/wiki/%CE%95%CE%BE%CE%AF%CF%83%CF%89%CF%83%CE%B7_%CF%84%CE%BF%CF%85_%CE%9D%CF%84%CF%81%CE%AD%CE%B7%CE%BA">wiki</a>
   
       <img src="https://seti.org/sites/default/files/inline-images/drake-equation-1600px.jpg" width=100%><br>
-     <br><a href="#top">Back to top</a> </p></div><br><BR>
+     <br><input type="button" onclick="drake();" value="Δοκιμασε την εξισωση Drake"><br>
+     <script src="index.js"></script>
+     <noscript>enable javascript</noscript>
+      <br><a href="#top">Back to top</a> </p></div><br><BR>
      
 <div id="links">
 	<h1>ClearNet Links</h1>
@@ -418,9 +422,8 @@ dd διαγράφει σειρές (όχι σειρές του Netflix. Δεν �
         <a href="http://www.tldp.org/LDP/intro-linux/intro-linux.pdf">Introduction to Linux: A Hands on Guide</a> Ένα βιβλίο 215 σελίδων, της Machtelt Garrels, με πρακτική εξάσκηση στο Λίνουξ.<br>
         <a href="https://technewsingreek.blogspot.com/2016/09/11-linux.html">Free books</a><br>
 	<a href="https://www.openbook.gr"/>Ανοικτή Βιβλιοθήκη</a> Η Ανοικτή Βιβλιοθήκη ιδρύθηκε το 2010 και αποτελεί ένα αποθετήριο με χιλιάδες ελληνικά ψηφιακά βιβλία που διανέμονται ελεύθερα και νόμιμα στο διαδίκτυο από τους δημιουργούς ή τους εκδοτικούς οίκους.<br>
-	<a href="https://www.ebooks4greeks.gr/">eBooks4Greeks</a> Διαβάστε online ή κατεβάστε δωρεάν βιβλία (free ebooks). Ψηφιακά βιβλία σε Pdf, ePub, Mobi, iBooks | Greek e books in Pdf, AudioBook, ePub, Mobi for free ...<br><BR>
-	    <a href="https://www.programming-book.com">Programming books</a>
-	    
+  <a href="https://www.ebooks4greeks.gr/">eBooks4Greeks</a> Διαβάστε online ή κατεβάστε δωρεάν βιβλία (free ebooks). Ψηφιακά βιβλία σε Pdf, ePub, Mobi, iBooks | Greek e books in Pdf, AudioBook, ePub, Mobi for free ...<br>
+      <a href="https://www.programming-book.com">Programming books</a><br><Br>
         <a href="#top">Back to top</a>
       </p></div>   
       <div id="abooks"><p>
@@ -460,7 +463,20 @@ dd διαγράφει σειρές (όχι σειρές του Netflix. Δεν �
        <img src="https://miro.medium.com/max/1326/1*M8WP_RFKNaqRLSujd9Ik3w.png" width=20%> 
        <img src="https://www.python.org/static/img/python-logo.png" width=20%>
        <img src="https://miro.medium.com/proxy/1*PW6lORfJV-kEJ8T8Z5OjIQ.png" width=20%></center><br><br>
-   <div class="footer">
+ 
+       <div id="email">
+       <h1>Email me</h1> <center>
+      <form action="mailto:chris_larry@riseup.net" method="post" enctype="text/plain" >
+        <input type="text" placeholder="FirstName" class="pure-input-rounded"><br>
+        <input type="text" placeholder="Email"><br>
+        <textarea type="text" placeholder="Comment Here..."></textarea><br>
+        <input type="submit" name="submit" value="Submit"><br>
+      </form><br><br></center>
+      <br>
+      <p><a href="#top">Back to top</a></p><br><br><br></p>
+    </div>
+
+    <div class="footer">
 
 	  <span class="iconify" data-icon="mdi:home" data-inline="false"></span>
 	  <a href="https://github.com" title="GitHub" target="_blank"><span class="iconify" data-icon="mdi:github" data-inline="false"></span></a>

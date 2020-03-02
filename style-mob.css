@@ -150,6 +150,28 @@ p {
  margin-right: 30px ;
 }
 
+form {
+  padding-left: 40%;
+  width: 60%;
+  height: 330px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+textarea {
+  width: 80%;
+  height: 200px;
+  padding: 5px 5px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+  resize: none;
+}
+
  h1, h2, h3, h4, h5, h6 {
  font-family: "Arial", "TimesNewRoman", "Helvetica Neue", sans-serif;
  color: #4c4c4c;
