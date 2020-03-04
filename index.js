@@ -44,3 +44,46 @@ function getCookie(c_name) {
     }
     return "";
 }
+
+function mygreeding() {
+var today = new date();
+var hourNow = today.getHours();
+var greeting;
+
+document.getElementById("greeting").innerHTML = '<h1>test1' + greeting + '</h1> ';
+}
+
+
+  var d = new Date();
+  var n = d.getHours();
+  if (n > 18){
+  greeting = 'Καλημέρα';
+} else if (n > 12) {
+  greeting = 'Καλησπέρα';
+} else if (n > 0) {
+  greeting = 'Καλό βράδυ';
+} else {
+  greeting = 'Καλός ήρθες';
+}
+
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
+
+  var weekday = new Array(7);
+  weekday[0] = "Κυριακή";
+  weekday[1] = "Δευτέρα";
+  weekday[2] = "Τρίτη";
+  weekday[3] = "Τετάρτη";
+  weekday[4] = "Πέμπτη";
+  weekday[5] = "Παρασκευή";
+  weekday[6] = "Σάββατο";
+
+  var day = weekday[today.getDay()];
+  var ΗΗ = String(today.getHours());
+  var ΜΜ = String(today.getMinutes());
+  time = ΗΗ + ':' + ΜΜ;
+  today = mm + '/' + dd + '/' + yyyy;
+
+  document.getElementById("greed").innerHTML = '<em>' + greeting + ' ' + name + ', σήμερα είναι ' + day + ' ' + today + ' και η ωρα ειναι ' + time + '</em>';
