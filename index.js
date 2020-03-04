@@ -45,23 +45,14 @@ function getCookie(c_name) {
     return "";
 }
 
-function mygreeding() {
-var today = new date();
-var hourNow = today.getHours();
-var greeting;
-
-document.getElementById("greeting").innerHTML = '<h1>test1' + greeting + '</h1> ';
-}
-
-
   var d = new Date();
   var n = d.getHours();
   if (n > 18){
-  greeting = 'Καλημέρα';
+  greeting = 'Καλο βραδυ';
 } else if (n > 12) {
   greeting = 'Καλησπέρα';
 } else if (n > 0) {
-  greeting = 'Καλό βράδυ';
+  greeting = 'Καλημερα';
 } else {
   greeting = 'Καλός ήρθες';
 }
@@ -86,4 +77,4 @@ document.getElementById("greeting").innerHTML = '<h1>test1' + greeting + '</h1> 
   time = ΗΗ + ':' + ΜΜ;
   today = mm + '/' + dd + '/' + yyyy;
 
-  document.getElementById("greed").innerHTML = '<em>' + greeting + ' ' + name + ', σήμερα είναι ' + day + ' ' + today + ' και η ωρα ειναι ' + time + '</em>';
+  document.getElementById("greed").innerHTML = '<em>' + greeting + ' ' + name + ', σήμερα είναι ' + day + ' ' + today + ' και η ωρα ειναι ' + time + ', η εξωτερική σου IP είναι ' + userip + '.</em>';
