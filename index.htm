@@ -10,14 +10,7 @@
     <a name="top"></a>
 <img src="rick.jpg" width=100%>
 
-<script type="text/javascript">
-  var userip;
-</script>
-<script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
-<script type="text/javascript">
-  document.write("&nbsp;&nbsp;&nbsp;<i class=\"fas fa-user\"></i>&nbsp;", userip, "&nbsp;<i class=\"fas fa-globe\"></i>");
-</script>
-<noscript>Need javascript...</noscript>
+
 
 
 <div class="navbar">
@@ -79,7 +72,21 @@
 
 </div>
 
+<script type="text/javascript">
+  var userip;
+if (name != ''){
+  var myCookie = docCookies.getItem('name');
+} else {
+name = prompt('Tell me your name.');
+document.cookie = name;
+}
+</script>
+<script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
+<script type="text/javascript">
+  document.write("&nbsp;&nbsp;&nbsp;<i class=\"fas fa-user\"></i>&nbsp;", name, "&nbsp;<i class=\"fas fa-globe\"></i>&nbsp;", userip, '&nbsp;<i class="far fa-window-maximize"></i>&nbsp;' + navigator.appName);
 
+</script>
+<noscript>No javascript...</noscript>
 
 
 
