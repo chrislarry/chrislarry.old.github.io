@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<p id="txt"></p>
+</head>
+<body>
+    <h1>Topics  </h1>
+    <input type="button" name="login" value="login" onclick="login()"> 
+  <br><br>
+    <div id="news"></div>
+    <form id="add">prosthese dinamika tous arithmous.<br>
+  <input type="text" size="10" name="a" id="a" value="a" oninput="add()">+
+  <input type="text" size="10" name="b" id="b" value="b" oninput="add()">=
+  <input type="text" size="10" name="c" id="c" value="c" oninput="add()">
+</form>
+<br/><br/><br/>
+<input type="button" onclick="pi()" value="Pi">
+<pre id="pi"></pre>
+<pre id="demo"></pre>
+
+
+</form>
+<Script>
+
+function login(){
+var name = prompt('Username:'); 
+var pass = prompt('Password:'); 
+
+if (name == 'xristos' && pass == '76557655') {
+fetch('news.txt')
+  .then(response => response.text())
+  .then(text => document.getElementById('news').innerHTML= '<p>' + text)
+
+  } else {
+      document.write('you cant login');
+  }
+}
+
+function add(){
+var x = document.getElementById("add");
+var text = "";
+var i;
+for (i=0; i<x.length; i++){
+    text+= x.elements[i].value + ' + ' ;
+var b = document.getElementById("b").value;
+var a = document.getElementById("a").value;
+var c = parseInt(a) + parseInt(b);
+document.getElementById("c").value = c;
+    }
+}
+
+
+function pi(){
+var pi = 22 / 7;
+document.getElementById("pi").innerHTML=("<br/>Pi is: " + pi);
+}
+
+
+</Script>
+<noscript>no java here</noscript>
+</body>
+</html>
