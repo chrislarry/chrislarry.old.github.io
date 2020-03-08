@@ -75,6 +75,6 @@ function getCookie(c_name) {
   var ΗΗ = String(today.getHours());
   var ΜΜ = String(today.getMinutes());
   time = ΗΗ + ':' + ΜΜ;
-  today = mm + '/' + dd + '/' + yyyy;
+  today = dd + '/' + mm + '/' + yyyy;
 
   document.getElementById("greed").innerHTML = '<em>' + greeting + ' ' + name + ', σήμερα είναι ' + day + ' ' + today + ' και η ωρα ειναι ' + time + ', η εξωτερική σου IP είναι ' + userip + '.</em>';
