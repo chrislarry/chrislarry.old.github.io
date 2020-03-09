@@ -1,0 +1,57 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+.app {
+ height: 80vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;   
+ align-items: center;
+}
+header h1{
+    margin: 20px 0px 20px 0px;
+    text-align: center;
+    font-size: 40px;
+
+}
+
+header p{
+    font-size: 20px;
+}
+.pads {
+    background: black;
+    border: 1px;
+    width: 100%;
+    display: flex;
+}
+
+
+.pads > div {
+    height: 100px;
+    width: 100px;
+    flex: 1;
+    }
+
+    .pad1{
+        background: rgb(59, 59, 59);
+    }
+    .pad2{
+        background: rgb(99, 99, 99);
+    }
+    .pad3{
+        background: rgb(131, 130, 130);
+    }
+    .pad4{
+        background: rgb(59, 59, 59);
+    }
+    .pad5{
+        background: rgb(145, 145, 145);
+    }
+    .pad6{
+        background: rgb(139, 139, 139);
+    }
