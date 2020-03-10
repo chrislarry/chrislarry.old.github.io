@@ -1,16 +1,36 @@
 {
     "movies": [
+
+        {
+            "title": "1917",
+            "icon": "https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtNzg0My00ZjkxLTg1ZDAtZTdkMDc2ZmFiNWQ1XkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "plot": "April 6th, 1917. As a regiment assembles to wage war deep in enemy territory, two soldiers are assigned to race against time and deliver a message that will stop 1,600 men from walking straight into a deadly trap.",
+            "link": "magnet:?xt=urn:btih:456921509782b06a930cf800ce9a9798691ea44d&dn=1917.2019.1080p.WEB-DL.DD5.1.H264-FGT&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2950&tr=udp%3A%2F%2F9.rarbg.to%3A2740"
+        },
+        {
+            "title": "Escape from Pretoria",
+            "icon": "https://m.media-amazon.com/images/M/MV5BOWRhYWFkMDEtNTFjZC00OWJkLWJmMWQtNzI2OWRjZjVjOGYyXkEyXkFqcGdeQXVyMzQwMTY2Nzk@._V1_UY268_CR2,0,182,268_AL_.jpg",
+            "plot": "Based on the real-life prison break of two political captives, Escape From Pretoria is a race-against-time thriller set in the tumultuous apartheid days of South Africa. ",
+            "link": "magnet:?xt=urn:btih:90a4964baa9189d4d3de8e81712bdcae687a6dea&dn=Escape.from.Pretoria.2020.1080p.WEB-DL.DD5.1.H264-FGT&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2790&tr=udp%3A%2F%2F9.rarbg.to%3A2810"
+        },
+        {
+	        "title": "Richard Jewell",
+    	    "icon": "https://m.media-amazon.com/images/M/MV5BOTFlODg1MTEtZTJhOC00OTY1LWE0YzctZjRlODdkYWY5ZDM4XkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "plot": "American security guard Richard Jewell saves thousands of lives from an exploding bomb at the 1996 Olympics, but is vilified by journalists and the press who falsely reported that he was a terrorist. ",
+	        "link": "magnet:?xt=urn:btih:6e86bd0ff69d232f10f0b09a552228d248d501c9&dn=Richard.Jewell.2019.1080p.BluRay.x264-GECKOS&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2810&tr=udp%3A%2F%2F9.rarbg.to%3A2800"
+        },
+
         {
             "title": "Black Widow",
             "icon": "https://m.media-amazon.com/images/M/MV5BZGRlNTY3NGYtM2YzZS00N2YyLTg0ZDYtNmY2ZDg2NDM3N2JlXkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_UX182_CR0,0,182,268_AL_.jpg",
             "plot": "A film about Natasha Romanoff in her quests between the films Civil War and Infinity War. ",
-            "link": "#"
+            "link": "hkjh"
         }, 
         {
             "title": "Birds of Prey: And the Fantabulous Emancipation of One Harley Quinn",
             "icon": "https://m.media-amazon.com/images/M/MV5BMzQ3NTQxMjItODBjYi00YzUzLWE1NzQtZTBlY2Y2NjZlNzkyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
             "plot": "After splitting with the Joker, Harley Quinn joins superheroes Black Canary, Huntress and Renee Montoya to save a young girl from an evil crime lord. ",
-            "link": "#"
+            "link": "magnet:?xt=urn:btih:dd944978cbc75f9b345920f765b6e66f14f155c0&dn=Birds.of.Prey.And.the.Fantabulous.Emancipation.of.One.Harley.Quinn.2020.1080p.KORSUB.HDRip.x264.AAC2.0-STUTTERSHIT&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2840&tr=udp%3A%2F%2F9.rarbg.to%3A2750"
         },
         {
             "title": "Avengers: Endgame",

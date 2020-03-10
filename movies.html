@@ -7,30 +7,54 @@
 </head>
 <body>
     
-<div id="movies"></div>
+   <pre><b><img src="chris-larry.png"></b></pre>
+<div class="row" id="movies">
 
-
+</div>
+<br>
+<div id="plot">
+    
+</div>
 <style>
     body {
-        background: rgb(190, 190, 190);
+        background: rgb(37, 37, 37);
     align-items: center;
     }
-
-.td {
-    align-items: flex-start;
-    padding: 5px 5px 5px 5px ;
-    border: 1px;
-}
 h1 {
+    
+    font-size: 17px;
     text-emphasis: none;
-    color: rgb(70, 70, 70);
+    color: rgb(151, 151, 151);
+}
+.column {
+    align-items: center;
+    padding-left: 30px;
+    display: table;
+  float: left;
 
 }
-p {
-
-    color: rgb(75, 75, 75);
+pre {
+    font-family: "Times New Roman", Times, serif;
+    color:firebrick;
+    font-size: 100px;
+text-align: center;
+    padding: 10px 10px 10px 10px ;
+}
+/* Clear floats after the columns */
+.row:after {
+    display: table-cell;
     align-items: center;
 }
+p {
+    font-size: 14px;
+    color: rgb(170, 170, 170);
+    align-items: center;
+}
+a:link { color: rgb(122, 122, 143); }
+ a:visited { color: rgb(122, 122, 143); }
+ a:hover { color: rgb(155, 84, 25); };
+ a:active { color: rgb(122, 122, 143); }
+
 </style>
 <script>
 
@@ -39,25 +63,39 @@ fetch('movies.json')
     return response.json();
   })
   .then((data) => {
+    //var pdata = JSON.parse(data);  
     var getdata = data.movies;
 
+    //var getdata = JSON.parse(gdata);
+   
     for (i = 0; i < getdata.length; i++){
-        
+        function fplot(){
+            alert(plot)
+            document.getElementById("plot").innerHTML = plot;
+        } 
+    
         var title = getdata[i].title;
         var icon = getdata[i].icon;
         var plot = getdata[i].plot;
         var link = getdata[i].link;
         var text; 
-        text += '<h1>Name '+title+'</h1><p><img src="'+icon+'"><br>'+plot+'<br><a href="'+link+'">Download</a> </p>';
-        
+   //     text += '<div class="column"><h1>Name '+title+'</h1><p><img src="'+icon+'" height="180px"><br>'+plot+'<br><a href="'+link+'">Download</a> </p></div>';
+        text += '<div class="column"><a href="'+link+'" title="'+title+' '+plot+'" onclick=""><img src="'+icon+'" height="180px"></a></p></div>';
+
         console.log(text);
         
-
+        if(text == "undefined"){
+    } else {
         document.getElementById("movies").innerHTML = text;
 
     }
+    }
   });
 
+function fplot(){
+alert(plot)
+document.getElementById("plot").innerHTML = plot;
+}  
     </script>
 
 </body>
