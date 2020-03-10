@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="movies"></div>
+
+
+<style>
+    body {
+        background: rgb(190, 190, 190);
+    align-items: center;
+    }
+
+.td {
+    align-items: flex-start;
+    padding: 5px 5px 5px 5px ;
+    border: 1px;
+}
+h1 {
+    text-emphasis: none;
+    color: rgb(70, 70, 70);
+
+}
+p {
+
+    color: rgb(75, 75, 75);
+    align-items: center;
+}
+</style>
+<script>
+
+fetch('movies.json')
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    var getdata = data.movies;
+
+    for (i = 0; i < getdata.length; i++){
+        
+        var title = getdata[i].title;
+        var icon = getdata[i].icon;
+        var plot = getdata[i].plot;
+        var link = getdata[i].link;
+        var text; 
+        text += '<h1>Name '+title+'</h1><p><img src="'+icon+'"><br>'+plot+'<br><a href="'+link+'">Download</a> </p>';
+        
+        console.log(text);
+        
+
+        document.getElementById("movies").innerHTML = text;
+
+    }
+  });
+
+    </script>
+
+</body>
+</html>
