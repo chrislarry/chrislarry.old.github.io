@@ -1,5 +1,52 @@
-{
-    "movies": [
+[
+        {
+            "title": "Ford v Ferrari ",
+            "icon": "https://m.media-amazon.com/images/M/MV5BM2UwMDVmMDItM2I2Yi00NGZmLTk4ZTUtY2JjNTQ3OGQ5ZjM2XkEyXkFqcGdeQXVyMTA1OTYzOTUx._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "plot": "American car designer Carroll Shelby and driver Ken Miles battle corporate interference and the laws of physics to build a revolutionary race car for Ford in order to defeat Ferrari at the 24 Hours of Le Mans in 1966. ",
+            "link": "magnet:?xt=urn:btih:3bbc4eb9ed5b4a93e730abb99dfc35937936019a&dn=Ford.v.Ferrari.2019.1080p.BluRay.H264.AAC-RARBG&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2870&tr=udp%3A%2F%2F9.rarbg.to%3A2740"
+        },
+        {
+            "title": "Dolittle",
+            "icon": "https://m.media-amazon.com/images/M/MV5BMDNkODA5ZGQtODczOS00OTQxLThhMTItMjk0ZmNhMDM0YjNmXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "plot": "A physician who can talk to animals embarks on an adventure to find a legendary island with a young apprentice and a crew of strange pets. ",
+            "link": "magnet:?xt=urn:btih:4811ceb8a442ba687f9f58b5eb65dd8952979bd3&dn=Dolittle.2020.HDRip.x264-STUTTERSHIT&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2830&tr=udp%3A%2F%2F9.rarbg.to%3A2880"
+        },
+        {
+            "title": "Jojo Rabbit",
+            "icon": "https://m.media-amazon.com/images/M/MV5BZjU0Yzk2MzEtMjAzYy00MzY0LTg2YmItM2RkNzdkY2ZhN2JkXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "plot": "A young boy in Hitler's army finds out his mother is hiding a Jewish girl in their home. ",
+            "link": "magnet:?xt=urn:btih:4f4fb6ee62eb48685f1a5e5158752847e7403fa1&dn=Jojo.Rabbit.2019.1080p.WEBRip.x264-RARBG&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2810&tr=udp%3A%2F%2F9.rarbg.to%3A2870"
+        },
+        {
+            "title": "Midway",
+            "icon": "https://m.media-amazon.com/images/M/MV5BYzA5Y2Q2YjktZDYwMi00NTdmLThlMjctMmY5NDgwOWRhZDUxXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "plot": "The story of the Battle of Midway, told by the leaders and the sailors who fought it. ",
+            "link": "magnet:?xt=urn:btih:61fcfd126b1ec97709bf2d821d8e58f1b2467a64&dn=Midway.2019.1080p.BluRay.H264.AAC-RARBG&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2930&tr=udp%3A%2F%2F9.rarbg.to%3A2950"
+        },
+        {
+            "title": "Superman: Red Son",
+            "icon": "https://m.media-amazon.com/images/M/MV5BZDAzYTI4MmItYWE3Ni00Y2MwLWE5NDAtZTg4Y2VmMGI3MzIzXkEyXkFqcGdeQXVyNzU3NjUxMzE@._V1_UY268_CR9,0,182,268_AL_.jpg",
+            "plot": "What if baby Kal-El's rocket landed, not in Kansas, but in the Soviet Union? That is the premise of this Elseworld's tale from DC Comics.",
+            "link": "magnet:?xt=urn:btih:e1203e496360e685646a4a4cde21cec8b4da5649&dn=Superman.Red.Son.2020.1080p.WEBRip.x264-RARBG&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2900&tr=udp%3A%2F%2F9.rarbg.to%3A2880"
+        },
+        {
+            "title": "Knives Out",
+            "icon": "https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "plot": "A detective investigates the death of a patriarch of an eccentric, combative family. ",
+            "link": "magnet:?xt=urn:btih:6b74d1fc4654e1fd54a4300adc3e22d8e43684ce&dn=Knives.Out.2019.WEBRip.x264-ION10&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2770&tr=udp%3A%2F%2F9.rarbg.to%3A2780"
+        },
+        {
+            "title": "Parasite",
+            "icon": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "plot": "A poor family, the Kims, con their way into becoming the servants of a rich family, the Parks. But their easy life gets complicated when their deception is threatened with exposure. ",
+            "link": "magnet:?xt=urn:btih:66b8ac047bb6c15914038673234313612449f5d6&dn=Parasite.2019.KOREAN.1080p.BluRay.H264.AAC-VXT&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2840&tr=udp%3A%2F%2F9.rarbg.to%3A2740"
+        },
+        {
+            "title": "The Invisible Man",
+            "icon": "https://m.media-amazon.com/images/M/MV5BZjFhM2I4ZDYtZWMwNC00NTYzLWE3MDgtNjgxYmM3ZWMxYmVmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+            "plot": "When Cecilia's abusive ex takes his own life and leaves her his fortune, she suspects his death was a hoax. As a series of coincidences turn lethal, Cecilia works to prove that she is being hunted by someone nobody can see. ",
+            "link": "#"
+        },
         {
             "title": "Sonic the Hedgehog",
             "icon": "https://m.media-amazon.com/images/M/MV5BNDc1ZTlmOWUtNDY2YS00OGU5LTg2MTYtYTk2MmQzMGE2NzUwXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_UX182_CR0,0,182,268_AL_.jpg",
@@ -35,7 +82,7 @@
             "title": "Black Widow",
             "icon": "https://m.media-amazon.com/images/M/MV5BZGRlNTY3NGYtM2YzZS00N2YyLTg0ZDYtNmY2ZDg2NDM3N2JlXkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_UX182_CR0,0,182,268_AL_.jpg",
             "plot": "A film about Natasha Romanoff in her quests between the films Civil War and Infinity War. ",
-            "link": "hkjh"
+            "link": "#"
         }, 
         {
             "title": "Birds of Prey: And the Fantabulous Emancipation of One Harley Quinn",
@@ -50,6 +97,6 @@
             "link": "magnet:?xt=urn:btih:223f7484d326ad8efd3cf1e548ded524833cb77e&dn=Avengers.Endgame.2019.1080p.BRRip.x264-MP4&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80"
         }
 
-    ]
+]
     
-}
+
