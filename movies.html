@@ -8,17 +8,13 @@
 <body onload="getmovies()">
     
    <pre><b><img src="chris-larry.png" id="images"></b></pre><br>
-     
+ <div id="movie"></div>    
 <div class="row" id="movies">
 
 </div>
-
-
-    
-
 <style>
     body {
-    background: rgb(26, 26, 26);
+    background: rgb(0, 0, 0);
     align-items: center;
     }
 h1 {
@@ -27,11 +23,16 @@ h1 {
     text-emphasis: none;
     color: rgb(151, 151, 151);
 }
+h2 {
+    
+    font-size: 27px;
+    text-emphasis: none;
+    color: rgb(151, 151, 151);
+}
 .column {
     margin: auto;
     align-items: center;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 30px 30px 30px 30px ;
     display: table;
     float: left;
     align-content: center;
@@ -43,27 +44,19 @@ div {
     text-align: center;
     align-self: center;
     align-content: center;
- 
-  
-}
-.center {
-  margin: auto;
-  width: 60%;
-  border: 3px solid #73AD21;
-  padding: 10px;
 }
 pre {
     font-family: "Times New Roman", Times, serif;
-    color:firebrick;
+    color:rgb(207, 207, 207);
     text-align: center;
     margin-top: 0em;
     padding-bottom: 0px;
 }
-/* Clear floats after the columns */
 .row:after {
     display: table-cell;
     align-items: center;
     margin: auto;
+    padding: 30px 30px 30px 30px ;
 }
 p {
     font-size: 14px;
@@ -74,40 +67,145 @@ p {
  a:visited { color: rgb(122, 122, 143); }
  a:hover { color: rgb(155, 84, 25); };
  a:active { color: rgb(122, 122, 143); }
-
 </style>
 <script>
 function bigImg(x) {
-  x.style.height = "300px";
-  x.style.width = "200px";
+  x.style.height = "180px";
+  x.style.width = "120px";
+
 }
 function normalImg(x) {
   x.style.height = "180px";
   x.style.width = "120px";
 }
-
+/*
 function getmovies(){
     fetch('movies.json')
     .then((res) => res.json())
     .then((data) => {
-        let output = '<h2>Movies</h2>';
+        let output = '<h2>Movies</h2>', mymovie, myplot, mycom, i=0, id = '';
         data.forEach(function(movie)  {
-            output += `
-            
-            <div class="column">
-            </p><a href="${movie.link}" title="${movie.title}...${movie.plot}">
-            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="${movie.icon}" height="180px" id="movies"></a></div>
-                
-            `;
 
-        });
-        document.getElementById('movies').innerHTML = output;
-    })
-
+            */
+function getmovies(){ 
+    fetch('movies.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
 }
 
+function appendData(data) {
+            var mainContainer = document.getElementById("movies");
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = `<div class="column" >
+ <a href="?id=${i}" title="${data[i].title}...${data[i].plot}" onclick="showmovie();">
+            <img src="${data[i].icon}"></a></div>`;
+           // console.log(data[i].id)
+                mainContainer.appendChild(div);
+            }
+        }
+
+        var data;
+//function showmovie(){ 
+    fetch('movies.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                movieData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+//}
+var id = getQueryVariable("id");
+console.log(id);
+function movieData(data) {
+            var mainContainer = document.getElementById("movie");
+
+            for (var i = 0; i < data.length; i++) {
+               if(id == data[i].id){
+                var div = document.createElement("div");
+                div.innerHTML = `<table><tr><td>
+            <div class="column">
+                <img src="${data[i].icon}" height="380"></div></td><td>
+            <div class="column"><iframe width='400' height='215' src='https://www.youtube.com/embed/TcMBFSGVi1c' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe> 
+            <h1>${data[i].title}</h1>
+            <p>${data[i].plot}<br/><a href="${data[i].link}">Κατέβασε το torrent εδώ.</a>
+            <br>   
+            </p></div></td></tr></table>`;
+                mainContainer.appendChild(div);
+                
+           }
+       }
+
+  }
+/*
+   /* output += `
+            <div class="column" >
+ <a href="?id=${i}" title="${movie.title}...${movie.plot}" onclick="getmovie()">
+            <img src="${movie.icon}"></a></div>`;
+            i++;
+            id = getQueryVariable("id");
+            document.getElementById('movies').innerHTML = output;
 
 
+            if (id != ''){
+            document.getElementById('title').innerHTML = `
+            <table><tr><td>
+            <div class="column">
+                <img src="${movie.icon}" height="380"></div></td><td>
+            <div class="column"><iframe width='400' height='215' src='https://www.youtube.com/embed/TcMBFSGVi1c' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe> 
+            <h1>${movie.title} id=${id}</h1>
+            <p>${movie.plot}<br/><a href="${movie.link}">Κατέβασε το torrent εδώ.</a>
+            <br>   
+            </p></div></td></tr></table>
+            `;
+        }
+  }
+}
+
+function showmovie(){
+    fetch('movies.json')
+    .then((res) => res.json())
+    .then((data) => {
+        data.forEach(function(movie)  {
+    id = getQueryVariable("title");
+    document.getElementById('movies').innerHTML= id;
+        });  
+});
+    
+}
+*/
+function getmovie(){
+    fetch('movies.json')
+    .then((res) => res.json())
+    .then((data) => {
+        let output = '<h2>Movie</h2>', mymovie, myplot, mycom, i=0;
+        data.forEach(function(movie)  {
+    id = getQueryVariable("id");
+    document.getElementById('movies').innerHTML= id;
+});
+})
+
+}
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
 </script>
 </body>
 </html>
