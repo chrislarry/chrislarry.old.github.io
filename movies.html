@@ -19,7 +19,7 @@
     }
 h1 {
     
-    font-size: 17px;
+    font-size: 25px;
     text-emphasis: none;
     color: rgb(151, 151, 151);
 }
@@ -59,7 +59,7 @@ pre {
     padding: 30px 30px 30px 30px ;
 }
 p {
-    font-size: 14px;
+    font-size: 17px;
     color: rgb(170, 170, 170);
     align-items: center;
 }
@@ -135,18 +135,20 @@ function movieData(data) {
                 var div = document.createElement("div");
                 div.innerHTML = `<table><tr><td>
             <div class="column">
-                <img src="${data[i].icon}" height="380"></div></td><td>
-            <div class="column"><iframe width='400' height='215' src='https://www.youtube.com/embed/TcMBFSGVi1c' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe> 
-            <h1>${data[i].title}</h1>
+                <img src="${data[i].icon}" height="380"></div></td><td><h1>${data[i].title}</h1>
             <p>${data[i].plot}<br/><a href="${data[i].link}">Κατέβασε το torrent εδώ.</a>
             <br>   
-            </p></div></td></tr></table>`;
+            </p></td><td>
+            <div class="column"><iframe width="560" height="315" src="https://www.youtube.com/embed/${data[i].trailer}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div></td></tr></table>`;
                 mainContainer.appendChild(div);
-                
+                console.log(data[i].trailer);
            }
        }
 
   }
+
+ 
 /*
    /* output += `
             <div class="column" >
