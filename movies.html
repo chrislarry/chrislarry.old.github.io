@@ -7,7 +7,7 @@
 </head>
 <body onload="getmovies()">
     
-   <pre><b><img src="chris-larry.png" id="images"></b></pre><br>
+   <pre><b><img src="movietime.png" id="images"></b></pre><br>
  <div id="movie"></div>    
 <div class="row" id="movies">
 
@@ -19,9 +19,9 @@
     }
 h1 {
     
-    font-size: 25px;
+    font-size: 35px;
     text-emphasis: none;
-    color: rgb(151, 151, 151);
+    color: rgb(199, 199, 199);
 }
 h2 {
     
@@ -59,7 +59,7 @@ pre {
     padding: 30px 30px 30px 30px ;
 }
 p {
-    font-size: 17px;
+    font-size: 20px;
     color: rgb(170, 170, 170);
     align-items: center;
 }
@@ -69,6 +69,7 @@ p {
  a:active { color: rgb(122, 122, 143); }
 </style>
 <script>
+
 function bigImg(x) {
   x.style.height = "180px";
   x.style.width = "120px";
@@ -78,15 +79,7 @@ function normalImg(x) {
   x.style.height = "180px";
   x.style.width = "120px";
 }
-/*
-function getmovies(){
-    fetch('movies.json')
-    .then((res) => res.json())
-    .then((data) => {
-        let output = '<h2>Movies</h2>', mymovie, myplot, mycom, i=0, id = '';
-        data.forEach(function(movie)  {
 
-            */
 function getmovies(){ 
     fetch('movies.json')
             .then(function (response) {
@@ -105,7 +98,7 @@ function appendData(data) {
             for (var i = 0; i < data.length; i++) {
                 var div = document.createElement("div");
                 div.innerHTML = `<div class="column" >
- <a href="?id=${i}" title="${data[i].title}...${data[i].plot}" onclick="showmovie();">
+ <a href="?id=${data[i].id}" title="${data[i].title}...${data[i].plot}" onclick="showmovie();">
             <img src="${data[i].icon}"></a></div>`;
            // console.log(data[i].id)
                 mainContainer.appendChild(div);
@@ -135,8 +128,8 @@ function movieData(data) {
                 var div = document.createElement("div");
                 div.innerHTML = `<table><tr><td>
             <div class="column">
-                <img src="${data[i].icon}" height="380"></div></td><td><h1>${data[i].title}</h1>
-            <p>${data[i].plot}<br/><a href="${data[i].link}">Κατέβασε το torrent εδώ.</a>
+                <img src="${data[i].icon}"></div></td><td><h1>${data[i].title}</h1>
+            <p>${data[i].plot}<br/><br/><a href="${data[i].link}">Κατέβασε το torrent εδώ.</a>
             <br>   
             </p></td><td>
             <div class="column"><iframe width="560" height="315" src="https://www.youtube.com/embed/${data[i].trailer}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -148,44 +141,6 @@ function movieData(data) {
 
   }
 
- 
-/*
-   /* output += `
-            <div class="column" >
- <a href="?id=${i}" title="${movie.title}...${movie.plot}" onclick="getmovie()">
-            <img src="${movie.icon}"></a></div>`;
-            i++;
-            id = getQueryVariable("id");
-            document.getElementById('movies').innerHTML = output;
-
-
-            if (id != ''){
-            document.getElementById('title').innerHTML = `
-            <table><tr><td>
-            <div class="column">
-                <img src="${movie.icon}" height="380"></div></td><td>
-            <div class="column"><iframe width='400' height='215' src='https://www.youtube.com/embed/TcMBFSGVi1c' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe> 
-            <h1>${movie.title} id=${id}</h1>
-            <p>${movie.plot}<br/><a href="${movie.link}">Κατέβασε το torrent εδώ.</a>
-            <br>   
-            </p></div></td></tr></table>
-            `;
-        }
-  }
-}
-
-function showmovie(){
-    fetch('movies.json')
-    .then((res) => res.json())
-    .then((data) => {
-        data.forEach(function(movie)  {
-    id = getQueryVariable("title");
-    document.getElementById('movies').innerHTML= id;
-        });  
-});
-    
-}
-*/
 function getmovie(){
     fetch('movies.json')
     .then((res) => res.json())
