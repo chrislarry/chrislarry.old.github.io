@@ -1,6 +1,78 @@
 
 [
     {
+        "id": 34,
+        "title": "Storm of the Century",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMmU3ODdkMzEtMjA2My00MGRjLTliOGMtYjA2NDA1NDkxOGY5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "A dangerous blizzard hits an isolated town and brings along a mysterious stranger intent on terrorizing people for his own desires.",
+        "link": "#",
+        "trailer": "vBSVFEisWc0"
+    }, 
+    {
+        "id": 33,
+        "title": "The Prison",
+        "icon": "https://m.media-amazon.com/images/M/MV5BODc1NWY2NTMtNWQ3MC00YWQ2LWEwNzEtYmI2YmY0OGZjMDIxXkEyXkFqcGdeQXVyNDIwOTAzMDM@._V1_UY268_CR31,0,182,268_AL_.jpg",
+        "plot": "A troubled ex-cop imprisoned for a hit-and-run accident discovers that the entire penitentiary is controlled by an inmate who has been running a crime syndicate with the help of the warden and guards which provides them 100% alibi. ",
+        "link": "#",
+        "trailer": "lX5XNVKqqMo"
+    }, 
+    {
+        "id": 32,
+        "title": "The Mist",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTU2NjQyNDY1Ml5BMl5BanBnXkFtZTcwMTk1MDU1MQ@@._V1_UY268_CR0,0,182,268_AL_.jpg",
+        "plot": "A freak storm unleashes a species of bloodthirsty creatures on a small town, where a small band of citizens hole up in a supermarket and fight for their lives.",
+        "link": "#",
+        "trailer": "-f4faxBE92E"
+    }, 
+    {
+        "id": 31,
+        "title": "As Far as My Feet Will Carry Me",
+        "icon": "https://m.media-amazon.com/images/M/MV5BYjM2OGJlYTYtNzE0NC00MGVlLWExOTAtMjQ0NjFmYWNlZDQ4XkEyXkFqcGdeQXVyMTMxMTY0OTQ@._V1_UY268_CR6,0,182,268_AL_.jpg",
+        "plot": "At the end of WW2, a German POW doing hard labor in the Soviet Gulag escapes from his Siberian camp to return to Germany but he's pursued by a Soviet NKVD officer. ",
+        "link": "#",
+        "trailer": "7mHwR6hUuoE"
+    }, 
+    {
+        "id": 30,
+        "title": "The Island",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTk1MzA0NjEyMF5BMl5BanBnXkFtZTgwNDAwMDY0MDE@._V1_UY268_CR4,0,182,268_AL_.jpg",
+        "plot": "Somewhere in Northern Russia in a small Russian Orthodox monastery lives an unusual man whose bizarre conduct confuses his fellow monks, while others who visit the island believe that the man has the power to heal, exorcise demons and foretell the future. ",
+        "link": "#",
+        "trailer": "cnxzXRGWgLI"
+    }, 
+    {
+        "id": 29,
+        "title": "Deep Impact",
+        "icon": "https://m.media-amazon.com/images/M/MV5BYTUwMTY1YmMtN2U5NC00YjkzLTg0YWQtZmEwNTEzZjdkNzQ2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "A comet is discovered to be on a collision course with Earth. As doomsday nears, the human race prepare for the worst. ",
+        "link": "#",
+        "trailer": "s5RInpywMu8"
+    }, 
+    {
+        "id": 28,
+        "title": "Έτερος εγώ",
+        "icon": "https://m.media-amazon.com/images/M/MV5BNTgwYTg2ZDEtYjJhYS00MzBmLWEzN2EtZDY4NDliN2UxYWFiXkEyXkFqcGdeQXVyMzc0ODM5MTE@._V1_UY268_CR4,0,182,268_AL_.jpg",
+        "plot": "A professor of criminology tries to solve five completely unrelated murders whose only link is quotes from Pythagoras. Alongside him on this journey is a maths professor. ",
+        "link": "#",
+        "trailer": "y3zho2aV2bs"
+    }, 
+    {
+        "id": 27,
+        "title": "Crash",
+        "icon": "https://m.media-amazon.com/images/M/MV5BOTk1OTA1MjIyNV5BMl5BanBnXkFtZTcwODQxMTkyMQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Los Angeles citizens with vastly separate lives collide in interweaving stories of race, loss and redemption. ",
+        "link": "magnet:?xt=urn:btih:f00c2f664818127192e59bd5a78554484dded161&dn=Crash+%282004%29+720p+BrRip+x264+-+YIFY&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80",
+        "trailer": "DEJH0hEoHc4"
+    }, 
+    {
+        "id": 26,
+        "title": "The Butterfly Effect",
+        "icon": "https://m.media-amazon.com/images/M/MV5BODNiZmY2MWUtMjFhMy00ZmM2LTg2MjYtNWY1OTY5NGU2MjdjL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UY268_CR1,0,182,268_AL_.jpg",
+        "plot": "Evan Treborn suffers blackouts during significant events of his life. As he grows up, he finds a way to remember these lost memories and a supernatural way to alter his life by reading his journal. ",
+        "link": "magnet:?xt=urn:btih:e43dc185afc278061332b5df961093a09cd89083&dn=The+Butterfly+Effect+%282004%29+Dir+Cut+-+720p+mkv+-+600MB+-+YIFY&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80",
+        "trailer": "B8_dgqfPXFg"
+    }, 
+    {
         "id": 25,
         "title": "The Gentlemen",
         "icon": "https://m.media-amazon.com/images/M/MV5BMTlkMmVmYjktYTc2NC00ZGZjLWEyOWUtMjc2MDMwMjQwOTA5XkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_UX182_CR0,0,182,268_AL_.jpg",
