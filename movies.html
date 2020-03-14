@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://kit.fontawesome.com/b5a9c45e36.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Larry Movies</title>
+    <title>MovieTime</title>
 </head>
 <body onload="getmovies()">
     
-   <pre><b><img src="movietime.png" id="images"></b></pre><br>
- <div id="movie"></div>    
-<div class="row" id="movies">
 
-</div>
+  <pre><b><a href="./index.htm"><img src="movietime.png" id="images"></a></b></pre>
+
+<h3 id="back"></h3>
+
+ <div id="movie" class="showtime"></div> 
+
+<div class="row" id="movies"></div>
+
 <style>
+#slide_me_down {
+    display: none;
+    width: 1000px;
+    height: 600px;
+    background-color: #000;
+}
     body {
     background: rgb(0, 0, 0);
     align-items: center;
@@ -20,6 +32,7 @@
 h1 {
     
     font-size: 35px;
+    padding: 0px 0px 0px 0px;
     text-emphasis: none;
     color: rgb(199, 199, 199);
 }
@@ -29,11 +42,36 @@ h2 {
     text-emphasis: none;
     color: rgb(151, 151, 151);
 }
+#movie {
+    width:100%;
+    text-align:center;
+}
+#left {
+    float:left;
+    align-items: center;
+    width:40%;
+    text-align: left;
+    align-content: center;
+}
+
+#center {
+    display: inline-block;
+    margin:0 auto;
+    width:0%;
+}
+
+#right {
+    float:right;
+    width:60%;
+}
+
+
 .column {
     margin: auto;
+    max-width: 1000px;
     align-items: center;
-    padding: 30px 30px 30px 30px ;
-    display: table;
+    padding: 10px 10px 10px 10px ;
+ 
     float: left;
     align-content: center;
 }
@@ -60,15 +98,22 @@ pre {
 }
 p {
     font-size: 20px;
+    padding-top: 0px;
     color: rgb(170, 170, 170);
     align-items: center;
 }
- a:link { color: rgb(122, 122, 143); }
- a:visited { color: rgb(122, 122, 143); }
- a:hover { color: rgb(155, 84, 25); };
- a:active { color: rgb(122, 122, 143); }
+ a:link { color: rgb(122, 122, 143); text-decoration: none; }
+ a:visited { color: rgb(122, 122, 143); text-decoration: none;}
+ a:hover { color: rgb(155, 84, 25); text-decoration: none;}
+ a:active { color: rgb(122, 122, 143); text-decoration: none; }
 </style>
 <script>
+$(document).ready(function () {
+    $('#click_to_slide').live('click', function () {
+        $('#slide_me_down').slideDown();
+    });
+});
+
 
 function bigImg(x) {
   x.style.height = "180px";
@@ -97,8 +142,8 @@ function appendData(data) {
             var mainContainer = document.getElementById("movies");
             for (var i = 0; i < data.length; i++) {
                 var div = document.createElement("div");
-                div.innerHTML = `<div class="column" >
- <a href="?id=${data[i].id}" title="${data[i].title}...${data[i].plot}" onclick="showmovie();">
+                div.innerHTML = `<div width=300 class="column" >
+ <a href="?id=${data[i].id}" title="${data[i].title}...${data[i].plot}" onclick="showmovies()">
             <img src="${data[i].icon}"></a></div>`;
            // console.log(data[i].id)
                 mainContainer.appendChild(div);
@@ -106,7 +151,7 @@ function appendData(data) {
         }
 
         var data;
-//function showmovie(){ 
+//function showmovies(){ 
     fetch('movies.json')
             .then(function (response) {
                 return response.json();
@@ -122,25 +167,31 @@ var id = getQueryVariable("id");
 console.log(id);
 function movieData(data) {
             var mainContainer = document.getElementById("movie");
-
+            if(id != ''){
             for (var i = 0; i < data.length; i++) {
-               if(id == data[i].id){
+                if(data[i].id == id){
                 var div = document.createElement("div");
-                div.innerHTML = `<table><tr><td>
-            <div class="column">
-                <img src="${data[i].icon}"></div></td><td><h1>${data[i].title}</h1>
-            <p>${data[i].plot}<br/><br/><a href="${data[i].link}">Κατέβασε το torrent εδώ.</a>
-            <br>   
-            </p></td><td>
-            <div class="column"><iframe width="560" height="315" src="https://www.youtube.com/embed/${data[i].trailer}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div></td></tr></table>`;
+                div.innerHTML = `
+                <div id="left"><h1>&nbsp;${data[i].title}</h1> <table width=100%></table>   
+ <div class=column><img src="${data[i].icon}"></div><div class=column></div>
+<p><br>&nbsp; ${data[i].plot}<br><Br>
+    <a href="${data[i].link}">Κατέβασε εδώ.</a>
+</p></div></div><div id="right"><br><iframe width="560" height="315" src="https://www.youtube.com/embed/${data[i].trailer}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> 
+      </div><table width=100%></table>
+            
+            `;
                 mainContainer.appendChild(div);
                 console.log(data[i].trailer);
+                document.getElementById("back").innerHTML=  '<a href="./movies.html"><i class="fas fa-arrow-left"></i>&nbsp;Back</a>';
+                }
+            }
+            } else {
+              
+              document.getElementById("movie").innerHTML= "<h1>What do you wanna see today?</h1>" 
            }
-       }
-
   }
-
+/*
 function getmovie(){
     fetch('movies.json')
     .then((res) => res.json())
@@ -151,8 +202,9 @@ function getmovie(){
     document.getElementById('movies').innerHTML= id;
 });
 })
+}*/
 
-}
+
 function getQueryVariable(variable)
 {
        var query = window.location.search.substring(1);
@@ -163,6 +215,7 @@ function getQueryVariable(variable)
        }
        return(false);
 }
+
 </script>
 </body>
 </html>
