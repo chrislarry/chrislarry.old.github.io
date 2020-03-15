@@ -108,11 +108,7 @@ p {
  a:active { color: rgb(122, 122, 143); text-decoration: none; }
 </style>
 <script>
-$(document).ready(function () {
-    $('#click_to_slide').live('click', function () {
-        $('#slide_me_down').slideDown();
-    });
-});
+
 
 
 function bigImg(x) {
@@ -144,7 +140,7 @@ function appendData(data) {
                 var div = document.createElement("div");
                 div.innerHTML = `<div width=300 class="column" >
  <a href="?id=${data[i].id}" title="${data[i].title}...${data[i].plot}" onclick="showmovies()">
-            <img src="${data[i].icon}"></a></div>`;
+            <img src="${data[i].icon}" height="250"></a></div>`;
            // console.log(data[i].id)
                 mainContainer.appendChild(div);
             }
@@ -174,7 +170,7 @@ function movieData(data) {
 if (data[i].link != '#'){
                 div.innerHTML = `
                 <div id="left"><h1>&nbsp;${data[i].title}</h1> <table width=100%></table>   
- <div class=column><img src="${data[i].icon}"></div><div class=column></div>
+ <div class=column><img src="${data[i].icon}" height="300"></div><div class=column></div>
 <p><br>&nbsp; ${data[i].plot}
 </p></div></div><div id="right"><br><iframe width="560" height="315" src="https://www.youtube.com/embed/${data[i].trailer}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
        </div>    </div> <table width=100%></table> 
@@ -184,7 +180,7 @@ if (data[i].link != '#'){
     }else{
         div.innerHTML = `
                 <div id="left"><h1>&nbsp;${data[i].title}</h1> <table width=100%></table>   
- <div class=column><img src="${data[i].icon}"></div><div class=column></div>
+ <div class=column><img src="${data[i].icon}" height="300"></div><div class=column></div>
 <p><br>&nbsp; ${data[i].plot}
 </p></div></div><div id="right">Δες την ταινία εδω <i class="fas fa-arrow-down"></i><br><iframe width="560" height="315" src="https://www.youtube.com/embed/${data[i].trailer}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div> 
