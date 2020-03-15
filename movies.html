@@ -139,7 +139,7 @@ function appendData(data) {
             for (var i = 0; i < data.length; i++) {
                 var div = document.createElement("div");
                 div.innerHTML = `<div width=300 class="column" >
- <a href="?id=${data[i].id}" title="${data[i].title}...${data[i].plot}" onclick="showmovies()">
+ <a href="?id=${data[i].id}" title="${data[i].title}... ${data[i].plot}" onclick="showmovies()">
             <img src="${data[i].icon}" height="250"></a></div>`;
            // console.log(data[i].id)
                 mainContainer.appendChild(div);
