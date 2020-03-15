@@ -171,16 +171,27 @@ function movieData(data) {
             for (var i = 0; i < data.length; i++) {
                 if(data[i].id == id){
                 var div = document.createElement("div");
+if (data[i].link != '#'){
                 div.innerHTML = `
                 <div id="left"><h1>&nbsp;${data[i].title}</h1> <table width=100%></table>   
  <div class=column><img src="${data[i].icon}"></div><div class=column></div>
-<p><br>&nbsp; ${data[i].plot}<br><Br>
-    <a href="${data[i].link}">Κατέβασε εδώ.</a>
+<p><br>&nbsp; ${data[i].plot}
 </p></div></div><div id="right"><br><iframe width="560" height="315" src="https://www.youtube.com/embed/${data[i].trailer}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>    </div> <table width=100%></table> 
+      <i class="fas fa-download"></i>&nbsp;<a href="${data[i].link}">Κατέβασε το torrent εδώ.</a>
+       `;
+     
+    }else{
+        div.innerHTML = `
+                <div id="left"><h1>&nbsp;${data[i].title}</h1> <table width=100%></table>   
+ <div class=column><img src="${data[i].icon}"></div><div class=column></div>
+<p><br>&nbsp; ${data[i].plot}
+</p></div></div><div id="right">Δες την ταινία εδω <i class="fas fa-arrow-down"></i><br><iframe width="560" height="315" src="https://www.youtube.com/embed/${data[i].trailer}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div> 
-      </div><table width=100%></table>
-            
-            `;
+      </div><table width=100%></table>`;
+ 
+
+    }
                 mainContainer.appendChild(div);
                 console.log(data[i].trailer);
                 document.getElementById("back").innerHTML=  '<a href="./movies.html"><i class="fas fa-arrow-left"></i>&nbsp;Back</a>';

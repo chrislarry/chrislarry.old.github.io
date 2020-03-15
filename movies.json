@@ -1,5 +1,148 @@
-
 [
+    {
+        "id": 52,
+        "title": "No Retreat, No Surrender",
+        "icon": "https://m.media-amazon.com/images/M/MV5BNjQxOWM0YjgtNGRlMC00ZGQzLWJkZTUtNjU4NjZhNDE0Njk4XkEyXkFqcGdeQXVyMjY3MjUzNDk@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Ο δεκαεφτάχρονος γιος ενός δασκάλου καράτε αποφασίζει να εκδικηθεί ένα τραστ σχολών καράτε, που κάποτε κτύπησαν τον πατέρα του και του πήραν τη σχολή που διεύθυνε στο Λος Αντζελες.",
+        "link": "#",
+        "trailer": "RDbsIcA4j8A"
+    },
+    {
+        "id": 51,
+        "title": "A Crime",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTg3MTg4MDY1MV5BMl5BanBnXkFtZTcwMzI3ODU5Mw@@._V1_UY268_CR17,0,182,268_AL_.jpg",
+        "plot": "Vincent's life is on hold until he finds his wife's killer. Alice, his neighbor, is convinced she can make him happy. She decides to invent a culprit, so that Vincent can find revenge and leave the past behind. But there is no ideal culprit and no perfect crime. ",
+        "link": "#",
+        "trailer": "0NLEt97k0Zc"
+    },
+    {
+        "id": 50,
+        "title": "The Morning After",
+        "icon": "https://m.media-amazon.com/images/M/MV5BZGFjYmQ3YjAtY2Y0Ni00NjA5LWE4ZTgtM2UyMjcwYTk2MjUxXkEyXkFqcGdeQXVyNjMwMjk0MTQ@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "A washed up, alcoholic actress who is prone to blackouts wakes up next to a murdered man. Did she kill him and, if not, is she in danger? ",
+        "link": "#",
+        "trailer": "w0Jmzcr_5m8"
+    },
+    {
+        "id": 49,
+        "title": "Face/Off",
+        "icon": "https://m.media-amazon.com/images/M/MV5BYzFjNzIxMmEtMzY5NS00YTgzLTkwYWEtN2FjMmY0NmNkZWY3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "In order to foil a terrorist plot, an FBI agent undergoes facial transplant surgery and assumes the identity of a criminal mastermind, who murdered his only son. The plan turns sour when the criminal wakes up prematurely and seeks revenge. ",
+        "link": "#",
+        "trailer": "NTadwL-X_pE"
+    },
+    {
+        "id": 48,
+        "title": "Desert Saints",
+        "icon": "https://m.media-amazon.com/images/M/MV5BODI4NTU5MTIzOF5BMl5BanBnXkFtZTcwMjA1MTkyMQ@@._V1_UY268_CR4,0,182,268_AL_.jpg",
+        "plot": "An American assassin, who works for cartels in Latin America, is back in USA. He gets a woman before each job and kills her after. FBI's on to him but are curious about his next big job. ",
+        "link": "#",
+        "trailer": "xH8LS20h1FM"
+    },
+    {
+        "id": 47,
+        "title": "Hachi: A Dog's Tale",
+        "icon": "https://m.media-amazon.com/images/M/MV5BNzE4NDg5OWMtMzg3NC00ZDRjLTllMDMtZTRjNWZmNjBmMGZlXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY268_CR3,0,182,268_AL_.jpg",
+        "plot": "A college professor bonds with an abandoned dog he takes into his home. ",
+        "link": "#",
+        "trailer": "b4K7-sK5Pwk"
+    },
+    {
+        "id": 46,
+        "title": "Devil's Gate",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTk3NTk1MDMxM15BMl5BanBnXkFtZTgwMTA4MjQzNDM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Seeking a missing woman in North Dakota, an FBI agent and a sheriff focus on her religious zealot husband but discover something far more sinister. ",
+        "link": "#",
+        "trailer": "72IGwfrhlEw"
+    },
+    {
+        "id": 45,
+        "title": "13",
+        "icon": "https://m.media-amazon.com/images/M/MV5BOWE4YWZjYWItY2U0NS00N2ZlLWFkOGEtY2M2N2E0NDA5MjBlXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UY268_CR2,0,182,268_AL_.jpg",
+        "plot": "A naive young man assumes a dead man's identity and finds himself embroiled in an underground world of power, violence, and chance where men gamble behind closed doors on the lives of other men. ",
+        "link": "#",
+        "trailer": "zaSduNKA0X8"
+    },
+    {
+        "id": 44,
+        "title": "High School",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTU0ODM2NTQxMF5BMl5BanBnXkFtZTcwMjYxNTU0Nw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "A high school valedictorian who gets baked with the local stoner finds himself the subject of a drug test. The situation causes him to concoct an ambitious plan to get his entire graduating class to face the same fate, and fail. ",
+        "link": "#",
+        "trailer": "aOB34_P7KFI"
+    },
+    {
+        "id": 43,
+        "title": "Leningrad",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMjEzNzQwMjYwOV5BMl5BanBnXkFtZTcwMDQ4MzgxMw@@._V1_UY268_CR3,0,182,268_AL_.jpg",
+        "plot": "When in 1941 Nazi Germany invaded the Soviet Union, their troops quickly besieged Leningrad. Foreign journalists are evacuated but one of them, Kate Davies, is presumed dead and misses the ... ",
+        "link": "#",
+        "trailer": "EZ2Y3meSBrM"
+    },
+    {
+        "id": 42,
+        "title": "Ice",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTc3MDI0NDAwNF5BMl5BanBnXkFtZTgwNDAyMDI2MDI@._V1_UY268_CR9,0,182,268_AL_.jpg",
+        "plot": "A diamond dealer navigates the culturally diverse and otherwise treacherous world of the diamond business. ",
+        "link": "#",
+        "trailer": "bEA3DNyuiXI"
+    },
+    {
+        "id": 41,
+        "title": "Phenomenon",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMjAwMDA2NzEyMl5BMl5BanBnXkFtZTgwNTA2MjgxMTE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "An ordinary man sees a bright light descend from the sky, and discovers he now has super-intelligence and telekinesis.",
+        "link": "#",
+        "trailer": "3vl-miT_ojE"
+    },
+    {
+        "id": 40,
+        "title": "Home Run",
+        "icon": "https://m.media-amazon.com/images/M/MV5BZDIzN2UyNmUtN2U4ZS00NTZlLWE4NjItZTk5NjM4MDczZTcyXkEyXkFqcGdeQXVyMTY5Nzc4MDY@._V1_UY268_CR9,0,182,268_AL_.jpg",
+        "plot": "A pro ball player with a substance abuse problem is forced into rehab in his hometown, finding new hope when he gets honest about his checkered past, and takes on coaching duties for a misfit Little League team. ",
+        "link": "#",
+        "trailer": "aMs9tVi61TE"
+    },
+    {
+        "id": 39,
+        "title": "The Crow",
+        "icon": "https://m.media-amazon.com/images/M/MV5BM2Y4ZGVhZjItNjU0OC00MDk1LWI4ZTktYTgwMWJkNDE5OTcxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "A man brutally murdered comes back to life as an undead avenger of his and his fiancée's murder. ",
+        "link": "#",
+        "trailer": "-XlvPRbzU7k"
+    },
+    {
+        "id": 38,
+        "title": "Heat",
+        "icon": "https://m.media-amazon.com/images/M/MV5BNDc0YTQ5NGEtM2NkYS00MWRhLThiNzAtNmY3NWU3YzNkMjIyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "A group of professional bank robbers start to feel the heat from police when they unknowingly leave a clue at their latest heist. ",
+        "link": "#",
+        "trailer": "OFPSbZlKLvQ"
+    },
+    {
+        "id": 37,
+        "title": "Ip Man",
+        "icon": "https://m.media-amazon.com/images/M/MV5BNTFmMjM3M2UtOTIyZC00Zjk3LTkzODUtYTdhNGRmNzFhYzcyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "During the Japanese invasion of 1937, when a wealthy martial artist is forced to leave his home and work to support his family, he reluctantly agrees to train others in the art of Wing Chun for self-defense. ",
+        "link": "#",
+        "trailer": "71lW0istyKA"
+    },
+    {
+        "id": 36,
+        "title": "A Fistful of Dollars",
+        "icon": "https://m.media-amazon.com/images/M/MV5BYjA1MGVlMGItNzgxMC00OWY4LWI4YjEtNTNmYWIzMGUxOGQzXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UY268_CR1,0,182,268_AL_.jpg",
+        "plot": "A wandering gunfighter plays two rival families against each other in a town torn apart by greed, pride, and revenge. ",
+        "link": "#",
+        "trailer": "JqVYpgOzByM"
+    },
+    {
+        "id": 35,
+        "title": "King Solomon's Mines",
+        "icon": "https://m.media-amazon.com/images/M/MV5BNTY3ODM5OTc0NV5BMl5BanBnXkFtZTcwNzMwNDYyMQ@@._V1_UY268_CR3,0,182,268_AL_.jpg",
+        "plot": "An adventurous quest for a treasure hidden in King Solomon's mines, based on H. Rider Haggard's timeless tale. ",
+        "link": "#",
+        "trailer": "K3AITH6U7rA"
+    },
     {
         "id": 34,
         "title": "Storm of the Century",
@@ -7,7 +150,7 @@
         "plot": "A dangerous blizzard hits an isolated town and brings along a mysterious stranger intent on terrorizing people for his own desires.",
         "link": "#",
         "trailer": "vBSVFEisWc0"
-    }, 
+    },
     {
         "id": 33,
         "title": "The Prison",
@@ -15,7 +158,7 @@
         "plot": "A troubled ex-cop imprisoned for a hit-and-run accident discovers that the entire penitentiary is controlled by an inmate who has been running a crime syndicate with the help of the warden and guards which provides them 100% alibi. ",
         "link": "#",
         "trailer": "lX5XNVKqqMo"
-    }, 
+    },
     {
         "id": 32,
         "title": "The Mist",
@@ -23,7 +166,7 @@
         "plot": "A freak storm unleashes a species of bloodthirsty creatures on a small town, where a small band of citizens hole up in a supermarket and fight for their lives.",
         "link": "#",
         "trailer": "-f4faxBE92E"
-    }, 
+    },
     {
         "id": 31,
         "title": "As Far as My Feet Will Carry Me",
@@ -31,7 +174,7 @@
         "plot": "At the end of WW2, a German POW doing hard labor in the Soviet Gulag escapes from his Siberian camp to return to Germany but he's pursued by a Soviet NKVD officer. ",
         "link": "#",
         "trailer": "7mHwR6hUuoE"
-    }, 
+    },
     {
         "id": 30,
         "title": "The Island",
@@ -39,7 +182,7 @@
         "plot": "Somewhere in Northern Russia in a small Russian Orthodox monastery lives an unusual man whose bizarre conduct confuses his fellow monks, while others who visit the island believe that the man has the power to heal, exorcise demons and foretell the future. ",
         "link": "#",
         "trailer": "cnxzXRGWgLI"
-    }, 
+    },
     {
         "id": 29,
         "title": "Deep Impact",
@@ -47,7 +190,7 @@
         "plot": "A comet is discovered to be on a collision course with Earth. As doomsday nears, the human race prepare for the worst. ",
         "link": "#",
         "trailer": "s5RInpywMu8"
-    }, 
+    },
     {
         "id": 28,
         "title": "Έτερος εγώ",
@@ -55,7 +198,7 @@
         "plot": "A professor of criminology tries to solve five completely unrelated murders whose only link is quotes from Pythagoras. Alongside him on this journey is a maths professor. ",
         "link": "#",
         "trailer": "y3zho2aV2bs"
-    }, 
+    },
     {
         "id": 27,
         "title": "Crash",
@@ -63,7 +206,7 @@
         "plot": "Los Angeles citizens with vastly separate lives collide in interweaving stories of race, loss and redemption. ",
         "link": "magnet:?xt=urn:btih:f00c2f664818127192e59bd5a78554484dded161&dn=Crash+%282004%29+720p+BrRip+x264+-+YIFY&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80",
         "trailer": "DEJH0hEoHc4"
-    }, 
+    },
     {
         "id": 26,
         "title": "The Butterfly Effect",
@@ -71,7 +214,7 @@
         "plot": "Evan Treborn suffers blackouts during significant events of his life. As he grows up, he finds a way to remember these lost memories and a supernatural way to alter his life by reading his journal. ",
         "link": "magnet:?xt=urn:btih:e43dc185afc278061332b5df961093a09cd89083&dn=The+Butterfly+Effect+%282004%29+Dir+Cut+-+720p+mkv+-+600MB+-+YIFY&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80",
         "trailer": "B8_dgqfPXFg"
-    }, 
+    },
     {
         "id": 25,
         "title": "The Gentlemen",
@@ -79,7 +222,7 @@
         "plot": "An American expat tries to sell off his highly profitable marijuana empire in London, triggering plots, schemes, bribery and blackmail in an attempt to steal his domain out from under him. ",
         "link": "magnet:?xt=urn:btih:24590215ab9acdd359d0a45495e4aa4c772385dc&dn=The.Gentlemen.2020.CLEAN.CAMRip.XVID.READNFO-WARRIORS&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80",
         "trailer": "Ify9S7hj480"
-    }, 
+    },
     {
         "id": 24,
         "title": "Tomboy",
@@ -87,7 +230,7 @@
         "plot": "A family moves into a new neighborhood, and a 10-year-old named Laure deliberately presents as a boy named Mikhael to the neighborhood children. ",
         "link": "magnet:?xt=urn:btih:cb9150ca53c3212b4b7863e252a7b0fef49fc579&dn=Tomboy.2011.720p.BluRay.DTS.x264-TayTO+%5BPublicHD%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80",
         "trailer": "Jb-Oys-IcWE"
-    }, 
+    },
     {
         "id": 23,
         "title": "Little Women",
@@ -95,7 +238,7 @@
         "plot": "Jo March reflects back and forth on her life, telling the beloved story of the March sisters - four young women each determined to live life on their own terms.",
         "link": "magnet:?xt=urn:btih:2d032e734ff0a4af636dd3e45e9e7f128f8d86aa&dn=Little.Women.2019.1080p.WEB-DL.DD5.1.H264-FGT&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2830&tr=udp%3A%2F%2F9.rarbg.to%3A2850",
         "trailer": "AST2-4db4ic"
-    }, 
+    },
     {
         "id": 22,
         "title": "Dark Waters",
@@ -103,7 +246,7 @@
         "plot": "A corporate defense attorney takes on an environmental lawsuit against a chemical company that exposes a lengthy history of pollution. ",
         "link": "magnet:?xt=urn:btih:7d0a3e32f7aa6a0d7398d6fd382dd4da580bbb7e&dn=Dark.Waters.2019.1080p.WEBRip.x264.AAC5.1&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80",
         "trailer": "GhADdU2Kccs"
-    }, 
+    },
     {
         "id": 21,
         "title": "A Beautiful Day in the Neighborhood",
@@ -111,7 +254,7 @@
         "plot": "Based on the true story of a real-life friendship between Fred Rogers and journalist Lloyd Vogel. ",
         "link": "magnet:?xt=urn:btih:6b4cdd744f0e4a69482c68574e5544f1d4a4f6d2&dn=A.Beautiful.Day.in.the.Neighborhood.2019.1080p.BluRay.H264.AAC-RARBG&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2760&tr=udp%3A%2F%2F9.rarbg.to%3A2980",
         "trailer": "-VLEPhfEN2M"
-    }, 
+    },
     {
         "id": 20,
         "title": "Queen & Slim",
@@ -119,7 +262,7 @@
         "plot": "A couple's first date takes an unexpected turn when a police officer pulls them over.",
         "link": "magnet:?xt=urn:btih:5157b15cfd0d58e049fcd37d63ebec612d40b2d7&dn=Queen.and.Slim.2019.1080p.WEBRip.x264.AAC5.1&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80",
         "trailer": "CDnhh4NEi_U"
-    }, 
+    },
     {
         "id": 18,
         "title": "Green Book",
@@ -127,7 +270,7 @@
         "plot": "A working-class Italian-American bouncer becomes the driver of an African-American classical pianist on a tour of venues through the 1960s American South.",
         "link": "magnet:?xt=urn:btih:c3aa236a8afbb725a38855b15d225f8062431b71&dn=Green.Book.2018.DVDScr.Xvid.AC3.Hive-CM8&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.ccc.de%3A80",
         "trailer": "QkZxoko_HC0"
-    },    
+    },
     {
         "id": 0,
         "title": "Ford v Ferrari ",
