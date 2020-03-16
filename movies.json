@@ -1,5 +1,77 @@
 [
     {
+        "id": 100,
+        "title": "The Game Changers",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMzg4ZjMzOWEtZjBhZi00MzgxLWEzNmItYjVlYjY0MGQ5ZmM5XkEyXkFqcGdeQXVyNDExMzMxNjE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "A UFC fighter's world is turned upside down when he discovers an elite group of world-renowned athletes and scientists who prove that everything he had been taught about protein was a lie. ",
+        "link": "#",
+        "trailer": "ove9b16OeR4"
+    },      
+    {
+        "id": 99,
+        "title": "What the #$*! Do We (K)now!?",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTQ5MjM4NjIyNl5BMl5BanBnXkFtZTYwNTUzMjQ3._V1_UY268_CR9,0,182,268_AL_.jpg",
+        "plot": " A fictional photographer's quest to spiritually rediscover herself is interspersed with documentary footage of scientists and theologians discussing the philosophical aspects of quantum physics.",
+        "link": "#",
+        "trailer": "Ie6ean8_z2E"
+    },       
+    {
+        "id": 98,
+        "title": "The Corporation",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTQxMjMzMTczM15BMl5BanBnXkFtZTcwNzg5MzUyMQ@@._V1_UY268_CR3,0,182,268_AL_.jpg",
+        "plot": "Documentary that looks at the concept of the corporation throughout recent history up to its present-day dominance. ",
+        "link": "#",
+        "trailer": "Ie6ean8_z2E"
+    },     
+    {
+        "id": 97,
+        "title": "Fallen",
+        "icon": "https://m.media-amazon.com/images/M/MV5BNzdhYWZjNTUtNmY4Mi00NzdkLWFiMTUtY2VmMWJhY2JlNDg5XkEyXkFqcGdeQXVyMTM2MzgyOTU@._V1_UY268_CR0,0,182,268_AL_.jpg",
+        "plot": "A young girl finds herself in a reform school after therapy since she was blamed for the death of a young boy. At the school she finds herself drawn to a fellow student, unaware that he is an angel, and has loved her for thousands of years.",
+        "link": "#",
+        "trailer": "XEwz2JRNcos"
+    },     
+    {
+        "id": 96,
+        "title": "The Ghost Beyond",
+        "icon": "https://m.media-amazon.com/images/M/MV5BZjNlNmM2ODgtYjJmZS00MzE2LWFkMzYtZWRiZWU2MjgxYTFhXkEyXkFqcGdeQXVyMTIxMzA5MDI@._V1_UY268_CR4,0,182,268_AL_.jpg",
+        "plot": "A struggling novelist moves his wife and young son to an old country home, but when a presence begins to communicate with his son, the family must escape an evil that threatens to doom them to the house for eternity. ",
+        "link": "#",
+        "trailer": "ZcxEwcTEHWk"
+    },     
+    {
+        "id": 95,
+        "title": "The Good, the Bad and the Ugly",
+        "icon": "https://m.media-amazon.com/images/M/MV5BOTQ5NDI3MTI4MF5BMl5BanBnXkFtZTgwNDQ4ODE5MDE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery. ",
+        "link": "#",
+        "trailer": "4oCdwxmeM2A"
+    },    
+    {
+        "id": 94,
+        "title": "Delivery",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMjIzMDA4ODg1N15BMl5BanBnXkFtZTcwMTM0NTA3Mg@@._V1_UY268_CR6,0,182,268_AL_.jpg",
+        "plot": "Young man arrives in Athens to seek his fortune. Vainly.",
+        "link": "#",
+        "trailer": "133D9kR4dhg"
+    },
+    {
+        "id": 93,
+        "title": "Το μικρό ψάρι",
+        "icon": "https://m.media-amazon.com/images/M/MV5BZGZhOTg5NDgtNTlmYy00ZTg5LTk5YmEtYTg1MTBiZTk0MjMxXkEyXkFqcGdeQXVyMTM1MzAzOQ@@._V1_UY268_CR3,0,182,268_AL_.jpg",
+        "plot": "By night, Stratos works in a bread factory but by day, he's a professional hit man. He needs the cash to free Leonidas from prison because the latter once saved his life when he was behind ...",
+        "link": "#",
+        "trailer": "3yTZcp4ZE_s"
+    },
+        {
+        "id": 92,
+        "title": "Safe Haven",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTg4MzcxODA3OV5BMl5BanBnXkFtZTcwMTYzNDkwOQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "A young woman with a mysterious past lands in Southport, North Carolina where her bond with a widower forces her to confront the dark secret that haunts her. ",
+        "link": "#",
+        "trailer": "Ye2y_M83pfk"
+    },
+    {
         "id": 91,
         "title": "4 Μαύρα Κοστούμια",
         "icon": "https://m.media-amazon.com/images/M/MV5BNDYzMTk1NTg5NV5BMl5BanBnXkFtZTcwMzI5NjcyMw@@._V1_UY268_CR4,0,182,268_AL_.jpg",
