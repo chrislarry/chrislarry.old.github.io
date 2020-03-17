@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <script src="https://kit.fontawesome.com/b5a9c45e36.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MovieTime</title>
@@ -10,7 +9,7 @@
 <body onload="getmovies()">
     
 
-  <pre><b><a href="./index.htm"><img src="movietime.png" id="images"></a></b></pre>
+  <pre><b><a href="./index.htm"><img src="movietime.png" id="images"></a></b></pre><pre id="sum"></pre>
 
 <h3 id="back"></h3>
 
@@ -18,7 +17,17 @@
 
 <div class="row" id="movies"></div>
 
+<div>
+<script>  
+/* <h1>Χρήσιμα link</h1><br>
+<a href="https://github.com/transmission/transmission-releases/raw/master/transmission-2.94-x64.msi">Download transmission</a><br>
+<a href="https://mirrors.uni-ruse.bg/vlc/vlc/3.0.8/win32/vlc-3.0.8-win32.exe">Download VLC</a><br>
+<a href="https://www.opensubtitles.org">Download subtitles</a><br>
+</div>*/
+</script> 
 <style>
+body
+{    font-family: Arial, "Times New Roman", Times, serif;}
 #slide_me_down {
     display: none;
     width: 1000px;
@@ -30,7 +39,7 @@
     align-items: center;
     }
 h1 {
-    
+    font-family: Arial, "Times New Roman", Times, serif;
     font-size: 35px;
     padding: 0px 0px 0px 0px;
     text-emphasis: none;
@@ -63,12 +72,15 @@ h2 {
 #right {
     float:right;
     width:60%;
+    align-items: baseline;
+    vertical-align: bottom;
+
 }
 
 
 .column {
     margin: auto;
-    max-width: 1000px;
+ 
     align-items: center;
     padding: 10px 10px 10px 10px ;
  
@@ -84,7 +96,7 @@ div {
     align-content: center;
 }
 pre {
-    font-family: "Times New Roman", Times, serif;
+    font-family: Arial, "Times New Roman", Times, serif;
     color:rgb(207, 207, 207);
     text-align: center;
     margin-top: 0em;
@@ -97,6 +109,7 @@ pre {
     padding: 30px 30px 30px 30px ;
 }
 p {
+    font-family: Arial, "Times New Roman", Times, serif;
     font-size: 20px;
     padding-top: 0px;
     color: rgb(170, 170, 170);
@@ -143,6 +156,7 @@ function appendData(data) {
             <img src="${data[i].icon}" height="250"></a></div>`;
            // console.log(data[i].id)
                 mainContainer.appendChild(div);
+                document.getElementById('sum').innerHTML = i+' ταινίες';
             }
         }
 
@@ -160,14 +174,14 @@ function appendData(data) {
             });
 //}
 var id = getQueryVariable("id");
-console.log(id);
+//console.log(id);
 function movieData(data) {
             var mainContainer = document.getElementById("movie");
             if(id != ''){
             for (var i = 0; i < data.length; i++) {
-                if(data[i].id == id){
+               if(data[i].id == id){
                 var div = document.createElement("div");
-if (data[i].link != '#'){
+if (data[i].link != '#'&& data[i].link != 'epi'){
                 div.innerHTML = `
                 <div id="left"><h1>&nbsp;${data[i].title}</h1> <table width=100%></table>   
  <div class=column><img src="${data[i].icon}" height="300"></div><div class=column></div>
@@ -177,25 +191,46 @@ if (data[i].link != '#'){
       <i class="fas fa-download"></i>&nbsp;<a href="${data[i].link}">Κατέβασε το torrent εδώ.</a>
        `;
      
-    }else{
+    }else if( data[i].link=='epi') {
+
+        div.innerHTML = `
+        <div id="left"><h1>&nbsp;${data[i].title}</h1> <table width=100%></table>   
+ <div class=column><img src="${data[i].icon}" height="300"></div><div class=column></div>
+<p><br>&nbsp; ${data[i].plot}
+</p></div></div><div id="right">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/${data[i].episodes[i].trailer}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> <div id=epis></div>
+    
+      </div><table width=100%></table>
+ 
+      `;
+        for(var e = 0; e < data[i].episodes.lenght; e++){
+            document.getElementById('epis').innerHTML= 
+`<a href="?id=${id}&season=${data[i].episodes[e].season}&epi=${data[i].episodes[e].episode}"></a>`;
+      
+            console.log(data[i].episodes[e]);
+        }
+
+    } else {
         div.innerHTML = `
                 <div id="left"><h1>&nbsp;${data[i].title}</h1> <table width=100%></table>   
  <div class=column><img src="${data[i].icon}" height="300"></div><div class=column></div>
 <p><br>&nbsp; ${data[i].plot}
-</p></div></div><div id="right">Δες την ταινία εδω <i class="fas fa-arrow-down"></i><br><iframe width="560" height="315" src="https://www.youtube.com/embed/${data[i].trailer}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p></div></div><div id="right"><br>Δες την ταινία εδω <i class="fas fa-arrow-down"></i>
+    <br><Br><br><iframe width="560" height="315" src="https://www.youtube.com/embed/${data[i].trailer}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div> 
       </div><table width=100%></table>`;
  
 
     }
                 mainContainer.appendChild(div);
-                console.log(data[i].trailer);
+                //console.log(i);
                 document.getElementById("back").innerHTML=  '<a href="./movies.html"><i class="fas fa-arrow-left"></i>&nbsp;Back</a>';
                 }
             }
             } else {
               
-              document.getElementById("movie").innerHTML= "<h1>What do you wanna see today?</h1>" 
+              document.getElementById("movie").innerHTML= "<h1> Τι ταινία θες να δεις σήμερα;</h1>" 
            }
   }
 /*
