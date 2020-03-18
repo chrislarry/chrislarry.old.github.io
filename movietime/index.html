@@ -11,7 +11,7 @@
     
 
   <pre><b><a href="../index.htm"><img src="movietime.png" id="images"></a></b>
-</pre><p id="sum"></p>
+</pre><center><p id="sum"></p><p id="greed"></p></center>
 
 <h3 id="back"></h3>
 
@@ -124,7 +124,29 @@ p {
  a:active { color: rgb(122, 122, 143); text-decoration: none; }
 </style>
 <script>
+function date(){
+ var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
 
+  var weekday = new Array(7);
+  weekday[0] = "Κυριακή";
+  weekday[1] = "Δευτέρα";
+  weekday[2] = "Τρίτη";
+  weekday[3] = "Τετάρτη";
+  weekday[4] = "Πέμπτη";
+  weekday[5] = "Παρασκευή";
+  weekday[6] = "Σάββατο";
+
+  var day = weekday[today.getDay()];
+  var ΗΗ = String(today.getHours());
+  var ΜΜ = String(today.getMinutes());
+  time = ΗΗ + ':' + ΜΜ;
+  today = dd + '/' + mm + '/' + yyyy;
+
+  document.getElementById("greed").innerHTML = '<em>' + day + ' ' + today + '</em>';
+}
 
 
 function bigImg(x) {
@@ -153,13 +175,14 @@ function getmovies(){
 function appendData(data) {
             var mainContainer = document.getElementById("movies");
             for (var i = 0; i < data.length; i++) {
+                const sum = i;
                 var div = document.createElement("div");
                 div.innerHTML = `<div width=300 class="column" >
  <a href="?id=${data[i].id}" title="${data[i].title}... ${data[i].plot}" onclick="showmovies()">
             <img src="${data[i].icon}" height="250"></a></div>`;
            // console.log(data[i].id)
                 mainContainer.appendChild(div);
-                document.getElementById('sum').innerHTML = i+' ταινίες';
+                document.getElementById('sum').innerHTML = '<em>'+i+' ταινίες</em>' ;
             }
         }
 
@@ -234,21 +257,9 @@ if (data[i].link != '#'&& data[i].link != 'epi'){
             } else {
               
               document.getElementById("movie").innerHTML= "<h1> Τι ταινία θες να δεις σήμερα;</h1>" 
+              date();
            }
   }
-/*
-function getmovie(){
-    fetch('movies.json')
-    .then((res) => res.json())
-    .then((data) => {
-        let output = '<h2>Movie</h2>', mymovie, myplot, mycom, i=0;
-        data.forEach(function(movie)  {
-    id = getQueryVariable("id");
-    document.getElementById('movies').innerHTML= id;
-});
-})
-}*/
-
 
 function getQueryVariable(variable)
 {
