@@ -10,7 +10,7 @@
 <body onload="getmovies()">
     
 
-  <pre><b><a href="./index.htm"><img src="movietime.png" id="images"></a></b>
+  <pre><b><a href="../index.htm"><img src="movietime.png" id="images"></a></b>
 </pre><p id="sum"></p>
 
 <h3 id="back"></h3>
@@ -100,9 +100,10 @@ div {
 pre {
     font-family: Arial, "Times New Roman", Times, serif;
     color:rgb(207, 207, 207);
+    font-size: 20px;
     text-align: center;
-    margin-top: 0em;
-    padding-bottom: 0px;
+    align-self: center;
+    align-content: center;
 }
 .row:after {
     display: table-cell;
@@ -227,7 +228,7 @@ if (data[i].link != '#'&& data[i].link != 'epi'){
     }
                 mainContainer.appendChild(div);
                 //console.log(i);
-                document.getElementById("back").innerHTML=  '<a href="./movies.html"><i class="fas fa-arrow-left"></i>&nbsp;Back</a>';
+                document.getElementById("back").innerHTML=  '<a href="./index.html"><i class="fas fa-arrow-left"></i>&nbsp;Back</a>';
                 }
             }
             } else {
