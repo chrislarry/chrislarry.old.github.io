@@ -11,7 +11,7 @@
     
 
   <pre><b><a href="../index.htm"><img src="movietime.png" id="images"></a></b>
-</pre><center><p id="sum"></p><p id="greed"></p></center>
+</pre><center><h2 id="sum"></h2><h2 id="greed"></h2></center>
 
 <h3 id="back"></h3>
 
@@ -145,7 +145,7 @@ function date(){
   time = ΗΗ + ':' + ΜΜ;
   today = dd + '/' + mm + '/' + yyyy;
 
-  document.getElementById("greed").innerHTML = '<em>' + day + ' ' + today + '</em>';
+  document.getElementById("greed").innerHTML = '<em>' + day + ' ' + today + ' '+ time + '</em>';
 }
 
 
@@ -175,14 +175,14 @@ function getmovies(){
 function appendData(data) {
             var mainContainer = document.getElementById("movies");
             for (var i = 0; i < data.length; i++) {
-                const sum = i;
                 var div = document.createElement("div");
                 div.innerHTML = `<div width=300 class="column" >
  <a href="?id=${data[i].id}" title="${data[i].title}... ${data[i].plot}" onclick="showmovies()">
             <img src="${data[i].icon}" height="250"></a></div>`;
            // console.log(data[i].id)
                 mainContainer.appendChild(div);
-                document.getElementById('sum').innerHTML = '<em>'+i+' ταινίες</em>' ;
+                if (id == ''){
+                document.getElementById('sum').innerHTML = '<em>'+i+' ταινίες</em>' ;}
             }
         }
 
