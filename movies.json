@@ -1,5 +1,141 @@
 [
     {
+        "id": 126,
+        "title": "Malicious",
+        "icon": "https://m.media-amazon.com/images/M/MV5BNzYzMjU1MDUzN15BMl5BanBnXkFtZTgwMDI0NjY1NjM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Ένας καθηγητής μαθηματικών, ο Άνταμ, μαζί με την έγκυο σύζυγό του Λίζα μετακομίζουν σε μια νέα κατοικία. Η αδελφή της Λίζα, η Μπέκι, τους έχει στείλει ένα δώρο για την εγκατάστασή τους: Ένα κουτί που λέγεται ότι είναι κουτί γονιμότητας. Η Λίζα το ανοίγει το κουτί και διαπιστώνει ότι είναι άδειο. Λίγο αργότερα αποβάλλει το έμβρυο που κυοφορεί. Από εκεί και πέρα, ο Άνταμ, η Λίζα και η Μπέκι έρχονται αντιμέτωποι με μία κακόβουλη (malicious) οντότητα που υποδύεται το πεθαμένο παιδί έχοντας δολοφονικές προθέσεις...",
+        "link": "#",
+        "trailer": "RTt8beZpOEo"
+    },
+    {
+        "id": 125,
+        "title": "Oculus",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMzE1NzM4MjEyNV5BMl5BanBnXkFtZTgwMjYzMjMzMTE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Μια γυναίκα προσπαθεί να απαλλάξει τον αδελφό της, ο οποίος είχε καταδικαστεί για φόνο, προσπαθώντας να αποδείξει ότι το έγκλημα διαπράχθηκε από ένα υπερφυσικό φαινόμενο.",
+        "link": "#",
+        "trailer": "PtmXVA1fM1U"
+    }, 
+    {
+        "id": 124,
+        "title": "SAGA: Curse of the Shadow",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMjE0OTcxODI2NV5BMl5BanBnXkFtZTcwMjc3NTg3OA@@._V1_UY268_CR13,0,182,268_AL_.jpg",
+        "plot": "A secret cabal, The Shadow, works to bring about the return of Goth Azul - the Undead God - in the rich world of SAGA, populated by elves, orcs, dwarves and dragons. ",
+        "link": "#",
+        "trailer": "GSYRZ-NNjIA"
+    }, 
+    {
+        "id": 123,
+        "title": "John Doe: Vigilante",
+        "icon": "https://m.media-amazon.com/images/M/MV5BOTg2NjAxNDc3NV5BMl5BanBnXkFtZTgwNzg5MDAyMTE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Ένας πολίτης, με το ψευδώνυμο Τζον Ντο,αποφασίζει να πάρει το νόμο στα χέρια του, δολοφονώντας 33 εγκληματίες τον ένα μετά τον άλλο. Κατά τη διάρκεια της δράσης του η κοινή γνώμη διχάζεται και κάποιοι τον θεωρούν ήρωα ενώ άλλοι εγκληματία.",
+        "link": "#",
+        "trailer": "c5cZQwX6KZs"
+    }, 
+    {
+        "id": 122,
+        "title": "Ouija House",
+        "icon": "https://m.media-amazon.com/images/M/MV5BNGFmZTJkMTAtNTRkNy00ZGIwLWFjODctNzQ3ZTdiYjUzZGFjXkEyXkFqcGdeQXVyNjg0MzUyNTg@._V1_UY268_CR4,0,182,268_AL_.jpg",
+        "plot": "Μια φοιτήτρια που προσπαθεί να τελειώσει την τελευταία της έρευνα σε έργο βιβλίου, ελπίζει ότι θα βοηθήσει την μητέρα της φέρνοντας φίλους σε ένα σπίτι με σκοτεινό παρελθόν. Σύντομα όμως μια κακιά οντότητα θα κάνει το σπίτι μέρος του παιχνιδιού...",
+        "link": "#",
+        "trailer": "__6YznyR054"
+    }, 
+    {
+        "id": 121,
+        "title": "Guardians of the Night",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTExMTAzMmMtYWJhZS00NDI4LTgzM2UtMGYxZjJlMjQyMmYzXkEyXkFqcGdeQXVyNjMxMzM3NDI@._V1_UY268_CR3,0,182,268_AL_.jpg",
+        "plot": "Στην σύγχρονη Μόσχα ο δεκαοχτάχρονος 'Πάσα' διασώζει μια όμορφη νεαρή γυναίκα από μια ομάδα παράξενων ισχυρών πλασμάτων, και ανακαλύπτει έναν υπόκοσμο από υπερφυσικά όντα που ζουν ανάμεσα μας...",
+        "link": "#",
+        "trailer": "_I1Q_zsGUb4"
+    }, 
+    {
+        "id": 120,
+        "title": "Purgatory",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTk5NjQwMzIzNF5BMl5BanBnXkFtZTcwNDIwMzgyMQ@@._V1_UY268_CR21,0,182,268_AL_.jpg",
+        "plot": "An outlaw band rides into a town that is actually Purgatory, between Heaven and Hell.",
+        "link": "#",
+        "trailer": "nnJ2xaRMmNk"
+    }, 
+    {
+        "id": 119,
+        "title": "Dark Circles",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMjAwODcyMTM1Ml5BMl5BanBnXkFtZTcwNTk1NjM1Nw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Όταν οι νέοι γονείς Alex και Penny αφήνουν τη πόλη και την κίνηση για ένα μέρος στην επαρχία, το άγχος και η στέρηση ύπνου που τους προκαλούν τα παιδιά τους έχουν ως αποτέλεσμα να βλέπουνε και οι δυο πράγματα στο σπίτι που μπορεί να υπάρχουν, μπορεί και όχι. Η επίμονη παρουσία μιας παράξενης γυναίκας που βλέπουν συνέχεια, τους κάνει να αναρωτιούνται αν υποφέρουν από παραισθήσεις ή αν το νέο σπίτι τους έχει μια σκοτεινή, υπερφυσική παρουσία. Ενώ ο εύθραυστος αυτοέλεγχος τους ελίσσεται μεταξύ πραγματικότητας και παραληρήματος, ο Alex και η Penny βρίσκονται σχεδόν ανήμποροι να αντιμετωπίσουν την τρομακτική αλήθεια για το τι πραγματικά συμβαίνει σε αυτό το σπίτι.",
+        "link": "#",
+        "trailer": "ZrmwI_fLZiI"
+    }, 
+    {
+        "id": 118,
+        "title": "The Boy",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTc1MjcxNzcwMV5BMl5BanBnXkFtZTgwMTE0NTE2NzE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Η Greta είναι μια νέα γυναίκα που παίρνει μια δουλειά ως νταντά σε ένα απομακρυσμένο αγγλικό χωριό μόνο που θα ανακαλύψει ότι η οικογένεια εχει ενα οκτάχρoνο παιδι-κούκλα που οι γονείς του νοιάζονται σαν να είναι ένα πραγματικό παιδί για να καλύψουν τα συναισθήματα τους απο τον πραγματικό θάνατο του παιδιού τους πριν απο 20 χρόνια.Η Greta παραβιάζει τους κανονες ανατροφής της κούκλας με αποτέλεσμα να πραγματοποιηθεί μια σειρά από ανησυχητικά γεγονότα που θα οδηγήσει την Greta να πιστέψει οτι η κούκλα ειναι όντως ζωντανή.",
+        "link": "#",
+        "trailer": "F2_w9Gjx2Zc"
+    }, 
+    {
+        "id": 117,
+        "title": "Armour of God",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMGZkZjZjOTItNDZkOS00MDY1LWE5MGUtNjMyMTJjZmM5ZTlkXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Ένας απλός και καθημερινός άνθρωπος (Τζάκι Τσαν) μπλέκεται σε μια απίστευτη περιπέτεια, όταν η κοπέλα (Ρόσμαντ Κουάνγκ) του καλύτερού του φίλου (Άλαν Ταμ) απάγεται. Προκειμένου να την εντοπίσει, ο Τζάκι Τσαν θα αναγκαστεί να εμπλακεί στην επιχείρηση εντοπισμού ενός μυστήριου και μυθικού αντικειμένου, γνωστού ως «Κεραυνός του Θεού». Η συναρπαστική του αναζήτηση θα τον οδηγήσει στα πλοκάμια μιας σκοτεινής αίρεσης στην Ευρώπη, που αποτελείται από ένα κύκλο τρομοκρατών και εμπόρων ναρκωτικών, μεταμφιεσμένων σε καλόγερους! Θα μπορέσει να τους σταματήσει και να σώσει την κοπέλα; Απίστευτες σκηνές δράσης, συγκλονιστικές μάχες πολεμικών τεχνών και απανωτές δόσεις χιούμορ από τον μετρ του είδους, Τζάκι Τσαν.",
+        "link": "#",
+        "trailer": "celKPmDdFYQ"
+    }, 
+    {
+        "id": 116,
+        "title": "The Patriot",
+        "icon": "https://m.media-amazon.com/images/M/MV5BN2YyOTQwMTMtMGVlYy00MmUzLThmMzAtMTQ5ZDk3MDQ3YWRhXkEyXkFqcGdeQXVyNjQ2MjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Ένας γιατρός αγωνίζεται ενάντια στον χρόνο να βρει μια θεραπεία για ένα θανατηφόρο ιό, που εξαπολύθηκε από μία παραστρατιωτική οργάνωση.",
+        "link": "#",
+        "trailer": "PrVeuf0x0dQ"
+    }, 
+    {
+        "id": 115,
+        "title": "Hangar 10",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTY1NTE2NjM2NV5BMl5BanBnXkFtZTgwMzA4NjkzMzE@._V1_UY268_CR1,0,182,268_AL_.jpg",
+        "plot": "33 years after the infamous Rendlesham Forest UFO incident, three metal detector enthusiasts hunting for Saxon gold in the same region, capture incredible footage of UFO's whilst filming ... ",
+        "link": "#",
+        "trailer": "b6GiMGPfDzk"
+    }, 
+    {
+        "id": 114,
+        "title": "Rust Creek",
+        "icon": "https://m.media-amazon.com/images/M/MV5BZjkyZTU5OWQtOTZiMy00NzdmLWE4ODgtNmRkZTE2MTZmYWI3XkEyXkFqcGdeQXVyODY3Nzc0OTk@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Μία φιλόδοξη και πολλά υποσχόμενη φοιτήτρια, η Sawyer που έχει ένα λαμπρό μέλλον μπροστά της. Καθώς λοιπόν, μια μέρα είναι καθ’ οδόν για να δώσει συνέντευξη για δουλειά, τα σχέδιά της παίρνουν αναπάντεχη τροπή και βρίσκεται από το πουθενά στην μέση του δάσους του Kentucky. Η Sawyer προσπαθεί να επιζήσει με ό,τι βρώσιμο μπορεί να βρει ενώ έρχεται πολύ πιο κοντά στον θάνατο αφού είναι αντιμέτωπη τόσο με τα στοιχεία της φύσης, όσο και με τα μέλη μίας άγριας συμμορίας.",
+        "link": "#",
+        "trailer": "fAmTWJ0_Ixg"
+    }, 
+    {
+        "id": 113,
+        "title": "Boarding School",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTExOTQzMDUxMTdeQTJeQWpwZ15BbWU4MDY2MDM2NzUz._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Οταν ο προβληματισμένος 12χρονος Jacob Felsen καταφθάνει στο οικοτροφείο, εισέρχεται στο χειρότερο εφιάλτη του κάθε παιδιού: Μια τρομακτική παλιά έπαυλη, που κατοικείται απο έξι απροσάρμοστους εφήβους και δυο μυστηριώδεις δασκάλους. Καθώς τα περιστατικά γίνονται ολοένα και πιο ανατριχιαστικά, ο Jacob θα πρέπει να νικήσει τους φόβους του άν θέλει να επιβιώσει.",
+        "link": "#",
+        "trailer": "TTjQ6T2GLLw"
+    }, 
+    {
+        "id": 112,
+        "title": "Traffic",
+        "icon": "https://m.media-amazon.com/images/M/MV5BNDA2YjNkMjEtZjcwNy00ZTc5LWEzNDItMjE0ODlmMDAzNDFkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY268_CR2,0,182,268_AL_.jpg",
+        "plot": "A conservative judge is appointed by the President to spearhead America's escalating war against drugs, only to discover that his teenage daughter is a crack addict. Two DEA agents protect an informant. A jailed drug baron's wife attempts to carry on the family business. ",
+        "link": "#",
+        "trailer": "Xgb1__9DvLw"
+    }, 
+    {
+        "id": 111,
+        "title": "The Expendables",
+        "icon": "https://m.media-amazon.com/images/M/MV5BNTUwODQyNjM0NF5BMl5BanBnXkFtZTcwNDMwMTU1Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "No subtitles. A CIA operative hires a team of mercenaries to eliminate a Latin dictator and a renegade CIA agent. ",
+        "link": "#",
+        "trailer": "V9dcRN2Djg0"
+    }, 
+    {
+        "id": 110,
+        "title": "Killer Elite ",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTc4MDAxMjAzNV5BMl5BanBnXkFtZTcwNTY3ODg3NQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "When his mentor is taken captive by a disgraced Arab sheik, a killer-for-hire is forced into action. His mission: kill three members of Britain's elite Special Air Service responsible for the death of his sons. ",
+        "link": "#",
+        "trailer": "FKhW1ooQ7LM"
+    }, 
+    {
         "id": 109,
         "title": "Primal Rage: The Legend of Konga ",
         "icon": "https://m.media-amazon.com/images/M/MV5BNjc5MjUyZTctNGQ1YS00ZTkyLWJmMDktZWNjNjcyNjU3MjU0XkEyXkFqcGdeQXVyNzc0MTgzMzU@._V1_UX182_CR0,0,182,268_AL_.jpg",
