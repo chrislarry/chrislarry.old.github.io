@@ -81,45 +81,45 @@ function getCookie(c_name) {
 
 
 
-  fetch("https://pomber.github.io/covid19/timeseries.json")
-.then(response => response.json())
-.then(data => {
-  data["Greece"].forEach(({ date, confirmed, recovered, deaths }) =>
-  document.getElementById('greece').innerHTML= `${date} active cases: ${confirmed} - recovered: ${recovered} - deaths: ${deaths}
-    `)})
-
-    fetch("https://pomber.github.io/covid19/timeseries.json")
-.then(response => response.json())
-.then(data => {
-  data["Italy"].forEach(({ date, confirmed, recovered, deaths }) =>
-  document.getElementById('italy').innerHTML= `${date} active cases: ${confirmed} - recovered: ${recovered} - deaths: ${deaths}
-  `);})
-
-  fetch("https://pomber.github.io/covid19/timeseries.json")
-.then(response => response.json())
-.then(data => {
-  data["China"].forEach(({ date, confirmed, recovered, deaths }) =>
-  document.getElementById('china').innerHTML= `${date} active cases: ${confirmed} - recovered: ${recovered} - deaths: ${deaths}
-  `);})
-
-  fetch("https://pomber.github.io/covid19/timeseries.json")
-.then(response => response.json())
-.then(data => {
-    data["Germany"].forEach(({ date, confirmed, recovered, deaths }) =>
-    document.getElementById('germany').innerHTML= `${date} active cases: ${confirmed} - recovered: ${recovered} - deaths: ${deaths}
-    `);})
-
-  fetch("https://pomber.github.io/covid19/timeseries.json")
-.then(response => response.json())
-.then(data => {
-      data["US"].forEach(({ date, confirmed, recovered, deaths }) =>
-      document.getElementById('usa').innerHTML= `${date} active cases: ${confirmed} - recovered: ${recovered} - deaths: ${deaths}
-      `);})
-
- fetch("https://corona.lmao.ninja/all")
-.then(response => response.json())
-.then(data => {
-      data.forEach(({ cases, deaths, recovered}) =>
-      document.getElementById('all').innerHTML= `active cases: ${cases} - recovered: ${recovered} - deaths: ${deaths}
-      `);})
+  fetch("https://corona.lmao.ninja/countries")
+  .then(response => response.json())
+  .then(data => {
+     // o arithmos tis xoras edo
+         var i =0;
+      document.getElementById('h1').innerHTML=`${data[i].country}`;   
+      document.getElementById('1').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
+  
+      var i =1;
+      document.getElementById('h2').innerHTML=`${data[i].country}`;   
+      document.getElementById('2').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
+  
+      var i =2;
+      document.getElementById('h3').innerHTML=`${data[i].country}`;   
+      document.getElementById('3').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
+     
+      var i =3;
+      document.getElementById('h4').innerHTML=`${data[i].country}`;   
+      document.getElementById('4').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
+  
+      var i =4;
+      document.getElementById('h5').innerHTML=`${data[i].country}`;   
+      document.getElementById('5').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
+  
+      var i =5;
+      document.getElementById('h6').innerHTML=`${data[i].country}`;   
+      document.getElementById('6').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
+  
+      var i =6;
+      document.getElementById('h7').innerHTML=`${data[i].country}`;   
+      document.getElementById('7').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
+  
+      var i =26;
+      document.getElementById('h8').innerHTML=`${data[i].country}`;   
+      document.getElementById('8').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
+  
+      var i =9;
+      document.getElementById('h9').innerHTML=`${data[i].country}`;   
+      document.getElementById('9').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
+  
+       })
       
