@@ -78,3 +78,48 @@ function getCookie(c_name) {
   today = dd + '/' + mm + '/' + yyyy;
 
   document.getElementById("greed").innerHTML = '<em>' + greeting + ' ' + name + ', σήμερα είναι ' + day + ' ' + today + ' και η ωρα ειναι ' + time + ', η εξωτερική σου IP είναι ' + userip + '.</em>';
+
+
+
+  fetch("https://pomber.github.io/covid19/timeseries.json")
+.then(response => response.json())
+.then(data => {
+  data["Greece"].forEach(({ date, confirmed, recovered, deaths }) =>
+  document.getElementById('greece').innerHTML= `${date} active cases: ${confirmed} - recovered: ${recovered} - deaths: ${deaths}
+    `)})
+
+    fetch("https://pomber.github.io/covid19/timeseries.json")
+.then(response => response.json())
+.then(data => {
+  data["Italy"].forEach(({ date, confirmed, recovered, deaths }) =>
+  document.getElementById('italy').innerHTML= `${date} active cases: ${confirmed} - recovered: ${recovered} - deaths: ${deaths}
+  `);})
+
+  fetch("https://pomber.github.io/covid19/timeseries.json")
+.then(response => response.json())
+.then(data => {
+  data["China"].forEach(({ date, confirmed, recovered, deaths }) =>
+  document.getElementById('china').innerHTML= `${date} active cases: ${confirmed} - recovered: ${recovered} - deaths: ${deaths}
+  `);})
+
+  fetch("https://pomber.github.io/covid19/timeseries.json")
+.then(response => response.json())
+.then(data => {
+    data["Germany"].forEach(({ date, confirmed, recovered, deaths }) =>
+    document.getElementById('germany').innerHTML= `${date} active cases: ${confirmed} - recovered: ${recovered} - deaths: ${deaths}
+    `);})
+
+  fetch("https://pomber.github.io/covid19/timeseries.json")
+.then(response => response.json())
+.then(data => {
+      data["US"].forEach(({ date, confirmed, recovered, deaths }) =>
+      document.getElementById('usa').innerHTML= `${date} active cases: ${confirmed} - recovered: ${recovered} - deaths: ${deaths}
+      `);})
+
+ fetch("https://corona.lmao.ninja/all")
+.then(response => response.json())
+.then(data => {
+      data.forEach(({ cases, deaths, recovered}) =>
+      document.getElementById('all').innerHTML= `active cases: ${cases} - recovered: ${recovered} - deaths: ${deaths}
+      `);})
+      
