@@ -4,37 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corona Virus</title>
-    <link href="style-mob.css" rel="stylesheet">
+   
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-</head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
 <body>
-  <center><br><br><br>  <h1>Covid-19</h1>
-    <img src="https://ia801503.us.archive.org/30/items/github.com-NovelCOVID-API_-_2020-03-17_10-58-26/cover.jpg"><br>
-  </center>
-  <div>
-  <canvas id="myChart"></canvas>
-</div>
-  <h2 id="h8"></h2>
-  <p id="8"></p>   
-  <h2 id="h1"></h2>
-  <p id="1"></p>    
+  <div class="container">
+<div class="italic"> <h1>Covid-19</h1></div>
+
+<div class="row">
+  <div class="col-md-4">
+  <img src="https://ia801503.us.archive.org/30/items/github.com-NovelCOVID-API_-_2020-03-17_10-58-26/cover.jpg" class="rounded">
+  </div>
+
+  <div class="col-md-8">
+    «Είναι ένας καινούριος ιός που ανήκει στην κατηγορία των κορονοϊών, οι οποίοι μαζί με τους ρινοϊούς είναι αυτοί που προκαλούν συνηθέστερα τα κοινά κρυολογήματα. Ο καινούριος κορονοϊός που προκαλεί την μικρο-επιδημία, κυρίως στη Μέση Ανατολή, έχει προκύψει τα τελευταία χρόνια και θεωρείται πολύ πιο σοβαρός από τους προυπάρχοντες», επεσήμανε ο παθολόγος και κλινικός φαρμακολόγος, Αναστάσιος Σπαντιδέας, ο οποίος μίλησε στο Sputnik.
+
+    «Ο νέος αυτός κορονοϊός, γνωστός στην επιστημονική κοινότητα από το 2013, προήλθε από μία μετάλλαξη, η οποία τον έκανε πιο άγριο, πιο δυνατό, πιο ανθεκτικό. Πιστεύουμε ότι, όσο περνούν τα χρόνια, τόσο μεγαλύτερα προβλήματα θα δημιουργεί, διότι θα εξαπλωθεί από την περιοχή της Μέσης Ανατολής, αρχικά στην Ευρώπη κι ύστερα στην Αμερική. Διεθνώς ο Παγκόσμιος Οργανισμός Υγείας έχει σημάνει συναγερμό, πρώτον, για να καταγράφονται τα καινούρια περιστατικά, και δεύτερον, για να δημιουργηθούν φραγμοί για την επέκταση του ιού».
+  </div>
+<div><H3>Παγκόσμιος είχαμε:</H3>
+<p id="death"></p></div>
+
+<canvas class="container" id="myChart"></canvas>
+
+  <h2   id="h8"></h2>
+  <p   id="8"></p>   
+  <h2  id="h1"></h2>
+  <p  id="1"></p>    
   <h2 id="h2"></h2>
-  <p id="2"></p>    
-  <h2 id="h3"></h2>
-  <p id="3"></p>    
-  <h2 id="h4"></h2>
-  <p id="4"></p>    
-  <h2 id="h5"></h2>
-  <p id="5"></p>    
-  <h2 id="h6"></h2>
-  <p id="6"></p>    
-  <h2 id="h7"></h2>
-  <p id="7"></p>    
-  <h2 id="h9"></h2>
-  <p id="9"></p>   
-  <p>
-    <A href="https://www.worldometers.info/coronavirus/?fbclid=IwAR0sMISpv7_UivI0BorGatG_CsRLlJ4jnoelzH9ANw2GLol4s2klgZjUuck">More</A>
+  <p   id="2"></p>    
+  <h2  id="h3"></h2>
+  <p  id="3"></p>    
+  <h2  id="h4"></h2>
+  <p   id="4"></p>    
+  <h2  id="h5"></h2>
+  <p   id="5"></p>    
+  <h2  id="h6"></h2>
+  <p  id="6"></p>    
+  <h2  id="h7"></h2>
+  <p  id="7"></p>    
+  <h2  id="h9"></h2>
+  <p   id="9"></p>   
+  <p  >
+    <A href="https://www.worldometers.info/coronavirus/?fbclid=IwAR0sMISpv7_UivI0BorGatG_CsRLlJ4jnoelzH9ANw2GLol4s2klgZjUuck" class="btn btn-primary">More</A>
   </p><br><br><br><br>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 <script>
 
@@ -115,6 +132,14 @@ var myChart = new Chart(ctx, {
 
 
 })
+
+fetch("https://corona.lmao.ninja/all")
+.then(response => response.json())
+.then(data => {
+  document.getElementById('death').innerHTML=`<br>Kρούσματα: ${data.cases}<br>Nεκρούς: ${data.deaths} <br>Ανάρρωσαν: ${data.recovered}`;
+
+});
+
 /*
 API for Current cases and more stuff about COVID-19 or the Novel Coronavirus Strain
 
