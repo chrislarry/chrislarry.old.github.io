@@ -22,6 +22,7 @@
 
     «Ο νέος αυτός κορονοϊός, γνωστός στην επιστημονική κοινότητα από το 2013, προήλθε από μία μετάλλαξη, η οποία τον έκανε πιο άγριο, πιο δυνατό, πιο ανθεκτικό. Πιστεύουμε ότι, όσο περνούν τα χρόνια, τόσο μεγαλύτερα προβλήματα θα δημιουργεί, διότι θα εξαπλωθεί από την περιοχή της Μέσης Ανατολής, αρχικά στην Ευρώπη κι ύστερα στην Αμερική. Διεθνώς ο Παγκόσμιος Οργανισμός Υγείας έχει σημάνει συναγερμό, πρώτον, για να καταγράφονται τα καινούρια περιστατικά, και δεύτερον, για να δημιουργηθούν φραγμοί για την επέκταση του ιού».
   </div>
+  <br><Br>
 <div><H3>Παγκόσμιος είχαμε:</H3>
 <p id="death"></p></div>
 
@@ -97,7 +98,7 @@
     document.getElementById('h7').innerHTML=`${data[i].country}`;   
     document.getElementById('7').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
 
-    var i =27;
+    var i =28;
     document.getElementById('h8').innerHTML=`${data[i].country}`;   
     document.getElementById('8').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
 
@@ -111,9 +112,9 @@
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: [data[0].country, data[1].country, data[2].country, data[3].country, data[4].country, data[5].country, data[6].country, data[7].country, data[8].country, data[9].country, data[10].country, data[11].country, data[27].country   ],        datasets: [{
+        labels: [data[0].country, data[1].country, data[2].country, data[3].country, data[4].country, data[5].country, data[6].country, data[7].country, data[8].country, data[9].country, data[10].country, data[11].country, data[28].country   ],        datasets: [{
             label: 'Deaths from COVID-19',
-            data: [data[0].deaths, data[1].deaths, data[2].deaths, data[3].deaths, data[4].deaths, data[5].deaths, data[6].deaths, data[7].deaths, data[8].deaths, data[9].deaths, data[10].deaths, data[11].deaths, data[27].deaths ],
+            data: [data[0].deaths, data[1].deaths, data[2].deaths, data[3].deaths, data[4].deaths, data[5].deaths, data[6].deaths, data[7].deaths, data[8].deaths, data[9].deaths, data[10].deaths, data[11].deaths, data[28].deaths ],
             backgroundColor: [         ],
             borderColor: [       ],
             borderWidth: 1
