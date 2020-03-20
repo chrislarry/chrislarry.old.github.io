@@ -10,7 +10,12 @@
   </head>
 <body>
   <div class="container">
-<div class="italic"> <h1>Covid-19</h1></div>
+<div class="italic"> <h1>Covid-19</h1>
+<div>  <p>
+  Αυτόματη ενημέρωση συνέχεια από https://corona.lmao.ninja και https://public.coronastats.co<br>
+  Created by Chris Larry<br>
+ </p></div>
+</div>
 
 <div class="row">
   <div class="col-md-4">
@@ -18,18 +23,20 @@
   </div>
 
   <div class="col-md-7">
+    <p></p>
+    <H2>Παγκόσμιος είχαμε:</H2>
     <p id="death"></p>
   <p id="newd"></p>
+
  </div>
  
-<div class="container"> <br><Br><H2>Παγκόσμιος είχαμε:</H2>
+<div class="container"> <br><Br>
 
 </div>
 
 <canvas class="container" id="myChart"></canvas>
 
-  <h2   id="h8"></h2>
-  <p   id="8"></p>   
+
   <h2  id="h1"></h2>
   <p  id="1"></p>    
   <h2 id="h2"></h2>
@@ -46,6 +53,8 @@
   <p  id="7"></p>    
   <h2  id="h9"></h2>
   <p   id="9"></p>   
+  <h2   id="h8"></h2>
+  <p   id="8"></p>   
   <p  >
     <A href="https://www.worldometers.info/coronavirus/?fbclid=IwAR0sMISpv7_UivI0BorGatG_CsRLlJ4jnoelzH9ANw2GLol4s2klgZjUuck" class="btn btn-primary">More</A>
   </p><br><br><br><br>
@@ -148,6 +157,7 @@ fetch("https://public.coronastats.co/mini.json")
   Σε κρίσιμη κατάσταση ${data.data.active.critical}.<br>
   Συνολικά τα κρούσματα είναι ${data.data.active.total}.<br>
   Συνολικά τα νεα κρούσματα είναι ${data.data.new.cases}.<br>
+  Συνολικά Ανάρρωσαν ${data.data.closed.recoveries}
 
    
    `;
