@@ -80,7 +80,7 @@
     document.getElementById('h7').innerHTML=`${data[i].country}`;   
     document.getElementById('7').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
 
-    var i =26;
+    var i =27;
     document.getElementById('h8').innerHTML=`${data[i].country}`;   
     document.getElementById('8').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
 
@@ -94,9 +94,9 @@
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['China', 'Italy', 'Iran', 'Spain', 'Greece', 'US', 'France', 'UK', 'Japan', 'S. Korea'],        datasets: [{
+        labels: [data[0].country, data[1].country, data[2].country, data[3].country, data[4].country, data[5].country, data[6].country, data[7].country, data[8].country, data[9].country, data[10].country, data[11].country, data[27].country   ],        datasets: [{
             label: 'Deaths from COVID-19',
-            data: [data[0].deaths, data[1].deaths, data[2].deaths, data[3].deaths, data[26].deaths, data[5].deaths, data[6].deaths, data[9].deaths, data[16].deaths, data[7].deaths ],
+            data: [data[0].deaths, data[1].deaths, data[2].deaths, data[3].deaths, data[4].deaths, data[5].deaths, data[6].deaths, data[7].deaths, data[8].deaths, data[9].deaths, data[10].deaths, data[11].deaths, data[27].deaths ],
             backgroundColor: [         ],
             borderColor: [       ],
             borderWidth: 1
