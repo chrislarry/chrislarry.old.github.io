@@ -44,25 +44,8 @@
 
 
 <div class="col-md-12"><h1 class="italic">Αναλυτικά για την κάθε χώρα</h1></div>
+<div id="country"></div>
 
-  <h2  id="h1"></h2>
-  <p  id="1"></p>    
-  <h2 id="h2"></h2>
-  <p   id="2"></p>    
-  <h2  id="h3"></h2>
-  <p  id="3"></p>    
-  <h2  id="h4"></h2>
-  <p   id="4"></p>    
-  <h2  id="h5"></h2>
-  <p   id="5"></p>    
-  <h2  id="h6"></h2>
-  <p  id="6"></p>    
-  <h2  id="h7"></h2>
-  <p  id="7"></p>    
-  <h2  id="h9"></h2>
-  <p   id="9"></p>   
-  <h2   id="h8"></h2>
-  <p   id="8"></p>   
   <p  >
     <A href="https://www.worldometers.info/coronavirus/?fbclid=IwAR0sMISpv7_UivI0BorGatG_CsRLlJ4jnoelzH9ANw2GLol4s2klgZjUuck" class="btn btn-primary">More</A>
   </p><br><br><br><br>
@@ -82,48 +65,34 @@
       `)})
 
 */
+fetch("https://corona.lmao.ninja/countries")
+.then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
 
-    fetch("https://corona.lmao.ninja/countries")
-.then(response => response.json())
-.then(data => {
-   // o arithmos tis xoras edo
-   var i =0;
-    document.getElementById('h1').innerHTML=`${data[i].country}`;   
-    document.getElementById('1').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
-
-    var i =1;
-    document.getElementById('h2').innerHTML=`${data[i].country}`;   
-    document.getElementById('2').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
-
-    var i =2;
-    document.getElementById('h3').innerHTML=`${data[i].country}`;   
-    document.getElementById('3').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
+function appendData(data) {
+            var mainContainer = document.getElementById("country");
+            for (var i = 0; i < data.length; i++) {
+             var div = document.createElement("div");
+             div.innerHTML = `<h1>${data[i].country}</h1><p>Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}</p>`;
    
-    var i =3;
-    document.getElementById('h4').innerHTML=`${data[i].country}`;   
-    document.getElementById('4').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
+                mainContainer.appendChild(div);
+ 
+            }
+        }
 
-    var i =4;
-    document.getElementById('h5').innerHTML=`${data[i].country}`;   
-    document.getElementById('5').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
-
-    var i =5;
-    document.getElementById('h6').innerHTML=`${data[i].country}`;   
-    document.getElementById('6').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
-
-    var i =6;
-    document.getElementById('h7').innerHTML=`${data[i].country}`;   
-    document.getElementById('7').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
-
-    var i =29;
-    document.getElementById('h8').innerHTML=`${data[i].country}`;   
-    document.getElementById('8').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
-
-    var i =9;
-    document.getElementById('h9').innerHTML=`${data[i].country}`;   
-    document.getElementById('9').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
-
-     
+fetch("https://corona.lmao.ninja/countries")
+.then(function (response) {
+                return response.json();
+            })
+            .then(data => {
+          
 
 var ctx = document.getElementById('countries').getContext('2d');
 var myChart = new Chart(ctx, {
@@ -147,9 +116,9 @@ var myChart = new Chart(ctx, {
         }
     }
 });
-
-
 })
+
+
 
 var ctx = document.getElementById('age').getContext('2d');
 var myChart = new Chart(ctx, {
