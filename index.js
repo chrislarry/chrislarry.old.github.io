@@ -100,3 +100,28 @@ function getCookie(c_name) {
       
        })
       
+
+       fetch("http://newsapi.org/v2/top-headlines?country=gr&apiKey=e64cb01f6ddd440286928859e7ff3aab")
+.then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+
+function appendData(data) {
+            var mainContainer = document.getElementById("newsapi");
+            for (var i = 0; i < data.articles.length; i++) {
+                var div = document.createElement("div");
+                if (data.articles[i].urlToImage != null){
+                div.innerHTML = '<h1>'+data.articles[i].title+' </h1><center><img src="'+data.articles[i].urlToImage+'" width="300"></center><p>'+data.articles[i].description+'<br> <a href="'+data.articles[i].url+'">περισσότερα εδώ</a></p>';
+                } else {
+                div.innerHTML = '<h1>'+data.articles[i].title+' </h1><p>'+data.articles[i].description+'<br> <a href="'+data.articles[i].url+'">περισσότερα εδώ</a></p>';
+                }
+                mainContainer.appendChild(div);
+       //         console.log(data.articles);
+            }
+        }
