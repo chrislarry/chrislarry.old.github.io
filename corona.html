@@ -39,6 +39,8 @@
 <canvas class="container" id="age"></canvas>
 <canvas class="container" id="viruses"></canvas>
 <canvas class="container" id="bydate"></canvas>
+<canvas class="container" id="sex"></canvas>
+<canvas class="container" id="why"></canvas>
 <div class="col-md-12"><h1 class="italic">Αναλυτικά για την κάθε χώρα</h1></div>
 
   <h2  id="h1"></h2>
@@ -83,7 +85,7 @@
 .then(response => response.json())
 .then(data => {
    // o arithmos tis xoras edo
-       var i =0;
+   var i =0;
     document.getElementById('h1').innerHTML=`${data[i].country}`;   
     document.getElementById('1').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
 
@@ -218,7 +220,53 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+var ctx = document.getElementById('sex').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: [ "Άντρες" , "Γυναίκες" ],      
+          datasets: [{
+            label: 'Διάγραμμα θανάτων μέχρι τώρα',
+            data: [ 4.7, 2.8 ],
+            backgroundColor: [  "blue", "red"     ],
+            borderColor: [   "blue","red"     ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
 
+var ctx = document.getElementById('why').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: [ "Cardiovascular disease" , "Diabetes", "Chronic respiratory disease", "Hypertension", "Cancer", "no pre-existing conditions " ],      
+          datasets: [{
+            label: 'Διάγραμμα θανάτων μέχρι τώρα',
+            data: [ 13.2, 9.2, 8.0, 8.4 , 7.6 , 0.9],
+            backgroundColor: [  "blue", "red", "green" ,"yellow", "purple"  ,"grey"  ],
+            borderColor: [   "blue","red" , "green" ,"yellow", "purple" ,"grey"     ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
 
 fetch("https://corona.lmao.ninja/all")
 .then(response => response.json())
