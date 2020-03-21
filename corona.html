@@ -41,6 +41,8 @@
 <canvas class="container" id="bydate"></canvas>
 <canvas class="container" id="sex"></canvas>
 <canvas class="container" id="why"></canvas>
+
+
 <div class="col-md-12"><h1 class="italic">Αναλυτικά για την κάθε χώρα</h1></div>
 
   <h2  id="h1"></h2>
@@ -113,7 +115,7 @@
     document.getElementById('h7').innerHTML=`${data[i].country}`;   
     document.getElementById('7').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
 
-    var i =28;
+    var i =29;
     document.getElementById('h8').innerHTML=`${data[i].country}`;   
     document.getElementById('8').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
 
@@ -127,9 +129,9 @@ var ctx = document.getElementById('countries').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: [data[0].country, data[1].country, data[2].country, data[3].country, data[4].country, data[5].country, data[6].country, data[7].country, data[8].country, data[9].country, data[10].country, data[11].country, data[28].country   ],        datasets: [{
+        labels: [data[0].country, data[1].country, data[2].country, data[3].country, data[4].country, data[5].country, data[6].country, data[7].country, data[8].country, data[9].country, data[10].country, data[11].country, data[29].country   ],        datasets: [{
             label: 'Θανατοι απο τον κορονοϊό.',
-            data: [data[0].deaths, data[1].deaths, data[2].deaths, data[3].deaths, data[4].deaths, data[5].deaths, data[6].deaths, data[7].deaths, data[8].deaths, data[9].deaths, data[10].deaths, data[11].deaths, data[28].deaths ],
+            data: [data[0].deaths, data[1].deaths, data[2].deaths, data[3].deaths, data[4].deaths, data[5].deaths, data[6].deaths, data[7].deaths, data[8].deaths, data[9].deaths, data[10].deaths, data[11].deaths, data[29].deaths ],
             backgroundColor: [         ],
             borderColor: [       ],
             borderWidth: 1
@@ -248,7 +250,7 @@ var ctx = document.getElementById('why').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'pie',
     data: {
-        labels: [ "Cardiovascular disease" , "Diabetes", "Chronic respiratory disease", "Hypertension", "Cancer", "no pre-existing conditions " ],      
+        labels: [ "Καρδιακά προβλήματα" , "Διαβήτη", "Χρόνια αναπνευστικά προβλήματα ", "Υπέρταση", "Καρκίνο", "Κάτι που δεν προϋπάρχει" ],      
           datasets: [{
             label: 'Διάγραμμα θανάτων μέχρι τώρα',
             data: [ 13.2, 9.2, 8.0, 8.4 , 7.6 , 0.9],
@@ -286,8 +288,11 @@ fetch("https://public.coronastats.co/mini.json")
 
    
    `;
-console.log(data);
+//console.log(data);
 });
+
+
+// document.getElementById('news').innerHTML = '<h3>'+data.articles[i].title+' </h3><p>'+data.articles[i].description+'</p>';
 
 /*
 API for Current cases and more stuff about COVID-19 or the Novel Coronavirus Strain
