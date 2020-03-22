@@ -145,7 +145,7 @@ var myChart = new Chart(ctx, {
 
 var ctx = document.getElementById('viruses').getContext('2d');
 var myChart = new Chart(ctx, {
-    type: 'pie',
+    type: 'bar',
     data: {
         labels: [ "Swine Flu", "MERS" , "SARS", "seasonal flu", "Coronavirus" ],      
           datasets: [{
@@ -160,7 +160,7 @@ var myChart = new Chart(ctx, {
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero: true
+                    beginAtZero: false
                 }
             }]
         }
@@ -217,7 +217,7 @@ var myChart = new Chart(ctx, {
 
 var ctx = document.getElementById('why').getContext('2d');
 var myChart = new Chart(ctx, {
-    type: 'pie',
+    type: 'bar',
     data: {
         labels: [ "Καρδιακά προβλήματα" , "Διαβήτη", "Χρόνια αναπνευστικά προβλήματα ", "Υπέρταση", "Καρκίνο", "Κάτι που δεν προϋπάρχει" ],      
           datasets: [{
