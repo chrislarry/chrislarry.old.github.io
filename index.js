@@ -113,7 +113,7 @@ function getCookie(c_name) {
             });
 
 function appendData(data) {
-            var mainContainer = document.getElementById("newsapi");
+            var mainContainer = document.getElementById("newsapigr");
             for (var i = 0; i < data.articles.length; i++) {
                 var div = document.createElement("div");
                 if (data.articles[i].urlToImage != null){
@@ -125,3 +125,39 @@ function appendData(data) {
        //         console.log(data.articles);
             }
         }
+        fetch("http://newsapi.org/v2/top-headlines?country=us&apiKey=e64cb01f6ddd440286928859e7ff3aab")
+        .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (data) {
+                        appendData(data);
+                    })
+                    .catch(function (err) {
+                        console.log('error: ' + err);
+                    });
+        
+        function appendData(data) {
+                    var mainContainer = document.getElementById("newsapi");
+                    for (var i = 0; i < data.articles.length; i++) {
+                        var div = document.createElement("div");
+                        if (data.articles[i].urlToImage != null){
+                        div.innerHTML = '<h1>'+data.articles[i].title+' </h1><center><img src="'+data.articles[i].urlToImage+'" width="300"></center><p>'+data.articles[i].description+'<br> <a href="'+data.articles[i].url+'">περισσότερα εδώ</a></p>';
+                        } else {
+                        div.innerHTML = '<h1>'+data.articles[i].title+' </h1><p>'+data.articles[i].description+'<br> <a href="'+data.articles[i].url+'">περισσότερα εδώ</a></p>';
+                        }
+                        mainContainer.appendChild(div);
+               //         console.log(data.articles);
+                    }
+                }
+
+
+                fetch("https://api.nasa.gov/planetary/apod?api_key=aUSWiBgYi0yuMOcjyilylvSpjJ8ar2hD0AyTyRhh")
+                .then(response => response.json())
+                .then(data => {
+                  document.getElementById('nasa').innerHTML=`
+  <h1> ${data.title} <em>${data.date}</em></h1>
+  <p> ${data.explanation}
+  <img src="${data.hdurl}" width="840">
+  `;
+                
+                });
