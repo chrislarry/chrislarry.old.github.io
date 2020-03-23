@@ -137,3 +137,10 @@ function appendData(data) {
   `;
                 
                 });
+
+                fetch("https://hacker-news.firebaseio.com/v0/item/121003.json?print=pretty")
+                .then(response => response.json())
+                .then(data => {
+                  document.getElementById('hacking').innerHTML=`
+  <h1> ${data.title}</h1>
+  <p> ${data.text}  `;          });              
