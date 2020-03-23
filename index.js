@@ -85,7 +85,7 @@ function getCookie(c_name) {
   .then(response => response.json())
   .then(data => {
      // o arithmos tis xoras edo
-         var i =0;
+      var i =0;
       document.getElementById('h1').innerHTML=`${data[i].country}`;   
       document.getElementById('1').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
   
@@ -93,7 +93,7 @@ function getCookie(c_name) {
       document.getElementById('h2').innerHTML=`${data[i].country}`;   
       document.getElementById('2').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
   
-      var i =26;
+      var i =3;
       document.getElementById('h3').innerHTML=`${data[i].country}`;   
       document.getElementById('3').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
      
@@ -125,31 +125,7 @@ function appendData(data) {
        //         console.log(data.articles);
             }
         }
-        fetch("http://newsapi.org/v2/top-headlines?country=us&apiKey=e64cb01f6ddd440286928859e7ff3aab")
-        .then(function (response) {
-                        return response.json();
-                    })
-                    .then(function (data) {
-                        appendData(data);
-                    })
-                    .catch(function (err) {
-                        console.log('error: ' + err);
-                    });
-        
-        function appendData(data) {
-                    var mainContainer = document.getElementById("newsapi");
-                    for (var i = 0; i < data.articles.length; i++) {
-                        var div = document.createElement("div");
-                        if (data.articles[i].urlToImage != null){
-                        div.innerHTML = '<h1>'+data.articles[i].title+' </h1><center><img src="'+data.articles[i].urlToImage+'" width="300"></center><p>'+data.articles[i].description+'<br> <a href="'+data.articles[i].url+'">περισσότερα εδώ</a></p>';
-                        } else {
-                        div.innerHTML = '<h1>'+data.articles[i].title+' </h1><p>'+data.articles[i].description+'<br> <a href="'+data.articles[i].url+'">περισσότερα εδώ</a></p>';
-                        }
-                        mainContainer.appendChild(div);
-               //         console.log(data.articles);
-                    }
-                }
-
+    
 
                 fetch("https://api.nasa.gov/planetary/apod?api_key=aUSWiBgYi0yuMOcjyilylvSpjJ8ar2hD0AyTyRhh")
                 .then(response => response.json())
@@ -157,7 +133,7 @@ function appendData(data) {
                   document.getElementById('nasa').innerHTML=`
   <h1> ${data.title} <em>${data.date}</em></h1>
   <p> ${data.explanation}
-  <img src="${data.hdurl}" width="840">
+  <img src="${data.hdurl}" width="840"></p>
   `;
                 
                 });
