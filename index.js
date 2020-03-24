@@ -101,7 +101,7 @@ function getCookie(c_name) {
        })
       
 
-       fetch("http://newsapi.org/v2/top-headlines?country=gr&apiKey=e64cb01f6ddd440286928859e7ff3aab")
+fetch("http://newsapi.org/v2/top-headlines?country=gr&apiKey=e64cb01f6ddd440286928859e7ff3aab")
 .then(function (response) {
                 return response.json();
             })
@@ -138,9 +138,4 @@ function appendData(data) {
                 
                 });
 
-                fetch("https://hacker-news.firebaseio.com/v0/item/121003.json?print=pretty")
-                .then(response => response.json())
-                .then(data => {
-                  document.getElementById('hacking').innerHTML=`
-  <h1> ${data.title}</h1>
-  <p> ${data.text}  `;          });              
+      
