@@ -140,10 +140,12 @@ padding-right: 10px;
   word-spacing: 20px;
   padding: 3px 3px;
   background-color: #999;
+  background-image: url("menu.png");
   width: 100%;
   color: black;
   border-top: 1px solid black;
  text-align: center;
+ font-size: 12px;
 }
 .iconify {
 	color: black;
