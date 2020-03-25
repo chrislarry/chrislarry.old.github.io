@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Greek News</title>
 </head>
 <body>
     <div id="news"></div>
@@ -43,6 +43,9 @@ html{
 
 
  <script>
+//News api
+//http://newsapi.org/v2/top-headlines?country=gr&apiKey=e64cb01f6ddd440286928859e7ff3aab
+
 function getQueryVariable(variable)
 {
        var query = window.location.search.substring(1);
@@ -59,10 +62,15 @@ if (id !=''){
     fetch("news.json")
     .then(response => response.json())
     .then(data => {
+        if(data.articles[i].urlToImage == null){
+                 img="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fmaestroselectronics.com%2Fwp-content%2Fuploads%2F2017%2F12%2FNo_Image_Available.jpg";
+             }else{
+                 img=data.articles[i].urlToImage;
+             }
     document.getElementById('show').innerHTML=`
   <h1> ${data.articles[i].title} </h1>
   <p> 
-  <img src="${data.articles[i].urlToImage}" width="100%"><br>
+  <img src="${img}" width="100%"><br>
   ${data.articles[i].description}<br>
   <em>Εκδόθηκε ${data.articles[i].publishedAt} από ${data.articles[i].source.name}</em><br>
   <a href="${data.articles[i].url}">Περισσότερα</a> 
