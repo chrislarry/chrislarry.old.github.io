@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="news"></div>
+    <div id="show"></div>
+    <div class="row" >
+
+</div>
+
+
+<style>
+h1{
+    font-size: 15px;
+    text-align: center;
+    align-self: justify;
+    text-align: inherit;
+}
+.col{
+    align-items: center;
+    text-align: bottom;
+}
+.row{
+    border-style: solid;
+    border: 1px;
+    border-color: black;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+.container{
+    padding: 0px 0px 0px 0px;
+
+}
+
+</style>    
+
+
+ <script>
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+var id = getQueryVariable("id");
+if (id !=''){
+    let i = id;
+    fetch("news.json")
+    .then(response => response.json())
+    .then(data => {
+    document.getElementById('show').innerHTML=`
+  <h1> ${data.articles[i].title} </h1>
+  <p> 
+  <img src="${data.articles[i].urlToImage}" width="100%"><br>
+  ${data.articles[i].description}<br>
+  <em>Εκδόθηκε ${data.articles[i].publishedAt} από ${data.articles[i].source.name}</em><br>
+  <a href="${data.articles[i].url}">Περισσότερα</a> 
+  </p>
+  `;
+});
+
+
+console.log(id);
+
+
+} else {
+fetch("news.json")
+.then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+
+function appendData(data) {
+            var mainContainer = document.getElementById("news");
+            for (var i = 0; i < data.articles.length; i++) {
+             var div = document.createElement("div");
+             if(data.articles[i].urlToImage == null){
+                 img="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fmaestroselectronics.com%2Fwp-content%2Fuploads%2F2017%2F12%2FNo_Image_Available.jpg";
+             }else{
+                 img=data.articles[i].urlToImage;
+             }
+             div.innerHTML = `
+             
+             <div class="row" >    
+    <div class="col-md-12">
+    </div>
+    <div class="col">
+<a href="?id=${i}"><img src="${img}" width="100%"></a>
+    </div>
+    <div class="col"><h1>${data.articles[i].title}</h1>  </div>
+
+</div>
+            `;
+   
+                mainContainer.appendChild(div);
+ 
+            }
+        }
+    }
+ </script>   
+</body>
+</html>
