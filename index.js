@@ -169,5 +169,5 @@ function appendData(data) {
               });
 
               function fullscreen() {
-                window.open("news/news.html", "_blank", "toolbar=no,addressbar=no,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=800");
+                window.open("news/livenews.html", "_blank", "toolbar=no,addressbar=no,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=800");
               }    
