@@ -114,13 +114,17 @@ fetch("http://newsapi.org/v2/top-headlines?country=gr&apiKey=e64cb01f6ddd4402869
 
 function appendData(data) {
             var mainContainer = document.getElementById("newsapigr");
+            var topContainer = document.getElementById("apigr")
             for (var i = 0; i < data.articles.length; i++) {
                 var div = document.createElement("div");
+                var divv = document.createElement("em");
                 if (data.articles[i].urlToImage != null){
                 div.innerHTML = '<h1>'+data.articles[i].title+' </h1><center><img src="'+data.articles[i].urlToImage+'" width="300"></center><p>'+data.articles[i].description+'<br> <a href="'+data.articles[i].url+'">περισσότερα εδώ</a></p>';
                 } else {
                 div.innerHTML = '<h1>'+data.articles[i].title+' </h1><p>'+data.articles[i].description+'<br> <a href="'+data.articles[i].url+'">περισσότερα εδώ</a></p>';
                 }
+               divv.innerHTML= data.articles[i].title;
+                topContainer.appendChild(divv);
                 mainContainer.appendChild(div);
        //         console.log(data.articles);
             }
@@ -133,9 +137,37 @@ function appendData(data) {
                   document.getElementById('nasa').innerHTML=`
   <h1> ${data.title} <em>${data.date}</em></h1>
   <p> ${data.explanation}
-  <img src="${data.hdurl}" width="840"></p>
+  <img src="${data.hdurl}" width="100%"></p>
   `;
                 
                 });
 
-      
+                $(function() {
+
+                  var marquee = $("#marquee"); 
+                  marquee.css({"overflow": "hidden", "width": "100%"});
+              
+                  // wrap "My Text" with a span (old versions of IE don't like divs inline-block)
+                  marquee.wrapInner("<span>");
+                  marquee.find("span").css({ "width": "50%", "display": "inline-block", "text-align":"center" }); 
+                  marquee.append(marquee.find("span").clone()); // now there are two spans with "My Text"
+              
+                  // create an inner div twice as wide as the view port for animating the scroll
+                  marquee.wrapInner("<div>");
+                  marquee.find("div").css("width", "200%");
+              
+                  // create a function which animates the div
+                  // $.animate takes a callback for when the animation completes
+                  var reset = function() {
+                      $(this).css("margin-left", "0%");
+                      $(this).animate({ "margin-left": "-100%" }, 11000, 'linear', reset);
+                  };
+              
+                  // kick it off
+                  reset.call(marquee.find("div"));
+              
+              });
+
+              function fullscreen() {
+                window.open("news/news.html", "_blank", "toolbar=no,addressbar=no,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=800");
+              }    
