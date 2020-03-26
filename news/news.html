@@ -5,8 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greek News</title>
+    <script src="https://kit.fontawesome.com/b5a9c45e36.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="center" style="text-align:center;"><h3>
+      <a href="?page=world"><i class="fas fa-globe-europe"></i></a>
+      &nbsp;&nbsp;&nbsp;<a href="?page=tech"><i class="fas fa-microchip"></i></a>
+      &nbsp;&nbsp;&nbsp;<a href="?page=movies"><i class="fas fa-film"></i></a>
+      &nbsp;&nbsp;&nbsp;<a href="?page=star"><i class="far fa-star"></i></a>
+      &nbsp;&nbsp;&nbsp;<a href="?page=music"><i class="fas fa-music"></i></a>
+      &nbsp;&nbsp;&nbsp;<a href="?page=space"><i class="fas fa-meteor"></i></a>
+      &nbsp;&nbsp;&nbsp;<a href="?"><i class="far fa-handshake"></i></a>
+      <div id="tfheader">
+        <form id="tfnewsearch" method="get" action="news.html">
+            <input type="text" id="input" name="q" size="8" maxlength="20">
+            <input type="submit" value="search" class="tfbutton">
+        </form>
+    <div class="tfclear"></div>
+    </div>
+    </h3></div>
     <div id="news"></div>
     <div id="show"></div>
     <div class="row" >
@@ -16,7 +33,13 @@
 
 <style>
 h1{
-    font-size: 15px;
+    font-size: 12px;
+    text-align: center;
+    align-self: justify;
+    text-align: inherit;
+}
+h3{
+    font-size: 25px;
     text-align: center;
     align-self: justify;
     text-align: inherit;
@@ -38,11 +61,79 @@ html{
     padding: 0px 0px 0px 0px;
 
 }
-
+a:link { color: rgb(40, 40, 40); }
+ a:visited { color: rgb(40, 40, 40); }
+ a:hover { color: rgb(40, 40, 40); }
+ a:active { color: rgb(40, 40, 40); }
+.col-8 {
+    border-top: 1px;
+    border-color: black;
+    padding-left: 0em;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
 </style>    
 
 
  <script>
+     /*
+ var a = document.getElementById('tfnewsearch');
+    a.addEventListener('submit',function(e) {
+    e.preventDefault();
+    var b = document.getElementById('tftextinput').value;
+    window.location.href = 'http://mywebsite.com/'+b;
+
+    });*/
+
+var q = getQueryVariable("q");
+console.log(q);
+var page = getQueryVariable("page");
+if (page =='world'){ 
+var url = 'http://newsapi.org/v2/everything?' +
+          'q=world&' +
+          'from=2020-03-01&' +
+          'sortBy=popularity&' +
+          'apiKey=e64cb01f6ddd440286928859e7ff3aab';
+} else if(page =='tech') {
+    var url = 'http://newsapi.org/v2/everything?' +
+          'q=tech&' +
+          'from=2020-03-01&' +
+          'sortBy=popularity&' +
+          'apiKey=e64cb01f6ddd440286928859e7ff3aab';
+        } else if(q != null) {
+    var url = 'http://newsapi.org/v2/everything?' +
+          'q='+q+'&' +
+          'from=2020-03-01&' +
+          'sortBy=popularity&' +
+          'apiKey=e64cb01f6ddd440286928859e7ff3aab';
+        } else if(page =='space') {
+    var url = 'http://newsapi.org/v2/everything?' +
+          'q=universe&' +
+          'from=2020-03-01&' +
+          'sortBy=popularity&' +
+          'apiKey=e64cb01f6ddd440286928859e7ff3aab';          
+        } else if(page =='movies') {
+    var url = 'http://newsapi.org/v2/everything?' +
+          'q=movies&' +
+          'from=2020-03-01&' +
+          'sortBy=popularity&' +
+          'apiKey=e64cb01f6ddd440286928859e7ff3aab';
+        } else if(page =='star') {
+    var url = 'http://newsapi.org/v2/everything?' +
+          'q=stars&' +
+          'from=2020-03-01&' +
+          'sortBy=popularity&' +
+          'apiKey=e64cb01f6ddd440286928859e7ff3aab';
+        } else if(page =='music') {
+    var url = 'http://newsapi.org/v2/everything?' +
+          'q=music&' +
+          'from=2020-03-01&' +
+          'sortBy=popularity&' +
+          'apiKey=e64cb01f6ddd440286928859e7ff3aab';
+        } else {
+    var url = 'http://newsapi.org/v2/top-headlines?country=gr&apiKey=e64cb01f6ddd440286928859e7ff3aab';
+}
+var req = new Request(url);
 
 //News api
 //http://newsapi.org/v2/top-headlines?country=gr&apiKey=e64cb01f6ddd440286928859e7ff3aab
@@ -60,7 +151,7 @@ function getQueryVariable(variable)
 var id = getQueryVariable("id");
 if (id !=''){
     let i = id;
-    fetch("news.json")
+    fetch(req)
     .then(response => response.json())
     .then(data => {
         if(data.articles[i].urlToImage == null){
@@ -69,9 +160,10 @@ if (id !=''){
                  img=data.articles[i].urlToImage;
              }
     document.getElementById('show').innerHTML=`
+  
+  <img src="${img}" width="100%"><br>
   <h1> ${data.articles[i].title} </h1>
   <p> 
-  <img src="${img}" width="100%"><br>
   ${data.articles[i].description}<br>
   <em>Εκδόθηκε ${data.articles[i].publishedAt} από ${data.articles[i].source.name}</em><br>
   <a href="${data.articles[i].url}">Περισσότερα</a> 
@@ -84,7 +176,7 @@ console.log(id);
 
 
 } else {
-fetch("news.json")
+fetch(req)
 .then(function (response) {
                 return response.json();
             })
@@ -106,15 +198,10 @@ function appendData(data) {
              }
              div.innerHTML = `
              
-             <div class="row" >    
-    <div class="col-md-12">
-    </div>
-    <div class="col">
-<a href="?id=${i}"><img src="${img}" width="100%"></a>
-    </div>
-    <div class="col"><h1>${data.articles[i].title}</h1>  </div>
-
-</div>
+             <div class="row">    
+    <div class="col-4"><a href="?page=${page}&id=${i}"><img src="${img}" width="100%"></a>  </div>
+    <div class="col-8"><a href="?page=${page}&id=${i}"><h1>${data.articles[i].title}</h1></a> </div>
+            </div>
             `;
    
                 mainContainer.appendChild(div);
