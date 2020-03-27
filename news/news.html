@@ -131,8 +131,10 @@ input[type=text] {
     });*/
 
 var q = getQueryVariable("q");
-console.log(q);
 var page = getQueryVariable("page");
+console.log(q);
+console.log(page);
+
 if (page =='world'){ 
 var url = 'http://newsapi.org/v2/everything?' +
           'q=world&' +
@@ -177,7 +179,7 @@ var url = 'http://newsapi.org/v2/everything?' +
           'sortBy=popularity&' +
           'apiKey=e64cb01f6ddd440286928859e7ff3aab';
         } else if(page =='chris') {
-    var url = 'https://chrislarry.github.io/news/news.json';  
+    var url = 'http://192.168.1.4/chrislarry.github.io/news/news.json';  
         } else {
     var url = 'http://newsapi.org/v2/top-headlines?country=gr&apiKey=e64cb01f6ddd440286928859e7ff3aab';
 }
@@ -220,7 +222,7 @@ if (id !=''){
 });
 
 
-console.log(q);
+
 
 
 } else {
@@ -244,6 +246,7 @@ function appendData(data) {
              }else{
                  img=data.articles[i].urlToImage;
              }
+             console.log(data.articles[0].title);
              var qset, pageset
              if (q != ''){
                 qset = "q="+q+"&";
