@@ -136,8 +136,8 @@ function appendData(data) {
                 .then(data => {
                   document.getElementById('nasa').innerHTML=`
   <h1> ${data.title} <em>${data.date}</em></h1>
-  <p> ${data.explanation}
-  <img src="${data.hdurl}" width="100%"></p>
+  <p><img src="${data.hdurl}" width="100%"><br> ${data.explanation}
+  </p>
   `;
                 
                 });
@@ -169,5 +169,5 @@ function appendData(data) {
               });
 
               function fullscreen() {
-                window.open("news/livenews.html", "_blank", "toolbar=no,addressbar=no,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=800");
+                window.open("news/news.html", "_blank", "toolbar=no,addressbar=no,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=800");
               }    
