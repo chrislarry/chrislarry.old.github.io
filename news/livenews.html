@@ -128,6 +128,28 @@ function appendData(data) {
             }
         }
     }
+
+
+    var url = 'http://newsapi.org/v2/everything?' +
+          'q=tech&' +
+          'from=2020-03-01&' +
+          'sortBy=popularity&' +
+          'apiKey=e64cb01f6ddd440286928859e7ff3aab';
+
+var req = new Request(url);
+
+fetch(req)
+    .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+
+
  </script>   
 </body>
 </html>

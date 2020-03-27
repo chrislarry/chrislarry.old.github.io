@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="shortcut icon" href="./news.ico" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greek News</title>
     <script src="https://kit.fontawesome.com/b5a9c45e36.js" crossorigin="anonymous"></script>
 </head>
-<body><div class="col-12">
-    <div class="row">
-       <div class="col-3">
-<a href="?page=chris"><img src="news.png" height="60px"></a>
-       </div>
-       <div class="col-8"> <h3>
+<body>
+    <div class="col-12"><h3>
       <a href="?page=world"><i class="fas fa-globe-europe"></i></a>
-      &nbsp;<a href="?page=tech"><i class="fas fa-microchip"></i></a>
-      &nbsp;<a href="?page=movies"><i class="fas fa-film"></i></a>
-      &nbsp;<a href="?page=star"><i class="far fa-star"></i></a>
-      &nbsp;<a href="?page=music"><i class="fas fa-music"></i></a>
-      &nbsp;<a href="?page=space"><i class="fas fa-meteor"></i></a>
-      &nbsp;<a href="?"><i class="far fa-handshake"></i></a>
+      &nbsp;&nbsp;&nbsp;<a href="?page=tech"><i class="fas fa-microchip"></i></a>
+      &nbsp;&nbsp;&nbsp;<a href="?page=movies"><i class="fas fa-film"></i></a>
+      &nbsp;&nbsp;&nbsp;<a href="?page=star"><i class="far fa-star"></i></a>
+      &nbsp;&nbsp;&nbsp;<a href="?page=music"><i class="fas fa-music"></i></a>
+      &nbsp;&nbsp;&nbsp;<a href="?page=space"><i class="fas fa-meteor"></i></a>
+      &nbsp;&nbsp;&nbsp;<a href="?"><i class="far fa-handshake"></i></a>
       <div id="tfheader">
         <form id="tfnewsearch" method="get" action="news.html">
             <input type="text" id="input" name="q" size="8" maxlength="20" placeholder="Search..">
             <input type="submit" class="button" value="Find" class="tfbutton">
         </form>
-        </h3></div></div></div>
+        </h3></div>
         <div class="main">
     <div class="tfclear"></div>
     </div>
@@ -46,10 +41,10 @@
   width: 100%; /* Full width */
 align-items: center;
 text-align: center;
-height: 52  px;
+height: 58  px;
 }
 .main {
-  margin-top: 62px; /* Add a top margin to avoid content overlay */
+  margin-top: 60px; /* Add a top margin to avoid content overlay */
 }
 h1{
     font-size: 14px;
@@ -80,10 +75,10 @@ html{
 .container{
     padding: 0px 0px 0px 0px;
 }
-a:link { color: rgb(116, 116, 116); }
-a:visited { color: rgb(116, 116, 116); }
-a:hover { color: rgb(116, 116, 116); }
-a:active { color: rgb(116, 116, 116); }
+a:link { color: rgb(40, 40, 40); }
+ a:visited { color: rgb(40, 40, 40); }
+ a:hover { color: rgb(40, 40, 40); }
+ a:active { color: rgb(40, 40, 40); }
 .col-8 {
     border-top: 1px;
     border-color: black;
@@ -176,8 +171,6 @@ var url = 'http://newsapi.org/v2/everything?' +
           'from=2020-03-01&' +
           'sortBy=popularity&' +
           'apiKey=e64cb01f6ddd440286928859e7ff3aab';
-        } else if(page =='chris') {
-    var url = 'https://chrislarry.github.io/news/news.json';  
         } else {
     var url = 'http://newsapi.org/v2/top-headlines?country=gr&apiKey=e64cb01f6ddd440286928859e7ff3aab';
 }
