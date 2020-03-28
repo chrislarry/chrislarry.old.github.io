@@ -93,7 +93,7 @@ function getCookie(c_name) {
       document.getElementById('h2').innerHTML=`${data[i].country}`;   
       document.getElementById('2').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
   
-      var i =3;
+      var i =2;
       document.getElementById('h3').innerHTML=`${data[i].country}`;   
       document.getElementById('3').innerHTML= `Συνολικά είναι ${data[i].cases} υποθέσεις, σήμερα είχαμε ${data[i].todayCases} καινούριες. Συνολικά πέθαναν ${data[i].deaths} άνθρωποι ενώ σήμερα είχαμε ${data[i].todayDeaths} θανάτους, έγιναν καλά ${data[i].recovered} και σε κρίσιμη κατάσταση είναι ${data[i].critical}. Στα νοσοκομεία νοσηλεύονται ${data[i].active}. Ενώ οι υποθέσεις ανά εκατομμύριο πολιτών είναι ${data[i].casesPerOneMillion}`;
      
@@ -171,3 +171,35 @@ function appendData(data) {
               function fullscreen() {
                 window.open("news/news.html", "_blank", "toolbar=no,addressbar=no,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=800");
               }    
+
+
+fetch("news/news.json")
+.then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+
+function appendData(data) {
+            var mainContainer = document.getElementById("chrisnews");
+            for (var i = 0; i < data.articles.length; i++) {
+             var div = document.createElement("div");
+             div.innerHTML = `
+             <h1> ${data.articles[i].title} </h1>
+             <center><img src="${data.articles[i].urlToImage}" width="60%"></center><br>
+             
+             <p> 
+             ${data.articles[i].description}<br>
+             <em>Εκδόθηκε ${data.articles[i].publishedAt} από
+              ${data.articles[i].source.name}</em><br>
+             <a href="${data.articles[i].url}">Περισσότερα</a> 
+             </p>`;
+   
+                mainContainer.appendChild(div);
+ 
+            }
+        }
