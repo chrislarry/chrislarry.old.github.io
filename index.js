@@ -173,7 +173,7 @@ function appendData(data) {
               }    
 
 
-fetch("news/news.json")
+fetch("index.json")
 .then(function (response) {
                 return response.json();
             })
