@@ -100,7 +100,7 @@ function getCookie(c_name) {
       
        })
       
-
+/*
 fetch("http://newsapi.org/v2/top-headlines?country=gr&apiKey=e64cb01f6ddd440286928859e7ff3aab")
 .then(function (response) {
                 return response.json();
@@ -129,7 +129,7 @@ function appendData(data) {
        //         console.log(data.articles);
             }
         }
-    
+    */
 
                 fetch("https://api.nasa.gov/planetary/apod?api_key=aUSWiBgYi0yuMOcjyilylvSpjJ8ar2hD0AyTyRhh")
                 .then(response => response.json())
@@ -190,13 +190,13 @@ function appendData(data) {
              var div = document.createElement("div");
              div.innerHTML = `
              <h1> ${data.articles[i].title} </h1>
-             <center><img src="${data.articles[i].urlToImage}" width="60%"></center><br>
+             <center><img src="${data.articles[i].urlToImage}" width="150"></center><br>
              
              <p> 
              ${data.articles[i].description}<br>
              <em>Εκδόθηκε ${data.articles[i].publishedAt} από
               ${data.articles[i].source.name}</em><br>
-             <a href="${data.articles[i].url}">Περισσότερα</a> 
+             <a href="download/${data.articles[i].download}">Download</a> 
              </p>`;
    
                 mainContainer.appendChild(div);
