@@ -6,10 +6,10 @@
                 "name":"Chris Larry"
             },
 
-            "title":"1st Android app",
-            "description":"test android app",
+            "title":"Covid-19 Android app",
+            "description":"Ένα App που σε ενημερώνει για τα κρούσματα του κορονοϊού.",
             "url":"https://chrislarry.github.io/#trafic",
-            "urlToImage":"https://cdn4.iconfinder.com/data/icons/logos-3/228/android-512.png",
+            "urlToImage":"https://pngimg.com/uploads/coronavirus/coronavirus_PNG7.png",
             "publishedAt":"2020-03-30",
             "download": "Covid-19.apk"
     }       
