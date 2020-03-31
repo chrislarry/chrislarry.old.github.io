@@ -11,9 +11,21 @@
             "url":"https://chrislarry.github.io/#trafic",
             "urlToImage":"https://pngimg.com/uploads/coronavirus/coronavirus_PNG7.png",
             "publishedAt":"2020-03-30",
-            "download": "Covid-19.apk"
-    }       
+            "download": "covid-19-0-1.apk"
+    },       
+    {
+                "source":{
+                "id":"",
+                "name":"Chris Larry"
+            },
 
+            "title":"News Android app",
+            "description":"Ένα App που σε ενημερώνει.",
+            "url":"https://chrislarry.github.io/#trafic",
+            "urlToImage":"https://chrislarry.github.io/news/news.png",
+            "publishedAt":"2020-03-30",
+            "download": "news.apk"
+    }   
 
 
 
