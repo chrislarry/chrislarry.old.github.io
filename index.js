@@ -196,7 +196,7 @@ function appendData(data) {
              ${data.articles[i].description}<br>
              <em>Εκδόθηκε ${data.articles[i].publishedAt} από
               ${data.articles[i].source.name}</em><br>
-             <a href="download/${data.articles[i].download}">Download</a> 
+             <a href="https://github.com/chrislarry/chrislarry.github.io/raw/master/download/${data.articles[i].download}">Download</a> 
              </p>`;
    
                 mainContainer.appendChild(div);
