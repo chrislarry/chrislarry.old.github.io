@@ -23,9 +23,9 @@
             "description":"Το News είναι μια δωρεάν εφαρμογή ανοιχτού κώδικα που δημιουργήθηκε επάνω σε μια ιδέα που             είχα να συγκεντρώνω όλα τα νέα σε ένα πρόγραμμα και να τα προβάλω με αυτόν τον τρόπο.",
             "url":"https://chrislarry.github.io/#trafic",
             "urlToImage":"https://chrislarry.github.io/news/news.png",
-            "publishedAt":"2020-03-30",
-            "download": "news.0.16.apk",
-            "version": "News-0.16",
+            "publishedAt":"03/04/2020",
+            "download": "news.0.17.apk",
+            "version": "News-0.17",
             "newsapiKEY": "425c786889fc4a2a953e1ed73f2066d9"
     }   
 
