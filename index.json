@@ -25,6 +25,7 @@
             "urlToImage":"https://chrislarry.github.io/news/news.png",
             "publishedAt":"2020-03-30",
             "download": "news.0.16.apk",
+            "version": "news.0.16",
             "newsapiKEY": "425c786889fc4a2a953e1ed73f2066d9"
     }   
 
