@@ -12,27 +12,35 @@
     
     <title>Alex Kav</title>
 </head>
-<body>
+<body onload="add()">
+    <style>
+        h1{
+            size: 15;
+            font-size: 20px;
+        }
+
+    </style>
     <div class="mx-auto" style="width: 700px;">
 <div class="form-group">
+    <h2>3D printing calculator</h2>
 <h1> Electricity [E]</h1>
 <form id=add>
-     <input type="text" class="col-sm-2 col-form-label" name="costE" id="costE" value="costE"  oninput="add()"> Cost €/kWh<br>
-     <input type="text" class="col-sm-2 col-form-label" id="supplyE" name="supplyE" value="supplyE" oninput="add()"> Supply W<br>
-     <input type="text" class="col-sm-2 col-form-label" name="ConsumptionE" id="ConsumptionE" value="ConsumptionE" oninput="add()"> Consumption €/h<br>
+     <input type="text" class="col-sm-2 col-form-label" name="costE" value="0.18" id="costE" value="costE"  onchange="add()"> Cost €/kWh<br>
+     <input type="text" class="col-sm-2 col-form-label" id="supplyE" name="supplyE" value="0.36" onchange="add()"> Supply kW<br>
+     <input type="text" class="col-sm-2 col-form-label" name="ConsumptionE" id="ConsumptionE" onchange="add()" readonly> Consumption €/h<br>
 
 <br>
 <h1> Filament [F]</h1>
 
-    <input type="text" class="col-sm-2 col-form-label" id="costF"" oninput="add()"> Cost €/g
+    <input type="text" class="col-sm-2 col-form-label" id="costF" value="0.03" oninput="add()"> Cost €/g
    
 
     <br>   <br>
 <h1> Machine [M]</h1>
 
-     <input type="text" class="col-sm-2 col-form-label" value="lifeM" id="lifeM"  oninput="add()"> Life h<br>
+     <input type="text" class="col-sm-2 col-form-label"  id="lifeM"  oninput="add()"> Life h<br>
     <input type="text" class="col-sm-2 col-form-label" id="costM"  oninput="add()"> Cost €<br>
-    <input type="text" class="col-sm-2 col-form-label" id="rateM"  oninput="add()"> Rate  €/h
+    <input type="text" class="col-sm-2 col-form-label" id="rateM"  oninput="add()" readonly> Rate  €/h
 
     <br><br>
 <h1> Value [V]</h1>
@@ -41,14 +49,14 @@
     <input type="text" class="col-sm-2 col-form-label" id="rateV"  oninput="add()"> Rate 1/T €/h<br>
     <input type="text" class="col-sm-2 col-form-label" id="profitV"  oninput="add()"> Profit %<br>
 
-    <br><br>
+    <br>
 <h1> SUM</h1>
 
     <input type="text" class="col-sm-2 col-form-label" id="Mass"  oninput="add()"> Mass €<br>
     <input type="text" class="col-sm-2 col-form-label" id="Time"  oninput="add()"> Time €/h<br>
-    <input type="text" class="col-sm-2 col-form-label" id="Prodaction" oninput="add()"> Prodaction %<br>
-    <input type="text" class="col-sm-2 col-form-label" id="Service" oninput="add()"> Service %<br>
-    <input type="text" class="col-sm-2 col-form-label" id="Total" oninput="add()"> Total %
+    <input type="text" class="col-sm-2 col-form-label" id="Prodaction" oninput="add()" readonly> Production %<br>
+    <input type="text" class="col-sm-2 col-form-label" id="Service" oninput="add()" readonly> Service %<br>
+    <input type="text" class="col-sm-2 col-form-label" id="Total" oninput="add()" readonly> Total %
 
 </form>
 
@@ -97,6 +105,11 @@ document.getElementById("Prodaction").value = t1.toFixed(2);
 //service
 
 var t2 = +setupV
+
+if (time>1){
+t2= +rateV * (+time -1)
+
+}
 document.getElementById("Service").value = t2.toFixed(2);
 
 //total
