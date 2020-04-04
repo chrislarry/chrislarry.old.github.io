@@ -25,38 +25,38 @@
     <h2>3D printing calculator</h2>
 <h1> Electricity [E]</h1>
 <form id=add>
-     <input type="text" class="col-sm-2 col-form-label" name="costE" value="0.18" id="costE" value="costE"  onchange="add()"> Cost €/kWh<br>
-     <input type="text" class="col-sm-2 col-form-label" id="supplyE" name="supplyE" value="0.36" onchange="add()"> Supply kW<br>
-     <input type="text" class="col-sm-2 col-form-label" name="ConsumptionE" id="ConsumptionE" onchange="add()" readonly> Consumption €/h<br>
+     <input type="text" class="btn btn-light" name="costE" value="0.18" id="costE" value="costE"  onchange="add()"> Cost €/kWh<br>
+     <input type="text" class="btn btn-light" id="supplyE" name="supplyE" value="0.36" onchange="add()"> Supply kW<br>
+     <input type="text" class="btn btn-primary" name="ConsumptionE" id="ConsumptionE" onchange="add()" readonly> Consumption €/h<br>
 
 <br>
 <h1> Filament [F]</h1>
 
-    <input type="text" class="col-sm-2 col-form-label" id="costF" value="0.03" oninput="add()"> Cost €/g
+    <input type="text" class="btn btn-light" id="costF" value="0.03" oninput="add()"> Cost €/g
    
 
     <br>   <br>
 <h1> Machine [M]</h1>
 
-     <input type="text" class="col-sm-2 col-form-label"  id="lifeM" value="1000" oninput="add()"> Life h<br>
-    <input type="text" class="col-sm-2 col-form-label" id="costM" value="300" oninput="add()"> Cost €<br>
-    <input type="text" class="col-sm-2 col-form-label" id="rateM"  oninput="add()" readonly> Rate  €/h
+     <input type="text" class="btn btn-light"  id="lifeM" value="1000" oninput="add()"> Life h<br>
+    <input type="text" class="btn btn-light" id="costM" value="300" oninput="add()"> Cost €<br>
+    <input type="text" class="btn btn-primary" id="rateM"  oninput="add()" readonly> Rate  €/h
 
     <br><br>
 <h1> Value [V]</h1>
 
-    <input type="text" class="col-sm-2 col-form-label" id="setupV" value="5.00"  oninput="add()"> Setup €<br>
-    <input type="text" class="col-sm-2 col-form-label" id="rateV" value="2.00" oninput="add()"> Rate 1/T €/h<br>
-    <input type="text" class="col-sm-2 col-form-label" id="profitV" value="100" oninput="add()"> Profit %<br>
+    <input type="text" class="btn btn-light" id="setupV" value="5.00"  oninput="add()"> Setup €<br>
+    <input type="text" class="btn btn-light" id="rateV" value="2.00" oninput="add()"> Rate 1/T €/h<br>
+    <input type="text" class="btn btn-light" id="profitV" value="100" oninput="add()"> Profit %<br>
 
     <br>
 <h1> SUM</h1>
 
-    <input type="text" class="col-sm-2 col-form-label" id="Mass" value="0.00" oninput="add()"> Mass €<br>
-    <input type="text" class="col-sm-2 col-form-label" id="Time" value="0.00" oninput="add()"> Time €/h<br>
-    <input type="text" class="col-sm-2 col-form-label" id="Prodaction" oninput="add()" readonly> Production €<br>
-    <input type="text" class="col-sm-2 col-form-label" id="Service" oninput="add()" readonly> Service €<br>
-    <input type="text" class="col-sm-2 col-form-label" id="Total" oninput="add()" readonly> Total €
+    <input type="text" class="btn btn-light" id="Mass" value="0.00" oninput="add()"> Mass €<br>
+    <input type="text" class="btn btn-light" id="Time" value="0.00" oninput="add()"> Time €/h<br>
+    <input type="text" class="btn btn-primary" id="Prodaction" oninput="add()" readonly> Production €<br>
+    <input type="text" class="btn btn-primary" id="Service" oninput="add()" readonly> Service €<br>
+    <input type="text" class="btn btn-primary" id="Total" oninput="add()" readonly> Total €
 
 </form>
 
