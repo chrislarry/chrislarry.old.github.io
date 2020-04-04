@@ -17,6 +17,7 @@
         }
         input{
             text-align: right;
+        
         }
 
     </style>
@@ -106,8 +107,8 @@ document.getElementById("Prodaction").value = t1.toFixed(2);
 
 var t2 = +setupV
 
-if (time>1){
-t2= +rateV * (+time -1)
+if (time>+1){
+t2= +t2 + +rateV * (+time -1)
 
 }
 document.getElementById("Service").value = t2.toFixed(2);
