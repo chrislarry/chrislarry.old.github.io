@@ -8,12 +8,22 @@
 </head>
 <body onload="add()">
     <style>
+        .form-group{
+            border: rgb(85, 85, 85);
+            border-style: solid;
+            border-width: 1px;
+        }
         h1{
-        
+            background: rgb(82, 82, 82);
+            color:white;
             font-size: 14px;
+            text-align: center;
         }
         h2{
             font-size: 17px;
+            background: rgb(77, 77, 77);
+            color: white;
+            text-align: center;
         }
   
         form{
@@ -23,39 +33,43 @@
             text-align: right;
         
         }
+        span{
+            color: brown;
+            font-weight:900 ;
+        }
 
     </style>
     <div class="mx-auto" style="width: 350px;">
 <div class="form-group">
     <h2>3D printing calculator</h2>
-<h1> Electricity</h1>
+<span><h1> Electricity</h1></span>
 <form id=add>
      <input type="text" class="btn btn-light btn-sm" name="costE" value="0.18" id="costE" value="costE"  onchange="add()"> Cost €/kWh<br>
      <input type="text" class="btn btn-light btn-sm" id="supplyE" name="supplyE" value="0.36" onchange="add()"> Supply kW<br>
      <input type="text" class="btn btn-primary btn-sm" name="ConsumptionE" id="ConsumptionE" onchange="add()" readonly> Consumption €/h<br>
 
 
-<h1> Filament </h1>
+<span><h1> Filament </h1></span>
 
     <input type="text" class="btn btn-light btn-sm" id="costF" value="0.03" oninput="add()"> Cost €/g
    
 
     <br>   
-<h1> Machine</h1>
+    <span><h1> Machine</h1></span>
 
      <input type="text" class="btn btn-light btn-sm"  id="lifeM" value="1000" oninput="add()"> Life h<br>
     <input type="text" class="btn btn-light btn-sm" id="costM" value="300" oninput="add()"> Cost €<br>
     <input type="text" class="btn btn-primary btn-sm" id="rateM"  oninput="add()" readonly> Rate  €/h
 
     <br>
-<h1> Value</h1>
+<span><h1> Value</h1></span>
 
     <input type="text" class="btn btn-light btn-sm" id="setupV" value="5.00"  oninput="add()"> Setup €<br>
     <input type="text" class="btn btn-light btn-sm" id="rateV" value="2.00" oninput="add()"> Rate 1/T €/h<br>
     <input type="text" class="btn btn-light btn-sm" id="profitV" value="100" oninput="add()"> Profit %<br>
 
     
-<h1> SUM</h1>
+<span><h1> SUM</h1></span>
 
     <input type="text" class="btn btn-light btn-sm" id="Mass" value="0.00" oninput="add()"> Mass €<br>
     <input type="text" class="btn btn-light btn-sm" id="Time" value="0.00" oninput="add()"> Time €/h<br>
