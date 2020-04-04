@@ -37,6 +37,10 @@
             color: brown;
             font-weight:900 ;
         }
+        .red{
+            color: red;
+        }
+
 
     </style>
     <div class="mx-auto" style="width: 350px;">
@@ -71,8 +75,8 @@
     
 <span><h1> SUM</h1></span>
 
-    <input type="text" class="btn btn-light btn-sm" id="Mass" value="0.00" oninput="add()"> Mass €<br>
-    <input type="text" class="btn btn-light btn-sm" id="Time" value="0.00" oninput="add()"> Time €/h<br>
+    <input type="text" class="btn btn-light btn-sm" id="Mass" value="0.00" oninput="add()"> <span class="red">Mass €</span><br>
+    <input type="text" class="btn btn-light btn-sm" id="Time" value="0.00" oninput="add()"> <span class="red">Time €/h</span><br>
     <input type="text" class="btn btn-primary btn-sm" id="Prodaction" oninput="add()" readonly> Production €<br>
     <input type="text" class="btn btn-primary btn-sm" id="Service" oninput="add()" readonly> Service €<br>
     <input type="text" class="btn btn-primary btn-sm" id="Total" oninput="add()" readonly> Total €
