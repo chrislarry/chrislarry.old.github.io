@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Mobile_style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/b5a9c45e36.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+   
+    
+    <title>Alex Kav</title>
+</head>
+<body onload="add()">
+    <style>
+        h1{
+            size: 15;
+            font-size: 20px;
+        }
+
+    </style>
+    <div class="mx-auto" style="width: 700px;">
+<div class="form-group">
+    <h2>3D printing calculator</h2>
+<h1> Electricity [E]</h1>
+<form id=add>
+     <input type="text" class="col-sm-2 col-form-label" name="costE" value="0.18" id="costE" value="costE"  onchange="add()"> Cost €/kWh<br>
+     <input type="text" class="col-sm-2 col-form-label" id="supplyE" name="supplyE" value="0.36" onchange="add()"> Supply kW<br>
+     <input type="text" class="col-sm-2 col-form-label" name="ConsumptionE" id="ConsumptionE" onchange="add()" readonly> Consumption €/h<br>
+
+<br>
+<h1> Filament [F]</h1>
+
+    <input type="text" class="col-sm-2 col-form-label" id="costF" value="0.03" oninput="add()"> Cost €/g
+   
+
+    <br>   <br>
+<h1> Machine [M]</h1>
+
+     <input type="text" class="col-sm-2 col-form-label"  id="lifeM" value="1000" oninput="add()"> Life h<br>
+    <input type="text" class="col-sm-2 col-form-label" id="costM" value="300" oninput="add()"> Cost €<br>
+    <input type="text" class="col-sm-2 col-form-label" id="rateM"  oninput="add()" readonly> Rate  €/h
+
+    <br><br>
+<h1> Value [V]</h1>
+
+    <input type="text" class="col-sm-2 col-form-label" id="setupV" value="5.00"  oninput="add()"> Setup €<br>
+    <input type="text" class="col-sm-2 col-form-label" id="rateV" value="2.00" oninput="add()"> Rate 1/T €/h<br>
+    <input type="text" class="col-sm-2 col-form-label" id="profitV" value="100" oninput="add()"> Profit %<br>
+
+    <br>
+<h1> SUM</h1>
+
+    <input type="text" class="col-sm-2 col-form-label" id="Mass"  oninput="add()"> Mass €<br>
+    <input type="text" class="col-sm-2 col-form-label" id="Time"  oninput="add()"> Time €/h<br>
+    <input type="text" class="col-sm-2 col-form-label" id="Prodaction" oninput="add()" readonly> Production €<br>
+    <input type="text" class="col-sm-2 col-form-label" id="Service" oninput="add()" readonly> Service €<br>
+    <input type="text" class="col-sm-2 col-form-label" id="Total" oninput="add()" readonly> Total €
+
+</form>
+
+
+</div></div>
+    <script>
+let costE, supplyE, consumptionE;
+
+function add(){
+var x = document.getElementById("add");
+var text = "";
+var i;
+for (i=0; i<x.length; i++){
+    text+= x.elements[i].value + ' + ' ;
+var costE = document.getElementById("costE").value;
+var supplyE = document.getElementById("supplyE").value;
+
+var costF = document.getElementById("costF").value;
+
+var lifeM = document.getElementById("lifeM").value;
+var costM = document.getElementById("costM").value;
+
+var setupV = document.getElementById("setupV").value;
+var rateV = document.getElementById("rateV").value;
+var profitv = document.getElementById("profitV").value;
+
+var mass = document.getElementById("Mass").value;
+var time = document.getElementById("Time").value;
+
+
+var consumptionE = +costE * +supplyE;
+document.getElementById("ConsumptionE").value = consumptionE.toFixed(2);
+
+var rateM = +lifeM / +costM
+document.getElementById("rateM").value = rateM.toFixed(2);
+ 
+
+//production
+var et = +consumptionE * +time 
+var ft = +costF * +mass
+var mt = +rateM * +time
+var t1 = +et + +ft + +mt
+t1 = +t1 + t1 * +profitv / 100
+document.getElementById("Prodaction").value = t1.toFixed(2);
+
+//service
+
+var t2 = +setupV
+
+if (time>1){
+t2= +rateV * (+time -1)
+
+}
+document.getElementById("Service").value = t2.toFixed(2);
+
+//total
+var total = +t1 + +t2
+document.getElementById("Total").value = total.toFixed(2);
+
+
+
+
+}
+}
+
+    </script>
+    
+</body>
+</html>
