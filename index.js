@@ -188,15 +188,21 @@ function appendData(data) {
             var mainContainer = document.getElementById("chrisnews");
             for (var i = 0; i < data.articles.length; i++) {
              var div = document.createElement("div");
+             let dl;
+             if(data.articles[i].download!= null){
+                 dl=`<a href="https://github.com/chrislarry/chrislarry.github.io/raw/master/download/${data.articles[i].download}">Download</a>`; 
+             } else {
+                 dl = '';
+             }
              div.innerHTML = `
              <h1> ${data.articles[i].title} </h1>
-             <center><img src="${data.articles[i].urlToImage}" width="150"></center><br>
+             <center><img src="${data.articles[i].urlToImage}" width="250"></center><br>
              
              <p> 
              ${data.articles[i].description}<br>
              <em>Εκδόθηκε ${data.articles[i].publishedAt} από
               ${data.articles[i].source.name}</em><br>
-             <a href="https://github.com/chrislarry/chrislarry.github.io/raw/master/download/${data.articles[i].download}">Download</a> 
+             ${dl}
              </p>`;
    
                 mainContainer.appendChild(div);
