@@ -12,6 +12,21 @@
         "urlToImage":"https://www.economist.com/sites/default/files/images/print-edition/20200321_LDD001_0.jpg",
         "publishedAt":"13/04/2020"
     },
+    {
+        "source":{
+        "id":"",
+        "name":"Chris Larry"
+    },
+
+    "title":"News Android app by Chris Larry",
+    "description":"Το News είναι μια δωρεάν εφαρμογή ανοιχτού κώδικα που δημιουργήθηκε επάνω σε μια ιδέα που             είχα να συγκεντρώνω όλα τα νέα σε ένα πρόγραμμα και να τα προβάλω με αυτόν τον τρόπο.",
+    "url":"https://chrislarry.github.io/#trafic",
+    "urlToImage":"https://chrislarry.github.io/news/news.png",
+    "publishedAt":"12/04/2020",
+    "download": "news.0.23.apk",
+    "version": "News-0.23",
+    "newsapiKEY": "425c786889fc4a2a953e1ed73f2066d9"
+},
         {
             "source":{
             "id":"",
@@ -36,22 +51,8 @@
             "urlToImage":"https://pngimg.com/uploads/coronavirus/coronavirus_PNG7.png",
             "publishedAt":"2020-03-30",
             "download": "covid-19.0.11.apk"
-    },       
-    {
-                "source":{
-                "id":"",
-                "name":"Chris Larry"
-            },
+    }       
 
-            "title":"News Android app by Chris Larry",
-            "description":"Το News είναι μια δωρεάν εφαρμογή ανοιχτού κώδικα που δημιουργήθηκε επάνω σε μια ιδέα που             είχα να συγκεντρώνω όλα τα νέα σε ένα πρόγραμμα και να τα προβάλω με αυτόν τον τρόπο.",
-            "url":"https://chrislarry.github.io/#trafic",
-            "urlToImage":"https://chrislarry.github.io/news/news.png",
-            "publishedAt":"12/04/2020",
-            "download": "news.0.23.apk",
-            "version": "News-0.23",
-            "newsapiKEY": "425c786889fc4a2a953e1ed73f2066d9"
-    }
 
 
 
