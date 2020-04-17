@@ -190,7 +190,7 @@ function appendData(data) {
              var div = document.createElement("div");
              let dl;
              if(data.articles[i].download!= null){
-                 dl=`<a href="https://github.com/chrislarry/chrislarry.github.io/raw/master/download/${data.articles[i].download}">Download</a>`; 
+                 dl=`<a href="${data.articles[i].download}">Download</a>`; 
              } else {
                  dl = '';
              }
