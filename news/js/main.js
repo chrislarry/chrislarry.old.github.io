@@ -25,7 +25,7 @@ const versionNo = "News-0.26";
 
 function corona(){
     document.getElementById('news').innerHTML='<center><h2>Ενημέρωση για τον Covid-19</h2></center><canvas id="countries"></canvas>'
-fetch("https://corona.lmao.ninja/countries")
+fetch("https://corona.lmao.ninja/v2/countries")
 .then(function (response) {
                 return response.json();
             })
@@ -55,7 +55,7 @@ var myChart = new Chart(ctx, {
     }
 });
 })
-fetch("https://corona.lmao.ninja/countries")
+fetch("https://corona.lmao.ninja/v2/countries")
 .then(function (response) {
                 return response.json();
             })
@@ -83,7 +83,7 @@ function appendData(data) {
  
             }
         }
-        fetch("https://corona.lmao.ninja/all")
+        fetch("https://corona.lmao.ninja/v2/all")
 .then(response => response.json())
 .then(data => {
   document.getElementById('death').innerHTML=`<div style="margin-left:10px;">
