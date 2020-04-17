@@ -1,0 +1,211 @@
+.main{
+    width: 100%;
+    max-width: 500px;;
+}
+
+
+.center {
+
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 5px;
+margin-bottom: 5px;
+
+}
+.footer{
+z-index: 500;
+overflow: hidden;
+background-color: rgb(255, 255, 255);
+position: fixed; /* Set the navbar to fixed position */
+bottom: 0; /* Position the navbar at the top of the page */
+width: 100%; /* Full width */
+max-width: 500px;
+align-items: center;
+text-align: center;
+height: 20px;
+border-top-style: solid;
+border-top-width: 1px;
+border-top-color: #444444;  
+background-color: #dc3545;
+box-shadow: 2px 2px 2px #888888;
+color: white;
+}
+.footext{
+font-size: 10px;
+}
+.youtubevideo{
+z-index: 500;
+overflow: hidden;
+position: fixed;
+top:54px;
+width: 100%;
+max-width: 500px;
+height: 200px;
+background-color: rgb(255, 255, 255);
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: white;
+margin: 0px 0px 0px 0px;
+box-shadow: 2px 2px 2px #888888;
+
+}
+
+
+.col-12{
+z-index: 500;
+overflow: hidden;
+background-color: rgb(255, 255, 255);
+position: fixed; /* Set the navbar to fixed position */
+top: 0; /* Position the navbar at the top of the page */
+width: 100%; /* Full width */
+max-width: 500px;
+align-items: left;
+text-align: left;
+height: 54px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #dc3545;
+box-shadow: 2px 2px 2px #888888;
+}
+.news{
+padding: 0px 15px 0px 0px;;
+}
+.ytmenu{
+z-index: 500;
+width: 100%;
+max-width: 500px;
+color: white;
+background:#dde5eb;
+text-align: center;
+font-weight: bold;
+position: fixed;
+top:54;
+box-shadow: 2px 2px 2px #888888;
+}
+
+.ytmenu :link { color:#dc3545; font-weight: bold; }
+.ytmenu  a:visited { color: #dc3545; font-weight: bold; }
+.ytmenu a:hover { color: #dc3545; font-weight: bold; }
+.ytmenu a:active { color: #dc3545; font-weight: bold; }
+.show{
+margin-top: 274px;
+margin-bottom: 20px;
+}
+
+.main {
+  margin-bottom: 20px;
+  margin-top: 54px; /* Add a top margin to avoid content overlay */
+  width: 100%;
+}
+h1{
+    font-size: 12px;
+    text-align: center;
+    align-self: justify;
+    text-align: inherit;
+}
+h3{
+    font-size: 20px;
+    text-align: center;
+    align-self: justify;
+    text-align: inherit;
+}
+h4{
+font-size: 80px;
+}
+.col{
+    align-items: center;
+    text-align: bottom;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+.container{
+    margin: auto;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+}
+a:link { color: rgb(116, 116, 116); }
+a:visited { color: rgb(116, 116, 116); }
+a:hover { color: rgb(116, 116, 116); }
+a:active { color: rgb(116, 116, 116); }
+.col-8 {
+    border-color: black;
+    padding-left: 0em;
+}
+input[type=text] {
+
+font-family: inherit;
+width: 100%;
+border: 0;
+border-bottom: 1px solid #dc3545;
+outline: 0;
+font-size: 14px;
+color: #424242;
+padding: 7px 0px 0px 5px;
+background: transparent;
+transition: border-color 0.2s;
+}
+
+.btn{
+color:#dc3545 ;
+}
+form{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.info{
+font-size: 13px;
+margin-top: 7px;
+color: #dc3545;
+
+}
+.info a {
+color: #dc3545;
+}
+.info a:visited{
+color: #dc3545;
+}
+.info a:hover{
+color: #dc3545;
+}
+.youtube{
+align-items:center;
+text-align:left;
+margin:  0px 0px 0px 0px;
+
+}
+.about{
+align-items: center;
+text-align: center;
+margin-top: 0px;
+border: unset;
+border-bottom: unset;
+}
+.about h1{
+font-size: 25px;
+font-weight: bold;
+}
+.about p{
+margin-top: 20px;
+margin: 0px 30px 0px 30px;
+}
+.about .center{
+margin: 0px 40px 0px 40px;
+}
+.about .left h2{
+padding-top: 20px;
+font-size: 18px;
+}
+table{
+align-items: center;
+text-align: center;
+}
+canvas{
+align-items: center;
+text-align: center;
+max-width: 100%;
+}
