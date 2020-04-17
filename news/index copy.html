@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>News</title>
+
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=yes">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://kit.fontawesome.com/b5a9c45e36.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+
+    
+</head>
+<style>
+  .center {
+    
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
+}
+.footer{
+    z-index: 500;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    position: fixed; /* Set the navbar to fixed position */
+    bottom: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    align-items: center;
+    text-align: center;
+    height: 20px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #444444;  
+    background-color: #dc3545;
+    box-shadow: 1px 2px 3px 3px #888888;
+    color: white;
+}
+.footext{
+   font-size: 10px;
+}
+.youtubevideo{
+    z-index: 500;
+    overflow: hidden;
+    position: fixed;
+    top:74px;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: white;
+    box-shadow: 1px 2px 3px #888888;
+
+}
+
+
+.col-12{
+    z-index: 500;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    align-items: center;
+    text-align: center;
+    height: 54px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #dc3545;
+    box-shadow: 1px 2px 3px #888888;
+    }
+.news{
+    padding: 0px 15px 20px 0px;;
+}
+.ytmenu{
+    z-index: 500;
+    width: 100%;
+    color: white;
+    background:#dde5eb;
+    text-align: center;
+    font-weight: bold;
+    position: fixed;
+    top:54;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #dc3545;
+    
+}
+.ytmenu :link { color:#dc3545; font-weight: bold; }
+.ytmenu  a:visited { color: #dc3545; font-weight: bold; }
+.ytmenu a:hover { color: #dc3545; font-weight: bold; }
+.ytmenu a:active { color: #dc3545; font-weight: bold; }
+.main {
+      margin-bottom: 25px;
+      margin-top: 54px; /* Add a top margin to avoid content overlay */
+      width: 100%;
+    }
+h1{
+        font-size: 12px;
+        text-align: center;
+        align-self: justify;
+        text-align: inherit;
+    }
+h3{
+        font-size: 20px;
+        text-align: center;
+        align-self: justify;
+        text-align: inherit;
+    }
+h4{
+    font-size: 80px;
+}
+.col{
+        align-items: center;
+        text-align: bottom;
+    }
+html{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+    }
+    
+    .container{
+        margin: auto;
+        width: 100%;
+        padding: 0px 0px 0px 0px;
+    }
+    a:link { color: rgb(116, 116, 116); }
+    a:visited { color: rgb(116, 116, 116); }
+    a:hover { color: rgb(116, 116, 116); }
+    a:active { color: rgb(116, 116, 116); }
+    .col-8 {
+        border-color: black;
+        padding-left: 0em;
+    }
+input[type=text] {
+
+font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #dc3545;
+  outline: 0;
+  font-size: 14px;
+  color: #424242;
+  padding: 7px 0px 0px 5px;
+  background: transparent;
+  transition: border-color 0.2s;
+  }
+.btn{
+    color:#dc3545 ;
+}
+form{
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+}
+.info{
+    font-size: 13px;
+    margin-top: 7px;
+    color: #dc3545;
+    
+}
+.info a {
+    color: #dc3545;
+}
+.info a:visited{
+    color: #dc3545;
+}
+.info a:hover{
+    color: #dc3545;
+}
+.youtube{
+    align-items:center;
+    text-align:left;
+    margin:  0px 0px 0px 0px;
+
+}
+.about{
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+}
+.about h1{
+    font-size: 25px;
+    font-weight: bold;
+}
+.about p{
+    margin-top: 20px;
+    margin: 0px 30px 0px 30px;
+}
+.about .center{
+    margin: 0px 40px 0px 40px;
+}
+.about .left h2{
+    padding-top: 20px;
+    font-size: 18px;
+}
+table{
+    align-items: center;
+    text-align: center;
+}
+
+    </style>    
+<body>
+    <div class="col-12">
+        <div class="row" style="background-color: #dde5eb;">
+           <div class="col-2">
+    <img src="img/news1.png" height="50px">
+           </div>
+           <div class="col-10" class="left"> <h3>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-outline-danger btn-sm active">
+                  <input type="radio" class="btn btn-outline-danger btn-sm active" name="options" onclick="window.location.href = '?';" id="option1" checked> Top
+                </label>
+                <label class="btn btn-outline-danger btn-sm active">
+                  <input type="radio" class="btn btn-outline-danger btn-sm" name="options" onclick="window.location.href = '?page=tech';" id="option2"> Tech
+                </label>
+                <label class="btn btn-outline-danger btn-sm active">
+                  <input type="radio" class="btn btn-outline-danger btn-sm" name="options" onclick="window.location.href = '?page=science';" id="option3"> Science
+                </label>
+                <label class="btn btn-outline-danger btn-sm active">
+                    <input type="radio" class="btn btn-outline-danger btn-sm" name="options" onclick="window.location.href = '?page=sports';" id="option4"> Sports
+                  </label>
+                  <label class="btn btn-outline-danger btn-sm active">
+                    <input type="radio" class="btn btn-outline-danger btn-sm" name="options" onclick="window.location.href = '?page=health';" id="option5"> Health
+                  </label>
+                  <label class="btn btn-outline-danger btn-sm active">
+                    <input type="radio" class="btn btn-outline-danger btn-sm" name="options" onclick="window.location.href = '?page=business';" id="option6"> Business
+                  </label>
+                  
+                  </div>
+                <div class="left">
+                   <form>
+            <div class="row">
+                <div class="col-7" style="text-align: left;">
+                    &nbsp;<span class="info"><a href="?page=info"><i style="text-align: left;" class="fas fa-info"></i></a></span>
+                    &nbsp;<span class="info"><a href="?page=news"><i class="far fa-newspaper"></i></a></span>
+                    &nbsp;<span id="info" class="info"><a href="?page=youtube"><i class="fab fa-youtube"></i></a></span>
+                    &nbsp;<span id="darksky" class="info"></span>
+                    &nbsp;<span  class="info"><a href="?page=settings"><i class="fas fa-cog"></i></a></span>
+                    &nbsp;<span class="info" id="update"></span>
+                  
+                </div>
+                <div class="col-5">
+                    <input type="text" name="q" placeholder="Αναζήτηση...">
+                </div>
+            </div>
+                   </form> 
+                </div>
+            </div>
+            
+          
+           
+        </div></div>
+            <div class="main">
+        <div class="tfclear"></div>
+        </div>
+        
+        <div class="container" id="playvideo"></div>
+        <div class="ytmenu" id="ytmenu"></div>
+        <div class="container" id="margin"></div>
+
+       <div class="container" id="data"></div>
+
+        <div class="news" id="news"></div>
+        <div class="container" id="show"></div>
+        <div class="container" id="video" style="margin-top:200px;"></div>      
+
+        
+ <div class="footer" >
+  <!--   <marquee class="bg-danger text-white" behavior="scroll" direction="left" scrollamount="1"></marquee>-->
+ <span class="footext" id="crypto"></span><span class="footext" id="scroll"></span>
+    
+    </div>
+        <script type="text/javascript" charset="utf-8">
+
+let api, page, q, ver;
+const version = "news.0.23.apk";
+const versionNo = "News-0.23";
+document.addEventListener("deviceready", onDeviceReady, false);
+    
+function onDeviceReady() {
+
+        update();
+        footerscroll();
+        marketcap();
+        weather();
+        var id = getQueryVariable("id");
+        if (id !=''){
+            shownews();
+
+        }else if (getQueryVariable("page") == "info"){
+            info();
+        }else if (getQueryVariable("page") == "youtube"){
+            youtube();    
+        }else{
+            show();
+        }
+}
+//https://api.darksky.net/forecast/58d7bfe187dc94623545ee34a5c619a7/40.756,22.775,7?exclude=currently&lang=el&units=auto
+
+
+function info(){
+   infoshow();
+    document.getElementById('data').innerHTML=`
+    <div class=about>
+    <h1 id="title">News by Chris Larry</h1>
+    <img src="img/news.png" height="80px"><br><br>
+
+    <p>
+    Version ${versionNo}<br>
+    Latest release <span id="version"></span><br><Br>
+    <span id="desc"></span>
+        <br>
+        <a href="https://chrislarry.github.io">https://chrislarry.github.io</a><br>
+    </p>        <div class="about center">
+    <br><Br><h2>Βοήθεια</h2>
+  <center>  <table border=1><tr><td>
+        <span class="info"><i class="fas fa-info"></i></span></td><td>Αυτές οι πληροφορίες.<br></td></tr><tr><td>
+        <span class="info"><i class="far fa-newspaper"></i></span></td><td>Οι ειδήσεις του News.<br></td></tr><tr><td>
+        <span class="info">XX°C</span></td><td>Η θερμοκρασία στη Θεσσαλονίκη.<br></td></tr><tr><td>
+        <span class="info"><i class="fas fa-cloud-download-alt"></i></span></td><td> Υπάρχει καινούριο update, πάτησε το για να κατέβει.</td></tr>
+
+        </table></center>
+
+         
+
+</div>
+</div>
+    `;
+}
+
+function pageshow(){
+q =  getQueryVariable("q");  
+page = getQueryVariable("page");
+    if (page == "tech"){
+api = "https://newsapi.org/v2/top-headlines?country=gr&category=technology&apiKey=425c786889fc4a2a953e1ed73f2066d9";
+    } else if (page == "science") {
+api = "https://newsapi.org/v2/top-headlines?country=gr&category=science&apiKey=425c786889fc4a2a953e1ed73f2066d9";
+} else if (page == "sports") {
+api = "https://newsapi.org/v2/top-headlines?country=gr&category=sports&apiKey=425c786889fc4a2a953e1ed73f2066d9";
+} else if (page == "health") {
+api = "https://newsapi.org/v2/top-headlines?country=gr&category=health&apiKey=425c786889fc4a2a953e1ed73f2066d9";
+} else if (page == "business") {
+api = "https://newsapi.org/v2/top-headlines?country=gr&category=business&apiKey=425c786889fc4a2a953e1ed73f2066d9";
+} else if (page == "news") {
+api = "https://chrislarry.github.io/news/news.json";
+} else if (page == "temp") {
+temp();
+} else if (page == "youtube") {
+youtube();
+} else if (page == "settings") {
+settings();
+
+} else if (q != '') {
+    const d = new Date()
+    const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d)
+    const mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(d)
+    const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d)
+            const fromday = ye+'-'+mo-1+'-'+da ;
+api = 'https://newsapi.org/v2/everything?'+'q='+q+'&'+'from='+fromday+'&'+'sortBy=popularity&'+'apiKey=425c786889fc4a2a953e1ed73f2066d9';
+} else {
+api = "https://newsapi.org/v2/top-headlines?country=gr&apiKey=425c786889fc4a2a953e1ed73f2066d9";
+    }   
+}
+
+
+//  const api = "https://chrislarry.github.io/news/news.json";
+
+function getQueryVariable(variable){
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+function settings(){
+
+    document.getElementById('data').innerHTML=`
+    <div class=about><h2>Settings</h2>
+    <form>
+    <input type="text" placeholder="City" id="weather" width="60%">
+    <input type="submit" name="set" width="60%"> 
+    </form>
+
+    </div>
+    `;
+    document.getElementById('weather').value;
+
+}
+
+function youtube(){
+
+       document.getElementById('ytmenu').innerHTML=`
+               <a href="?page=youtube">ERT</a>
+        &nbsp; <a href="?page=youtube&cat=SKAI">SKAI</a> 
+        &nbsp; <a href="?page=youtube&cat=CNN">CNN</a> 
+        &nbsp; <a href="?page=youtube&cat=BBC">BBC</a>
+        &nbsp; <a href="?page=youtube&cat=ABC">ABC</a>
+        &nbsp; <a href="?page=youtube&cat=Larry">Larry's</a>
+        &nbsp; <a href="?page=youtube&cat=fisiki">Physics</a>
+        &nbsp; <a href="?page=youtube&cat=fact"">WTF</a>
+       <br>`;
+        video = getQueryVariable('video');
+        cat = getQueryVariable('cat');
+
+        document.getElementById('playvideo').innerHTML=`<div class="youtubevideo">
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/${video}"
+         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
+          picture-in-picture" allowfullscreen></iframe></div>
+        `;
+ 
+    //https://www.googleapis.com/youtube/v3/playlists?part=snippet&channelId=UC2u0Ly2T56OmzcIH_UBmqoA&key=AIzaSyD2vSbi5PoJQ8-RPaMcenwN4Kj_d_IfOes
+    //playlist = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyD2vSbi5PoJQ8-RPaMcenwN4Kj_d_IfOes&maxResults=10&playlistId=PL0P8mi2fQacaW4M0QxzFsyPLHDVo0B88Q';
+//playlist = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyD2vSbi5PoJQ8-RPaMcenwN4Kj_d_IfOes&maxResults=50&playlistId=PLgeq7ezNgWe_CtArzWbso34HHLOgsMzJZ';
+//https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v='+youtubeid[i].id+'&format=json 
+//playlist1='https://www.googleapis.com/youtube/v3/search?key=AIzaSyD2vSbi5PoJQ8-RPaMcenwN4Kj_d_IfOes&channelId=PLgeq7ezNgWe97Qkdz2BdB51lMIIIqTUfp&part=snippet,id&order=date&maxResults=20';
+   // youtubeapi= 'AIzaSyD2vSbi5PoJQ8-RPaMcenwN4Kj_d_IfOes';
+let first ='https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=AIzaSyD2vSbi5PoJQ8-RPaMcenwN4Kj_d_IfOes&maxResults=';
+let results = 50;
+let second = '&playlistId=';
+
+if (cat == 'CNN'){
+    playlistID = 'PL6XRrncXkMaVGQM7ra02ystnTt_PExEgr';
+} else if (cat=='BBC'){
+    playlistID = 'PLS3XGZxi7cBVTzEE4Sim9UuNKnUJq9Vkh';
+} else if (cat=='SKAI'){
+    playlistID = 'PL0P8mi2fQacaW4M0QxzFsyPLHDVo0B88Q';
+} else if (cat=='ABC'){
+    playlistID = 'PLQOa26lW-uI9M2lxqgYRfRVKDE6UYunZT';
+} else if (cat=='Larry'){
+    playlistID = 'PLkqOCRl4i0nRuRzz34jpj-DXTT4uIp9dz';
+} else if (cat=='fisiki'){
+    playlistID = 'PLAbvQdGRq3OwYDM2nrSbeYixSqF4klfV7';
+} else if (cat=='fact'){
+    playlistID = 'PLc9HuvuZ9ZeRQwpozjDFIQS7KoI1oHYCk';
+    
+} else {
+    playlistID = 'PLgeq7ezNgWe_CtArzWbso34HHLOgsMzJZ';
+}
+
+playlist= first+results+second+playlistID;
+fetch(playlist)
+    .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    youtubeData(data);
+                })
+                .catch(function (err) {
+                    console.log('error: ' + err);
+                });
+    
+    function youtubeData(data) {
+        console.log(data);
+        cat = getQueryVariable('cat');
+                var mainContainer = document.getElementById("video");
+                for (var i = 0; i < data.items.length; i++) {
+                 var div = document.createElement("div");
+     div.innerHTML = `<div  class="row"><div class="col-5">
+<a href="?page=youtube&cat=${cat}&video=${data.items[i].snippet.resourceId.videoId}"><img src="${data.items[i].snippet.thumbnails.high.url}" height="100"></a></div>
+<div class="col-6" style="margin-top:10px">
+<a href="?page=youtube&cat=${cat}&video=${data.items[i].snippet.resourceId.videoId}">
+<h1>${data.items[i].snippet.title}</h1></a>
+</div></div>
+ `;
+ mainContainer.appendChild(div);
+  }
+               
+                }}            
+
+
+function temp(){
+    fetch("https://api.openweathermap.org/data/2.5/weather?q=thessaloniki&&units=metric&APPID=e1562f4036a2a6aa137df6b15c4608a7")
+                .then(response => response.json())
+                .then(data => {
+                  
+                    let wimg , weathertype;
+                    if (data.weather[0].main=="Rain"){
+                        wimg = '<img src="img/weather/Status-weather-showers-scattered-icon.png">'
+                        weathertype='Βροχή';
+                    } else if (data.weather[0].main=="Few clouds"){
+                        wimg = ' <img src="img/weather/Status-weather-clouds-icon.html">'
+                        weathertype='Λίγα σύννεφα';
+                    } else if (data.weather[0].main=="Scattered clouds"){
+                        wimg = ' <img src="img/weather/oxygen/128/Status-weather-clouds-icon.png">'
+                        weathertype='Καταιγίδα';
+                    } else if (data.weather[0].main=="Broken clouds"){
+                        wimg = ' <img src="img/weather/Status-weather-many-clouds-icon.png">'
+                        weathertype='Συννεφία';
+                    } else if (data.weather[0].main=="Thunderstorm"){
+                        wimg = ' <img src="img/weather/Status-weather-storm-night-icon.png">'
+                        weathertype='Καταιγίδα';
+                    } else if (data.weather[0].main=="Snow"){
+                        wimg = ' <img src="img/weather/Status-weather-hail-icon.png">'
+                        weathertype='Χιόνι';
+                    } else if (data.weather[0].main=="Clear"){
+                        wimg = '<img src="img/weather/Status-weatdata.her-clouds-icon.png">'
+                        weathertype='Συννεφα';
+                    }  else if (data.weather[0].main=="Mist"){
+                        wimg = '<img src="img/weather/Status-weather-many-clouds-icon.png">'
+                        weathertype='Ομίχλη';
+                    
+                    }
+             document.getElementById('data').innerHTML=`
+            
+            <div class="about"> <h3>Θεσσαλονίκη Δελτίο Καιρού.</h3>
+             <h4>${wimg}</h4>
+                <h1>${weathertype}</h1><br>
+                <p>
+                Θερμοκρασία ${data.main.temp}°C <br>
+                Αισθηση θερμοκρασιας ${data.main.feels_like}°C <br>
+                Μικρότερη θερμοκρασια ημέρας ${data.main.temp_min}°C <br>
+                Μεγαλύτερη θερμοκρασιας ημέρας ${data.main.temp_max}°C <br>
+                Ατμοσφαιρική πίεση ${data.main.pressure}p<br>
+                Υγρασία ${data.main.humidity}%<br>
+                Ορατότητα ${data.visibility}μ<br>
+                Ταχύτητα ανέμων ${data.wind.speed}Χμ<br>
+                
+
+                </p></div>
+             
+             `;
+             
+                });
+}
+
+function infoshow(){            
+                fetch("https://chrislarry.github.io/index.json")
+                .then(response => response.json())
+                .then(data => {
+                    
+                    document.getElementById("title").innerHTML= data.articles[1].title;
+                    document.getElementById("desc").innerHTML= data.articles[1].description;
+                    document.getElementById("version").innerHTML= data.articles[1].version;
+                });
+                }
+
+function update(){            
+                fetch("https://chrislarry.github.io/index.json")
+                .then(response => response.json())
+                .then(data => {
+                if (data.articles[1].download!= version) {
+
+                    document.getElementById('update').innerHTML=`<a href="https://chrislarry.github.io/download/${data.articles[1].download}"><i class="fas fa-cloud-download-alt"></i></a>`;
+                }
+ });
+}
+function weather(){            
+                fetch("https://api.openweathermap.org/data/2.5/weather?q=thessaloniki&&units=metric&APPID=e1562f4036a2a6aa137df6b15c4608a7")
+                .then(response => response.json())
+                .then(data => {
+ let wimg;
+                    if (data.weather[0].main=="Rain"){
+                        wimg = ' <i class="fas fa-cloud-showers-heavy"></i>'
+                    } else if (data.weather[0].main=="Thunderstorm"){
+                        wimg = ' <i class="fas fa-poo-storm"></i>'
+                    } else if (data.weather[0].main=="Snow"){
+                        wimg = ' <i class="fas fa-snowflake"></i>'
+                    } else if (data.weather[0].main=="Clear"){
+                        wimg = ' <i class="fas fa-sun"></i>'
+                    } else if (data.weather[0].main=="Clouds"){
+                        wimg = ' <i class="fas fa-cloud"></i>'
+                    }  else if (data.weather[0].main=="Mist"){
+                        wimg = ' <i class="fas fa-smog"></i>'
+                    }
+
+document.getElementById('darksky').innerHTML=
+'<a href="?page=temp">'+ data.main.temp.toFixed(0)+'°C'+wimg+'</a>';
+//console.log(data.weather[0].main) ;             
+ });
+}
+    
+    function shownews(){
+    pageshow();    
+        fetch(api)
+        .then(response => response.json())
+        .then(data => {
+
+            var i = getQueryVariable("id");
+            
+            if(data.articles[i].urlToImage == null){
+                     img="./img/noimage.jpg";
+                 }else{
+                     img=data.articles[i].urlToImage;
+                 }
+        document.getElementById('show').innerHTML= `
+      
+      <img src="${img}" width="100%"><br>
+      <h1> ${data.articles[i].title} </h1>
+      <p> 
+      ${data.articles[i].description}<br>
+      <em>Εκδόθηκε ${data.articles[i].publishedAt} από ${data.articles[i].source.name}</em><br>
+      <br><center><a href="${data.articles[i].url}" class="btn btn-outline-danger btn-sm" role="button" aria-pressed="true">Περισσότερα</a></center> 
+      </p>
+      `;
+    });
+    }
+    
+    function show(){
+    pageshow();
+    fetch(api)
+    .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    appendData(data);
+                })
+                .catch(function (err) {
+                    console.log('error: ' + err);
+                });
+    
+    function appendData(data) {
+        
+                var mainContainer = document.getElementById("news");
+                for (var i = 0; i < data.articles.length; i++) {
+                    if(data.articles[i].urlToImage == null){
+                 img="./img/noimage.jpg";
+                     }else{
+                 img=data.articles[i].urlToImage;
+             }
+                 var div = document.createElement("div");
+ var pageset, qset, q, page;
+ q =  getQueryVariable("q");  
+page = getQueryVariable("page");
+pageset = "&page="+page;
+qset = "&q="+q;
+ if (q == '' && page==''){
+    div.innerHTML = `
+                <div class="row">    
+        <div class="col-4"><a href="?id=${i}">
+        <img src="${img}" width="100%"></a>  </div>
+        <div class="col-8"><a href="?id=${i}">
+        <h1>${data.articles[i].title}</h1></a> </div>
+                </div>  `;
+
+
+ } else{
+                div.innerHTML = `
+                <div class="row">    
+        <div class="col-4"><a href="?id=${i}${pageset}${qset}">
+        <img src="${img}" width="100%"></a>  </div>
+        <div class="col-8"><a href="?id=${i}${pageset}${qset}">
+        <h1>${data.articles[i].title}</h1></a> </div>
+                </div>  `;
+                
+ }
+                    mainContainer.appendChild(div);
+                }}
+}
+
+function footerscroll(){
+//https://api.openrates.io/latest
+//https://www.floatrates.com/daily/eur.json
+    fetch('https://api.openrates.io/latest')
+        .then(response => response.json())
+        .then(data => {
+
+
+            document.getElementById('scroll').innerHTML=`
+             USD:${data.rates.USD.toFixed(2)}€
+             GBP:${data.rates.GBP.toFixed(2)}€
+             JPY:${data.rates.JPY.toFixed(2)}€
+                    `;
+        });
+}       
+    
+function marketcap(){
+  //API KEY 9ef00d33-e37a-4a19-83ff-a546c57e0d14
+    fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=9ef00d33-e37a-4a19-83ff-a546c57e0d14')
+    .then(response => response.json())
+    .then(data=> { 
+        const d = new Date();
+        const ww = new Intl.DateTimeFormat('en', { weekday: 'long' }).format(d);    
+        const yy = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
+        const mm = new Intl.DateTimeFormat('en', { month: 'long' }).format(d);
+        const dd = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
+        const day = ww+' '+dd+' '+mm+' '+yy ;
+
+        document.getElementById('crypto').innerHTML = `
+        BTC:${data.data[0].quote.USD.price.toFixed(0)}$
+        ETH:${data.data[1].quote.USD.price.toFixed(0)}$
+        ETC:${data.data[20].quote.USD.price.toFixed(2)}$
+        XMR:${data.data[11].quote.USD.price.toFixed(2)}$
+
+        `;
+    });
+}
+    
+    
+    
+        </script>
+  
+</body>
+</html>

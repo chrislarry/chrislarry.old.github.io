@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Logo</title>
+</head>
+<body>
+    <style>
+        body,html{
+            width:100%;
+            height:100%;
+            overflow: hidden;
+            margin: 0px 0px 0px 0px ;
+            background: white;
+            }
+canvas{
+    margin: 0px 0px 0px 0px ;
+	position: absolute;
+
+}
+    </style>
+<center><a href="main.html">Main</a></center>
+    <canvas id="canvas"></canvas>
+  
+
+    <script>
+ //   <meta http-equiv="refresh" content="25;url=main.html" />
+var canvas = document.getElementById('canvas');
+var c = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+//box
+//c.fillRect(100,100,100,100);
+
+//line
+let x = Math.random() * innerWidth;
+let y = Math.random() * innerHeight;
+let dx = (Math.random() -0.5) * 5;
+let dy = (Math.random() -0.5) * 5;
+ function animate(){
+    c.clearRect(0, 0, canvas.width, canvas.height);
+     //c.clearRect();
+    requestAnimationFrame(animate);
+    c.beginPath();
+    c.moveTo(10+x,10+y);
+    c.lineTo(10+x,190+y);
+    c.lineTo(60+x,190+y);
+    c.lineTo(60+x,90+y);
+    c.lineTo(120+x,190+y);
+    c.lineTo(170+x,190+y);
+    c.lineTo(170+x,10+y);
+    c.lineTo(120+x,10+y);
+    c.lineTo(120+x,110+y);
+    c.lineTo(60+x,10+y);
+    c.lineTo(10+x,10+y);
+
+c.lineWidth=5;
+c.fillStyle='#dc3545';
+c.fill('evenodd')
+c.strokeStyle = 'black';
+c.stroke();
+x+= dx;
+y+= dy;
+if (x > (innerWidth -180) || x<0){
+    dx = -dx;
+}
+if (y > (innerHeight -200) || y<0){
+    dy = -dy;
+}
+c.fillStyle='#dde5eb';
+c.strokeRect(canvas.width/2-120, canvas.height/2-38,240,110 );
+c.fillRect(canvas.width/2-120, canvas.height/2-38,240,110 );
+c.font = '40px verdana';
+c.fillStyle='#dc3545';
+c.textAlign = "center";
+c.shadowBlur=7;
+c.lineWidth=2;
+c.shadowBlur=4;
+
+c.strokeText('Chris Larry' , canvas.width/2, canvas.height/2 );
+c.fillText('Chris Larry'  , canvas.width/2, canvas.height/2 );
+c.strokeText('News App' , canvas.width/2, canvas.height/2 +60 );
+c.fillText('News App'  , canvas.width/2, canvas.height/2+60 );
+
+}
+
+animate();
+
+    </script>
+</body>
+</html>

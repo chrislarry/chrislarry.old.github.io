@@ -135,13 +135,9 @@ var page = getQueryVariable("page");
 console.log(q);
 console.log(page);
 
-if (page =='world'){ 
-var url = 'http://newsapi.org/v2/everything?' +
-          'q=world&' +
-          'from=2020-03-01&' +
-          'sortBy=popularity&' +
-          'apiKey=e64cb01f6ddd440286928859e7ff3aab';
-} else if(page =='tech') {
+        if (page =='world'){ 
+    var url = 'https://newsapi.org/v2/sources?apiKey=e64cb01f6ddd440286928859e7ff3aab';
+        } else if(page =='tech') {
     var url = 'http://newsapi.org/v2/everything?' +
           'q=tech&' +
           'from=2020-03-01&' +
@@ -239,6 +235,18 @@ fetch(req)
 
 function appendData(data) {
             var mainContainer = document.getElementById("news");
+            if (page == 'world'){
+                for (var i = 0; i < data.sources.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = `
+            <div class="row">    
+    <div class="col-4"><a href="${data.sources[i].url}"><h1>${data.sources[i].name}</h1></a>  </div>
+    <div class="col-8"><a href="${data.sources[i].url}"><h1>${data.sources[i].description}</h1></a> </div>
+            </div>  `;
+
+                mainContainer.appendChild(div);
+                }
+            }else {
             for (var i = 0; i < data.articles.length; i++) {
              var div = document.createElement("div");
              if(data.articles[i].urlToImage == null){
@@ -259,11 +267,22 @@ function appendData(data) {
              }else if (page !='' ) {
                 q = '';
                 pageset = "page="+page+"&";
+                console.log(data);
                 div.innerHTML = `
             <div class="row">    
     <div class="col-4"><a href="?${pageset}id=${i}"><img src="${img}" width="100%"></a>  </div>
     <div class="col-8"><a href="?${pageset}id=${i}"><h1>${data.articles[i].title}</h1></a> </div>
             </div>  `;
+        }else if (page =='world' ) {
+                q = '';
+                pageset = "page="+page+"&";
+                console.log(data);
+                div.innerHTML = `
+            <div class="row">    
+    <div class="col-4"><a href="?${pageset}id=${i}"><h1>${data.sources[i].title}</h1><a href="${data.sources[i].url}">${data.sources[i].url}</a>  </div>
+    <div class="col-8"><a href="?${pageset}id=${i}"><p>${data.sources[i].description}</p></a> </div>
+            </div>  `;
+
              }else if (q != '' && page !='') {
                 pageset = '';
              
@@ -280,7 +299,7 @@ function appendData(data) {
             </div>  `;
             }
                 mainContainer.appendChild(div);
-            }
+            }}
         }
     }
  </script>   

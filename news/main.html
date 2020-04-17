@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>News</title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=yes">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://kit.fontawesome.com/b5a9c45e36.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+  
+<body><div class="main">
+    <div class="col-12">
+        <div class="row" style="background-color: #dde5eb;">
+           <div class="col-2">
+    <img src="img/news1.png" height="50px">
+           </div>
+           <div class="col-10" class="left"> <h3>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-outline-danger btn-sm">
+                  <input type="radio" class="btn btn-outline-danger btn-sm active" name="options" onclick="window.location.href = '?';" id="option1"> Top
+                </label>
+                <label class="btn btn-outline-danger btn-sm">
+                  <input type="radio" class="btn btn-outline-danger btn-sm" name="options" onclick="window.location.href = '?page=tech';" id="option2"> Tech
+                </label>
+                <label class="btn btn-outline-danger btn-sm">
+                  <input type="radio" class="btn btn-outline-danger btn-sm" name="options" onclick="window.location.href = '?page=science';" id="option3"> Science
+                </label>
+                <label class="btn btn-outline-danger btn-sm">
+                    <input type="radio" class="btn btn-outline-danger btn-sm" name="options" onclick="window.location.href = '?page=sports';" id="option4"> Sports
+                  </label>
+                  <label class="btn btn-outline-danger btn-sm">
+                    <input type="radio" class="btn btn-outline-danger btn-sm" name="options" onclick="window.location.href = '?page=health';" id="option5"> Health
+                  </label>
+                  <label class="btn btn-outline-danger btn-sm">
+                    <input type="radio" class="btn btn-outline-danger btn-sm" name="options" onclick="window.location.href = '?page=business';" id="option6"> Business
+                  </label>
+                  
+                  </div>
+                <div class="left">
+                   <form>
+            <div class="row">
+                <div class="col-8" style="text-align: left;">
+                    &nbsp; &nbsp;<span class="info"><a href="?page=info"><i style="text-align: left;" class="fas fa-info"></i></a></span>
+                    &nbsp;<span class="info"><a href="?page=news"><i class="far fa-newspaper"></i></a></span>
+                    &nbsp;<span id="info" class="info"><a href="?page=youtube"><i class="fab fa-youtube"></i></a></span>
+                    &nbsp;<span id="darksky" class="info"></span>
+                    &nbsp;<span  class="info"><a href="?page=corona"><i class="fas fa-virus"></i></a></span>
+                    &nbsp;<span  class="info"><a href="?page=settings"><i class="fas fa-cog"></i></a></span>
+                    &nbsp;<span class="info" id="update"></span>
+                  
+                </div>
+                <div class="col-4">
+                    <input type="text" name="q" placeholder="Search...">
+                </div>
+            </div>
+                   </form> 
+                </div>
+            </div>
+            
+          
+           
+        </div></div>
+            <div class="main">
+       
+        </div>
+        
+        <div class="container" id="playvideo"></div>
+        <div class="ytmenu" id="ytmenu"></div>
+        <div class="container" id="margin"></div>
+
+       <div class="container" id="data"></div>
+
+        <div class="news" id="news"></div>
+        <div class="container" id="death"></div>
+        <div class="container" id="newd"></div>
+        <div class="container" id="show"></div>
+        <div class="show" id="video"></div>
+        <div id="videolist"></div>    
+          
+
+        
+ <div class="footer" >
+  <!--   <marquee class="bg-danger text-white" behavior="scroll" direction="left" scrollamount="1"></marquee>-->
+ <span class="footext" id="crypto"></span><span class="footext" id="scroll"></span>
+    
+    </div></div>
+   
+  
+    <script src="js/main.js"></script>
+   
+</body>
+</html>
