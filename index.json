@@ -18,12 +18,12 @@
         "name":"Chris Larry"
     },
 
-    "title":"News Android app by Chris Larry",
+    "title":"News Android app",
     "description":"Το News είναι μια δωρεάν εφαρμογή ανοιχτού κώδικα που δημιουργήθηκε επάνω σε μια ιδέα που             είχα να συγκεντρώνω όλα τα νέα σε ένα πρόγραμμα και να τα προβάλω με αυτόν τον τρόπο.",
     "url":"https://chrislarry.github.io/#trafic",
     "urlToImage":"https://chrislarry.github.io/news/news.png",
     "publishedAt":"12/04/2020",
-    "download": "https://github.com/chrislarry/chrislarry.github.io/releases/download/news.0.26.apk/news.0.26.apk",
+    "download": "https://github.com/chrislarry/chrislarry.github.io/releases/download/news.0.26/news.0.26.apk",
     "version": "News-0.26",
     "newsapiKEY": "425c786889fc4a2a953e1ed73f2066d9"
 },
