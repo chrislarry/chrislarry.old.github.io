@@ -23,8 +23,8 @@
     "url":"https://chrislarry.github.io/#trafic",
     "urlToImage":"https://chrislarry.github.io/news/news.png",
     "publishedAt":"12/04/2020",
-    "download": "news.0.24.apk",
-    "version": "News-0.24",
+    "download": "https://github.com/chrislarry/chrislarry.github.io/releases/download/news.0.26.apk/news.0.26.apk",
+    "version": "News-0.26",
     "newsapiKEY": "425c786889fc4a2a953e1ed73f2066d9"
 },
         {
