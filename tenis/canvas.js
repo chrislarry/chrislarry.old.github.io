@@ -6,18 +6,18 @@ var c = canvas.getContext('2d');
 
 
 
-document.body.style.backgroundColor = "#225c22";
-var x= Math.random()*innerWidth;
+document.body.style.backgroundColor = "grey";
+var x= Math.random()*innerWidth/2;
 var y= Math.random()*innerHeight;
 var speed=5;
 var dx=speed;
 var dy=speed;
 var radius=7;
-var p = 4, a = 0 , racket, ball;
+var l=0 ,p = 0, a = 0 , racket, ball;
 var audio = new Audio('pong.mp3');
 var rackerping = new Audio('racket.mp3');
 l=0;
-c.fillStyle
+
 function animate(){
     requestAnimationFrame(animate);
     c.clearRect(0,0,innerWidth,innerHeight);
@@ -27,17 +27,23 @@ c.font= "25px Arial";
 c.fill();
 
 
+c.fillStyle='#225c22';//table
+c.fillRect(0, 0, innerWidth-15,innerHeight);
+
+if (l == 4 ){
+  speed ++;
+
+dy = (dy *8)/7;
+l=0;
+
+}
+
 
 racket =innerWidth/2+a;
 ball = x;
-
-points = "To level up: "+p +' Speed: '+speed+" Level: "+l +" a: "+a + " ball: "+ ball.toFixed(0) +" racket: "+racket;
-c.fillText(points ,10,20);
-if (p==0){
-    l++
-    p=4;
-    speed= speed + 6;
-}
+c.fillStyle= 'white'
+points = "Points: "+p ;
+c.fillText(points ,15,25);
 
 
 c.fillStyle='#34bbbc';//racket
@@ -50,19 +56,34 @@ c.fillStyle='white';//center
 c.fillRect(-10, innerHeight/2, innerWidth-5, 5);
 c.fillRect(0, 2, 5, innerHeight- 5);
 c.fillRect(canvas.width-20, 2, 5, innerHeight- 5);
+c.fillRect( 0 ,0,820, 3);
+c.fillRect( 0 ,728,820, 3);
+
+
 c.fill();
 
 //racket
-c.fillStyle='#34bbbc';//racket
-c.strokeStyle='black'
-c.fillRect(innerWidth/2+a, innerHeight-20, 100, 10);
-c.strokeRect(innerWidth/2+a, innerHeight-20, 100, 10);
+if (racket < innerWidth/2){
+var img1 = new Image();
+img1.src = 'racketr.png';
+c.drawImage(img1,innerWidth/2+a, innerHeight-50 )
+} else{
+var img2 = new Image();
+img2.src = 'racket.png';
+c.drawImage(img2,innerWidth/2+a, innerHeight-50 )
+
+}
+
 c.fillStyle='#f7c70c';//ball
 c.fill();
 c.strokeStyle='black'
 c.stroke();
 
+document.onmousedown = function(e){
 
+  a = event.clientX-400;
+
+}
 
 document.onkeydown = function(e) {
   switch (e.keyCode) {
@@ -71,9 +92,11 @@ document.onkeydown = function(e) {
           break;
 
       case 37:
-          a=a -50;
+          a=a-50;
           break;
-
+      case 13:
+        location.reload(); 
+          break;
   }
 };
 
@@ -87,17 +110,25 @@ if (x+radius > innerWidth-30 || x-radius < 10 ) {
     audio.load();
     audio.play();
     dy = -dy;
-    p--;
+    p++;
+    l++;
 
-} else if (y-radius > innerHeight-30 && racket < ball && (racket+100) > ball){
+} else if (y-radius > innerHeight-40 && racket-40 < ball && (racket+100
+  ) > ball){
     dy=-dy;
     rackerping.load();
     rackerping.play();
 
-} else if(y-radius > innerHeight-10){
+
+
+} else if(y-radius > innerHeight){
   c.font= "bold 50px Arial";
-  c.fillText("You lose" , 340,350);
-  c.strokeText();
+  c.fillText("Your score is "+p+" points" , 140,350);
+  c.strokeText("Your score is "+p+" points" , 140,350);
+  c.fillText("Press enter to restart" , 160,420);
+  c.strokeText("Press enter to restart" , 160,420);
+
+  c=null;
 
 }
 
@@ -107,7 +138,7 @@ x+= dx;
 
 
 }
-setTimeout(animate(), 100);
+setTimeout(animate(), 1000);
 
 
 
