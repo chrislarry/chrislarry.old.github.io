@@ -57,7 +57,7 @@ c.fillRect(-10, innerHeight/2, innerWidth-5, 5);
 c.fillRect(0, 2, 5, innerHeight- 5);
 c.fillRect(canvas.width-20, 2, 5, innerHeight- 5);
 c.fillRect( 0 ,0,820, 3);
-c.fillRect( 0 ,728,820, 3);
+c.fillRect( 0 ,innerHeight-5,820, 3);
 
 
 c.fill();
@@ -125,8 +125,8 @@ if (x+radius > innerWidth-30 || x-radius < 10 ) {
   c.font= "bold 50px Arial";
   c.fillText("Your score is "+p+" points" , 140,350);
   c.strokeText("Your score is "+p+" points" , 140,350);
-  c.fillText("Press enter to restart" , 160,420);
-  c.strokeText("Press enter to restart" , 160,420);
+  c.fillText("Press enter to restart" , 150,420);
+  c.strokeText("Press enter to restart" , 150,420);
 
   c=null;
 
