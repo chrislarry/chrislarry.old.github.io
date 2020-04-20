@@ -1,19 +1,21 @@
+
 var canvas =document.querySelector('canvas');
 canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;
 var c = canvas.getContext('2d');
 
+
+
 document.body.style.backgroundColor = "#225c22";
-document.getElementById('points').innerHTML =p;
 var x= Math.random()*innerWidth;
 var y= Math.random()*innerHeight;
-var speed= 15;
-var dx=(Math.random()-0.5)*speed;
-var dy=(Math.random()-0.5)*speed;
+var speed=5;
+var dx=speed;
+var dy=speed;
 var radius=7;
-var p = 4 ;
-var audio = new Audio('ping.mp3');
-
+var p = 4, a = 0 , racket, ball;
+var audio = new Audio('pong.mp3');
+var rackerping = new Audio('racket.mp3');
 l=0;
 c.fillStyle
 function animate(){
@@ -21,14 +23,16 @@ function animate(){
     c.clearRect(0,0,innerWidth,innerHeight);
 c.beginPath();
 c.fillStyle='white';  
-c.font= "20px Arial";
+c.font= "25px Arial";
 c.fill();
-points = "To level up: "+p +' Speed: '+speed;
-c.fillText(points ,100,20);
 
 
-level = "Level: "+l;
-c.fillText(level ,20,20);
+
+racket =innerWidth/2+a;
+ball = x;
+
+points = "To level up: "+p +' Speed: '+speed+" Level: "+l +" a: "+a + " ball: "+ ball.toFixed(0) +" racket: "+racket;
+c.fillText(points ,10,20);
 if (p==0){
     l++
     p=4;
@@ -50,29 +54,62 @@ c.fill();
 
 //racket
 c.fillStyle='#34bbbc';//racket
-c.fillRect(innerWidth/innerWidth+50, innerHeight-20, 70, 10);
+c.strokeStyle='black'
+c.fillRect(innerWidth/2+a, innerHeight-20, 100, 10);
+c.strokeRect(innerWidth/2+a, innerHeight-20, 100, 10);
 c.fillStyle='#f7c70c';//ball
 c.fill();
+c.strokeStyle='black'
+c.stroke();
+
+
+
+document.onkeydown = function(e) {
+  switch (e.keyCode) {
+      case 39:
+          a= a+50;
+          break;
+
+      case 37:
+          a=a -50;
+          break;
+
+  }
+};
+
+
+
 if (x+radius > innerWidth-30 || x-radius < 10 ) {
     dx = -dx;
     audio.load();
     audio.play();
-}
-/*if (y+radius >innerHeight-50){
-    x=0;
-    y=0;
-    c.font= "30px Arial";
-    c.fillText("you lose",100,100);
-    p++
-}*/
-if (y+radius > innerHeight-20 || y-radius < 0){
+} else if ( y-radius < 0){
     audio.load();
     audio.play();
     dy = -dy;
     p--;
-    document.getElementById('points').innerHTML =p;
+
+} else if (y-radius > innerHeight-30 && racket < ball && (racket+100) > ball){
+    dy=-dy;
+    rackerping.load();
+    rackerping.play();
+
+} else if(y-radius > innerHeight-10){
+  c.font= "bold 50px Arial";
+  c.fillText("You lose" , 340,350);
+  c.strokeText();
+
 }
+
 y+=dy;
-x+= dx;
+x+= dx;  
+
+
+
 }
-animate();
+setTimeout(animate(), 100);
+
+
+
+
+
