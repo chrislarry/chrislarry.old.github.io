@@ -20,14 +20,63 @@ function bgfront(){
 
 
 let x=40, y=0, radius=5, dx=1, dy=2, hop=0,
- comx=-41, comy=70, comdx=0.0067, comdy=0.003,
- diasx=41, diasy=-10, diasdx=0.007, diasdy=0.003,
+ comx=-21, comy=70, comdx=0.0067, comdy=0.0003,
+ diasx=341, diasy=-10, diasdx=0.007, diasdy=0.003,
  comx2=900, comy2=0, comdx2=-0.01, comdy2=0.001,
  cronosx=800, cronosy=80, cronosdx=-0.005, cronosdy=0.001,
  homerx=-30, homery=80, homerdx=0.193, homerdy=-0.001,
  benderx=1060, bendery=90, benderdx=-0.293, benderdy=-0.001,
- satex=-360, satey=100, satedx=0.03, satedy=-0.01;
+ satex=-360, satey=100, satedx=0.03, satedy=-0.01,
+ texts='https://chrislarry.github.io                                   Movies, Games, Posts, News, Nasa, Links, Darknet Links, Books, Downloads '
+ , opacity=0, add=0.01, titlex=900, titledx=-1, 
+ title='Created by Chris Larry ®';
 
+
+ 
+ function showtext(){
+  
+    c.fillStyle="#a93c3c";
+    c.font= 'Bold 15px Arial';
+    if (opacity>1){
+        add = -0.01;
+    } else if (opacity<0.5){
+        add = 0.01;
+    }
+
+    opacity+=add;
+    c.save();
+    c.globalAlpha = opacity;
+
+    c.fillText(texts,10,195);
+    c.restore();
+ //console.log(opacity);   
+ c.fillStyle="white";
+ c.font= '15px Arial';
+    c.fillText(title,titlex,15);
+    if (titlex >10){
+    titlex+=titledx;
+    }
+console.log(titlex);
+}
+function time(){
+  
+    c.fillStyle="white";
+    c.font= '15px Arial';
+    if (opacity>1){
+        add = -0.01;
+    } else if (opacity<0){
+        add = 0.01;
+    }
+
+    opacity+=add;
+    c.save();
+    c.globalAlpha = opacity;
+    c.fillText(date(),10,195);
+    c.restore();
+ console.log(date());   
+
+
+}
 function comet(){
     cometimg = new Image();
     cometimg.src = 'img/comet.png';
@@ -56,14 +105,13 @@ function homer(){
     c.drawImage(homerimg, homerx, homery);
     homerx+=homerdx;
     homery+=homerdy;
-
+    c.fillStyle='black';
+    c.font= '12px Arial';
 
     if (homerx > 100 && homerx <170){
     homercloud = new Image();
     homercloud.src = 'img/textcloud.png';
     c.drawImage(homercloud, 100, 13);
-    c.fillStyle='black';
-    c.font= '20 Alial';
     c.fillText("HELLO!!!", 110,35);
     c.fillText("Bender", 110,50);
     }
@@ -71,18 +119,14 @@ function homer(){
         homercloud = new Image();
         homercloud.src = 'img/textcloud.png';
         c.drawImage(homercloud, 220, 13);
-        c.fillStyle='black';
-        c.font= '20 Alial';
         c.fillText("HELLO!!!", 230,35);
-        c.fillText("Rick & Morty", 230,50);
+        c.fillText("Rick & Morty", 225,50);
         }
         if (homerx > 320 && homerx <390){
             homercloud = new Image();
             homercloud.src = 'img/textcloud.png';
-            c.drawImage(homercloud, 320, 13);
-            c.fillStyle='black';
-            c.font= '20 Alial';
-            c.fillText("Fuck u", 330,35);
+            c.drawImage(homercloud, 320, 13);  
+            c.fillText("Fuck you", 330,35);
             c.fillText("Homer", 330,50);
     }
         if (homerx > 360 && homerx <420){
@@ -90,19 +134,15 @@ function homer(){
             homercloud = new Image();
             homercloud.src = 'img/textcloud.png';
             c.drawImage(homercloud, 420, 0);
-            c.fillStyle='black';
-            c.font= '20 Alial';
-            c.fillText("Yea fuck you", 430,25);
-            c.fillText("Bitch", 435,40);
+            c.fillText("Yea fuck", 435,25);
+            c.fillText("you Bitch", 435,40);
         }
     if (homerx > 700 && homerx <770){
         homercloud = new Image();
         homercloud.src = 'img/textcloud.png';
         c.drawImage(homercloud, 700, 13);
-        c.fillStyle='black';
-        c.font= '20 Alial';
-        c.fillText("Good bye", 725,35);
-        c.fillText("Guys!!!", 725,50);
+        c.fillText("Good bye", 715,35);
+        c.fillText("Guys!!!", 715,50);
         }
 
 }
@@ -120,17 +160,13 @@ function bender(){
         bendercloud = new Image();
         bendercloud.src = 'img/textcloud.png';
         c.drawImage(bendercloud, 700, 13);
-        c.fillStyle='black';
-        c.font= '20 Alial';
-        c.fillText("fuck you", 710,35);
+        c.fillText("Fuck you", 710,35);
         c.fillText("Homer", 710,50);
         }
        if (benderx > 200 && benderx <270){
             bendercloud = new Image();
             bendercloud.src = 'img/textcloud.png';
             c.drawImage(bendercloud, 200, 13);
-            c.fillStyle='black';
-            c.font= '20 Alial';
             c.fillText("I need", 210,35);
             c.fillText("a Beer", 210,50);
            }
@@ -236,8 +272,8 @@ function animate(){
     homer();
     bender();
     bgfront();
+    showtext();
   
     requestAnimationFrame(animate);
 }
-
 animate();
