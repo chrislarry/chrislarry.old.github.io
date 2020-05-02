@@ -39,10 +39,10 @@ font-size: 12px;
   }
   .header {
     /* The image used */
-    background-image: url("rick.jpg");
+   /* background-image: url("rick.jpg");*/
   position: fixed;
     min-height: 15px;
-    padding-top: 180px;
+  /*  padding-top: 180px;*/
 padding-right: 10px;
     /* Center and scale the image nicely */
     background-position: center;
