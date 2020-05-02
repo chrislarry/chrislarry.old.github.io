@@ -181,6 +181,14 @@ function ship(){
         shipdx =0;
         shipdy =0;
     }
+    if (homerx > 900){
+        shipdy=-0.2;
+    }
+    if (homerx >930){
+        shipdy=0.2;
+        shipdx=2;
+    }
+
 }
 
 
