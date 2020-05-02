@@ -24,7 +24,11 @@ let x=40, y=0, radius=5, dx=1, dy=2, hop=0,
  diasx=341, diasy=-10, diasdx=0.007, diasdy=0.003,
  comx2=900, comy2=0, comdx2=-0.01, comdy2=0.001,
  cronosx=800, cronosy=80, cronosdx=-0.005, cronosdy=0.001,
- homerx=-30, homery=80, homerdx=0.193, homerdy=-0.001,
+ likekronosx=600, likekronosy=80, likekronosdx=-0.005, likekronosdy=0.001,
+ moonx=140, moony=80, moondx=0.005, moondy=0.001,
+ earthx=80, earthy=80, earthdx=0.005, earthdy=0.001,
+ shipx=-90, shipy=15, shipdx=2.55, shipdy=0.05,
+ homerx=-30, homery=80, homerdx=0.193, homerdy=-0.001, 
  benderx=1060, bendery=90, benderdx=-0.293, benderdy=-0.001,
  satex=-360, satey=100, satedx=0.03, satedy=-0.01,
  texts='https://chrislarry.github.io                                   Movies, Games, Posts, News, Nasa, Links, Darknet Links, Books, Downloads '
@@ -56,27 +60,14 @@ let x=40, y=0, radius=5, dx=1, dy=2, hop=0,
     if (titlex >10){
     titlex+=titledx;
     }
-console.log(titlex);
+//console.log(titlex);
+c.fillStyle="white";
+c.font= '15px Arial';
+c.save();
+c.fillText('chris_larry@riseup.net',titlex+730,15);
+c.restore();
 }
-function time(){
-  
-    c.fillStyle="white";
-    c.font= '15px Arial';
-    if (opacity>1){
-        add = -0.01;
-    } else if (opacity<0){
-        add = 0.01;
-    }
 
-    opacity+=add;
-    c.save();
-    c.globalAlpha = opacity;
-    c.fillText(date(),10,195);
-    c.restore();
- console.log(date());   
-
-
-}
 function comet(){
     cometimg = new Image();
     cometimg.src = 'img/comet.png';
@@ -172,6 +163,27 @@ function bender(){
            }
 }
 
+function ship(){
+    shipimg = new Image();
+    shipimg.src = 'img/ship.png';
+    c.drawImage(shipimg, shipx, shipy);
+    shipx+=shipdx;
+    shipy+=shipdy;  
+    if (shipx>250){
+        shipdx=shipdx-0.01
+        if (shipdx<0.4 ){shipdx=0.4;}
+    }  
+    if (shipx > 600){
+        shipdx=0.2;
+        shipdy=0.2;
+    }
+    if (shipy >200){
+        shipdx =0;
+        shipdy =0;
+    }
+}
+
+
 function planets(){
 
     cronosimg = new Image();
@@ -185,6 +197,24 @@ function planets(){
     c.drawImage(diasimg, diasx, diasy);
     diasx+=diasdx;
     diasy+=diasdy;
+
+    moonimg = new Image();
+    moonimg.src = 'img/moon.png';
+    c.drawImage(moonimg, moonx, moony);
+    moonx+=moondx;
+    moony+=moondy;
+
+    earthimg = new Image();
+    earthimg.src = 'img/earth.png';
+    c.drawImage(earthimg, earthx, earthy);
+    earthx+=earthdx;
+    earthy+=earthdy;
+
+    likekronosimg = new Image();
+    likekronosimg.src = 'img/likecronos.png';
+    c.drawImage(likekronosimg, likekronosx, likekronosy);
+    likekronosx+=likekronosdx;
+    likekronosy+=likekronosdy;
 
 }
 
@@ -269,11 +299,12 @@ function animate(){
     comet2();
     planets();
     satellite();
+    ship();
     homer();
     bender();
+
     bgfront();
     showtext();
-  
     requestAnimationFrame(animate);
 }
 animate();
