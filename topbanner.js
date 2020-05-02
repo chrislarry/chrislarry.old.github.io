@@ -22,15 +22,15 @@ function bgfront(){
 let x=40, y=0, radius=5, dx=1, dy=2, hop=0,
  comx=-21, comy=70, comdx=0.0067, comdy=0.0003,
  diasx=341, diasy=-10, diasdx=0.007, diasdy=0.003,
- comx2=900, comy2=0, comdx2=-0.01, comdy2=0.001,
+ comx2=900, comy2=0, comdx2=-0.019, comdy2=0.006,
  cronosx=800, cronosy=80, cronosdx=-0.005, cronosdy=0.001,
- likekronosx=600, likekronosy=80, likekronosdx=-0.005, likekronosdy=0.001,
- moonx=140, moony=80, moondx=0.005, moondy=0.001,
- earthx=80, earthy=80, earthdx=0.005, earthdy=0.001,
- shipx=-90, shipy=15, shipdx=2.55, shipdy=0.05,
+ likekronosx=600, likekronosy=80, likekronosdx=-0.01, likekronosdy=0.001,
+ moonx=140, moony=80, moondx=0.015, moondy=0.001,
+ earthx=80, earthy=80, earthdx=0.015, earthdy=0.001,
+ shipx=-990, shipy=15, shipdx=3.5, shipdy=0.15,
  homerx=-30, homery=80, homerdx=0.193, homerdy=-0.001, 
  benderx=1060, bendery=90, benderdx=-0.293, benderdy=-0.001,
- satex=-360, satey=100, satedx=0.03, satedy=-0.01,
+ satex=-60, satey=0, satedx=0.05, satedy=-0.009,
  texts='https://chrislarry.github.io                                   Movies, Games, Posts, News, Nasa, Links, Darknet Links, Books, Downloads '
  , opacity=0, add=0.01, titlex=900, titledx=-1, 
  title='Created by Chris Larry ®';
@@ -169,15 +169,15 @@ function ship(){
     c.drawImage(shipimg, shipx, shipy);
     shipx+=shipdx;
     shipy+=shipdy;  
-    if (shipx>250){
-        shipdx=shipdx-0.01
+    if (shipx>270){
+        shipdx=shipdx-0.016
         if (shipdx<0.4 ){shipdx=0.4;}
     }  
-    if (shipx > 600){
+    if (shipx > 640){
         shipdx=0.2;
         shipdy=0.2;
     }
-    if (shipy >200){
+    if (shipy >142){
         shipdx =0;
         shipdy =0;
     }
