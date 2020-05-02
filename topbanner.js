@@ -185,7 +185,7 @@ function ship(){
         shipdy=-0.2;
     }
     if (homerx >930){
-        shipdy=0.2;
+        shipdy=-0.2;
         shipdx=2;
     }
 
