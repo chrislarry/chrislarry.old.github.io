@@ -20,8 +20,10 @@ function bgfront(){
 
 
 let x=40, y=0, radius=5, dx=1, dy=2, hop=0,
- comx=-41, comy=10, comdx=0.07, comdy=0.005,
- comx2=1200, comy2=0, comdx2=-0.1, comdy2=0.01,
+ comx=-41, comy=70, comdx=0.0067, comdy=0.003,
+ diasx=41, diasy=-10, diasdx=0.007, diasdy=0.003,
+ comx2=900, comy2=0, comdx2=-0.01, comdy2=0.001,
+ cronosx=800, cronosy=80, cronosdx=-0.005, cronosdy=0.001,
  homerx=-30, homery=80, homerdx=0.193, homerdy=-0.001,
  benderx=1060, bendery=90, benderdx=-0.293, benderdy=-0.001,
  satex=-360, satey=100, satedx=0.03, satedy=-0.01;
@@ -129,9 +131,25 @@ function bender(){
             c.drawImage(bendercloud, 200, 13);
             c.fillStyle='black';
             c.font= '20 Alial';
-            c.fillText("i need", 210,35);
+            c.fillText("I need", 210,35);
             c.fillText("a Beer", 210,50);
            }
+}
+
+function planets(){
+
+    cronosimg = new Image();
+    cronosimg.src = 'img/kronos.png';
+    c.drawImage(cronosimg, cronosx, cronosy);
+    cronosx+=cronosdx;
+    cronosy+=cronosdy;
+
+    diasimg = new Image();
+    diasimg.src = 'img/dias.png';
+    c.drawImage(diasimg, diasx, diasy);
+    diasx+=diasdx;
+    diasy+=diasdy;
+
 }
 
 function satellite(){
@@ -213,6 +231,7 @@ function animate(){
     banner();
     comet();
     comet2();
+    planets();
     satellite();
     homer();
     bender();
