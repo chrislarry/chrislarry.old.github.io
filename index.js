@@ -16,6 +16,16 @@ var findIP = new Promise(r=>{var w=window,a=new (w.RTCPeerConnection||w.mozRTCPe
 /*Usage example*/
 findIP.then(ip => document.getElementById("addrr").innerHTML = ip).catch(e => console.error(e))
 }
+let name;
+function getname(){
+    name = localStorage.getItem('name');
+    if (name == null){
+    name = prompt('Write your name here');
+    localStorage.setItem("name", name);
+    }
+
+}
+
 
 function createCookie(name, value, days) {
     var expires;

@@ -29,28 +29,30 @@ let x=40, y=0, radius=5, dx=1, dy=2, hop=0,
  earthx=80, earthy=80, earthdx=0.015, earthdy=-0.001,
  shipx=-990, shipy=15, shipdx=3.5, shipdy=0.15,
  homerx=-30, homery=80, homerdx=0.193, homerdy=-0.001, 
- benderx=1060, bendery=90, benderdx=-0.293, benderdy=-0.001,
+ benderx=1060, bendery=80, benderdx=-0.293, benderdy=-0.001,
  satex=-60, satey=0, satedx=0.05, satedy=0.009,
  texts='https://chrislarry.github.io                                   Movies, Games, Posts, News, Nasa, Links, Darknet Links, Books, Downloads '
  , opacity=0, add=0.01, titlex=900, titledx=-1, 
- title='Created by Chris Larry ®';
+ title='Created by Chris Larry ®',
+ opacityw=0.0001 , addw=0.01;
 
 
  
  function showtext(){
   
-    c.fillStyle="#a93c3c";
+    c.fillStyle="white";
     c.font= 'Bold 15px Arial';
     if (opacity>1){
-        add = -0.01;
-    } else if (opacity<0.5){
-        add = 0.01;
+        add = -0.0031;
+    } else if (opacity<0.7){
+        add = 0.0031;
     }
 
     opacity+=add;
     c.save();
     c.globalAlpha = opacity;
 
+    
     c.fillText(texts,10,195);
     c.restore();
  //console.log(opacity);   
@@ -61,12 +63,38 @@ let x=40, y=0, radius=5, dx=1, dy=2, hop=0,
     titlex+=titledx;
     }
 //console.log(titlex);
-c.fillStyle="white";
+c.fillStyle="white"; 
 c.font= '15px Arial';
 c.save();
 c.fillText('chris_larry@riseup.net',titlex+730,15);
 c.restore();
+
+
+
+if (homerx>0 && opacityw>0){
+    c.save();
+    opacityw=  opacityw+0.001;
+    
+    if (homerx >150){
+        opacityw=opacityw-0.01;
+    }
+    
+    c.globalAlpha = opacityw;
+
+    c.font= '48px Arial';
+    c.strokeStyle = "#FFFFFF";
+    c.fillText('Welcome Back '+name, 10,175); 
+   // c.strokeText('Welcome Back '+name, 10,170); 
+    c.stroke();
+    c.restore();
 }
+
+if (homerx>900){
+    c.font= '20px Arial';
+    c.fillText(name+' Check out "tennis game" and "news app"', 10,175); 
+}
+}
+
 
 function comet(){
     cometimg = new Image();
@@ -162,11 +190,25 @@ function bender(){
             c.fillText("a Beer", 210,50);
            }
 }
-
+let ds=0,h=0,xd=0.1,dh=1.27;
 function ship(){
     shipimg = new Image();
     shipimg.src = 'img/ship.png';
-    c.drawImage(shipimg, shipx, shipy);
+    if (homerx>740){
+        c.save();
+        
+        if (ds <30){
+        ds=ds+xd;
+        h=h+dh;
+        console.log(ds,h);
+        }
+        c.translate(0, h);
+        c.rotate(-ds*Math.PI/180);
+        c.drawImage(shipimg, shipx, shipy);
+        c.restore();
+    }else {
+        c.drawImage(shipimg, shipx, shipy);
+    }
     shipx+=shipdx;
     shipy+=shipdy;  
     if (shipx>270){
@@ -181,11 +223,8 @@ function ship(){
         shipdx =0;
         shipdy =0;
     }
-    if (homerx > 900){
-        shipdy=-0.2;
-    }
-    if (homerx >930){
-        shipdy=-0.2;
+    if (homerx >900){
+        shipdy=-0.38;
         shipdx=2;
     }
 
