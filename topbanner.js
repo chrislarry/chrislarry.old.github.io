@@ -27,16 +27,39 @@ let x=40, y=0, radius=5, dx=1, dy=2, hop=0,
  likekronosx=600, likekronosy=80, likekronosdx=-0.01, likekronosdy=-0.001,
  moonx=140, moony=80, moondx=0.015, moondy=-0.001,
  earthx=80, earthy=80, earthdx=0.015, earthdy=-0.001,
- shipx=-990, shipy=15, shipdx=3.5, shipdy=0.15,
+ shipx=-990, shipy=15, shipdx=3.5, shipdy=0.19,
  homerx=-30, homery=80, homerdx=0.193, homerdy=-0.001, 
  benderx=1060, bendery=80, benderdx=-0.293, benderdy=-0.001,
  satex=-60, satey=0, satedx=0.05, satedy=0.009,
  texts='https://chrislarry.github.io                                   Movies, Games, Posts, News, Nasa, Links, Darknet Links, Books, Downloads '
- , opacity=0, add=0.01, titlex=900, titledx=-1, 
+ , opacity=0, add=0.01, titlex=1900, titledx=-4, 
  title='Created by Chris Larry ®',
- opacityw=0.0001 , addw=0.01;
+ opacityw=0.0001 , addw=0.01, 
+ titles= name+' check out \"tennis game\" and \"news app\"' , news , 
+ welcome= 'Welcome Back '+name,
+ g=900, dg=3, 
+ hx=940, hxd=3, 
+ cov=980, covd=3,
+ nasad=1020, nasadx=3,
+ newsd =1060, newsdx=3,
+ tennisd=1100 , tennisdx=3,
+ movietd=1140 ,movietdx=3;
+
+function datacon(titles, news, welcome){
+    fetch("index.json")
+    .then(response => response.json())
+    .then(data => {                  
+titles = data.data[0].title;
+news= data.data[0].news;
+welcome= data.data[0].welcome;
+
+//console.log(data.data[0].title , data.data[0].news, data.data[0].welcome);
 
 
+
+
+    })
+}
  
  function showtext(){
   
@@ -83,15 +106,66 @@ if (homerx>0 && opacityw>0){
 
     c.font= '48px Arial';
     c.strokeStyle = "#FFFFFF";
-    c.fillText('Welcome Back '+name, 10,175); 
+    c.fillText(welcome, 10,175); 
    // c.strokeText('Welcome Back '+name, 10,170); 
     c.stroke();
     c.restore();
+    console.log(welcome);
 }
 
 if (homerx>900){
     c.font= '20px Arial';
-    c.fillText(name+' Check out "tennis game" and "news app"', 10,175); 
+    c.fillText(titles, 10,175); 
+}
+c.font= '15px Arial';
+if (homerx>300){
+    g-=dg;
+    if (g<760){
+        g=760;
+    }
+    c.fillText('All behind 5g', g,40)
+}
+if (homerx>310){
+    hx-=hxd;
+    if (hx<760){
+        hx=760;
+    }
+    c.fillText('Ήξερες ότι', hx,60)
+}
+if (homerx>320){
+    cov-=covd;
+    if (cov<760){
+        cov=760;
+    }
+    c.fillText('Covid-19 News', cov,80)
+}
+if (homerx>330){
+    nasad-=nasadx;
+    if (nasad<760){
+        nasad=760;
+    }
+    c.fillText('NASA News', nasad,100)
+}
+if (homerx>340){
+    newsd-=newsdx;
+    if (newsd<760){
+        newsd=760;
+    }
+    c.fillText('News App', newsd,120)
+}
+if (homerx>350){
+    tennisd-=tennisdx;
+    if (tennisd<760){
+        tennisd=760;
+    }
+    c.fillText('Tennis Game', tennisd,140)
+}
+if (homerx>360){
+    movietd-=movietdx;
+    if (movietd<760){
+        movietd=760;
+    }
+    c.fillText('MovieTime app', movietd,160)
 }
 }
 
@@ -190,7 +264,7 @@ function bender(){
             c.fillText("a Beer", 210,50);
            }
 }
-let ds=0,h=0,xd=0.1,dh=1.27;
+let ds=0,h=0,xd=0.1,dh=1.29;
 function ship(){
     shipimg = new Image();
     shipimg.src = 'img/ship.png';
@@ -202,7 +276,7 @@ function ship(){
         h=h+dh;
         console.log(ds,h);
         }
-        c.translate(0, h);
+        c.translate(20, h);
         c.rotate(-ds*Math.PI/180);
         c.drawImage(shipimg, shipx, shipy);
         c.restore();
@@ -216,7 +290,7 @@ function ship(){
         if (shipdx<0.4 ){shipdx=0.4;}
     }  
     if (shipx > 640){
-        shipdx=0.2;
+        shipdx=0.30;
         shipdy=0.2;
     }
     if (shipy >142){
@@ -224,7 +298,7 @@ function ship(){
         shipdy =0;
     }
     if (homerx >900){
-        shipdy=-0.38;
+        shipdy=-0.30;
         shipdx=2;
     }
 
@@ -263,95 +337,26 @@ function planets(){
     likekronosx+=likekronosdx;
     likekronosy+=likekronosdy;
 
-}
-
-function satellite(){
     sateimg = new Image();
     sateimg.src = 'img/satellite.png';
     c.drawImage(sateimg, satex, satey);
     satex+=satedx;
     satey+=satedy;
-
-}
-
-function ball(){
-        c.beginPath();
-        c.lineWidth=0;
-        if (dy == 0 ){
-            c.fillStyle='black';    
-        } else {
-            c.fillStyle='blue';
-        }
-   //     c.arc(x,y,radius,0,Math.PI *2,false);
-    //    c.fill();
-   //     c.closePath();
-        y+=dy;
-        x+= dx;   
-        if (y+radius>200){
-            dy = -dy;
-            hop = hop +20;            
-
-        }
-        if (y+radius < hop){
-            dy = -dy;
-          
-        }
-        if (x+radius<0){
-            dx= -dx;
-        }
-        if (x+radius>900){
-            dx = -dx;
-        }
-        if (hop > 190){
-            dy=0;
-        }
-}
-
-function text(){
-        c.fillStyle='white';
-        c.font= '40px Arial';
-      //  c.textMode(CENTER);
-        let texty =185, textx=350;
-
-        if (dy == 0 && x < 60){
-            c.fillText('News', textx,texty)
-        }
-        if (dy == 0 && x > 60 && x < 200){
-            c.fillText('Games', textx,texty)
-        }
-        if (dy == 0 && x > 200 && x < 400){
-            c.fillText('My Posts', textx,texty)
-        }
-        if (dy == 0 && x > 200 && x < 400){
-            c.fillText('My Posts', textx,texty)
-        }
-        if (dy == 0 && x > 400 && x < 600){
-            c.fillText('My Links', textx,texty)
-        }
-        if (dy == 0 && x > 600 && x < 800){
-            c.fillText('Movies', textx,texty)
-        }
-        if (dy == 0 && x > 800){
-            c.fillText('Ήξερες ότι', textx,texty)
-        }
-
 }
 
 function animate(){
-    
     c.clearRect(0, 0, canvas.width, canvas.height);
-
     banner();
     comet();
     comet2();
     planets();
-    satellite();
+
     ship();
     homer();
     bender();
-
     bgfront();
     showtext();
     requestAnimationFrame(animate);
 }
 animate();
+datacon();
