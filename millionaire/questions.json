@@ -1,0 +1,46 @@
+[
+{
+    "question":"poso kanei 1+1? ",
+    "a":"1",
+    "b":"2",
+    "c":"3",
+    "d":"4",
+    "correctanswer":"b"
+},
+{
+    "question":"poso kanei 1+2? ",
+    "a":"1",
+    "b":"2",
+    "c":"3",
+    "d":"4",
+    "correctanswer":"c"
+},{
+    "question":"poso kanei 2+1? ",
+    "a":"1",
+    "b":"2",
+    "c":"3",
+    "d":"4",
+    "correctanswer":"c"
+},{
+    "question":"poso kanei 2+2? ",
+    "a":"1",
+    "b":"2",
+    "c":"3",
+    "d":"4",
+    "correctanswer":"d"
+},{
+    "question":"poso kanei 1+1? ",
+    "a":"1",
+    "b":"2",
+    "c":"3",
+    "d":"4",
+    "correctanswer":"b"
+},{
+    "question":"poso kanei 3+1? ",
+    "a":"1",
+    "b":"2",
+    "c":"3",
+    "d":"4",
+    "correctanswer":"d"
+}
+]
