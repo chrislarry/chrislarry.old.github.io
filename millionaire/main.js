@@ -5,7 +5,13 @@ let i=Math.floor((Math.random() * 5) + 1);
 let theanswer, a, points, p, ctl, qno=1, foreuro, time=60,timers,
 theanswera, theanswerb, theanswerc, theanswerd;
 //quest={    "q":"",    "a":"asd",    "b":"asd",    "c":"asd",    "d":"asd",    "ca":"asd",    "ma":""};
-
+let introsnd = new Audio('snd/intro.mp3');
+let questionsnd = new Audio('snd/Question.mp3');
+let countsnd = new Audio('snd/count.mp3');
+let chearsnd = new Audio('snd/chearing.mp3');
+let boosnd = new Audio('snd/boo.mp3');
+let endsnd = new Audio('snd/end.mp3');
+let defaultcolor='#191f46';
 
 function onload(){
     //getpoint();
@@ -22,6 +28,8 @@ function onload(){
 }
 
 function intro(){
+    introsnd.load();
+    introsnd.play();
     points=0;
 title.innerHTML=`<center><br>
     Ποιος θέλει να γίνει εκατομμυριούχος<br>
@@ -30,7 +38,7 @@ title.innerHTML=`<center><br>
     Έχεις 60 δευτερόλεπτα να βρεις την απάντηση.<br>
     Το παιχνίδι ξεκινάει σύντομα.</p>
 `;
-setTimeout(Startgame,5000)
+setTimeout(Startgame,17000)
 }
 
 function timer(){
@@ -48,10 +56,23 @@ function timer(){
 function getpoint(){
     document.getElementById('points').innerHTML='Points: '+points;
 }
+function countsong(){
+    countsnd.load();
+    countsnd.play();
+}
+function endsong(){
+    endsnd.load();
+    endsnd.play();
+}
 
 function Startgame(){
+    introsnd.pause();
+    setdefaults();
+    questionsnd.load();
+    questionsnd.play();
+ setTimeout(countsong,2000);
     timers = setInterval(timer ,1000);
-    i=Math.floor((Math.random() * 5) + 1);
+    i=Math.floor((Math.random() * 7) + 1);
     getpoint();
     fetch("questions.json")
                 .then(response => response.json())
@@ -63,7 +84,7 @@ function Startgame(){
     title.innerHTML='';
     question.innerHTML=`
    <center> <h2>Έχεις ${points} €</h2><img src="Millionaire.png" width="80px"><br>
-    <div id="timer" style="fontsize:40px; margin-top:10px"></div>
+    <div id="timer" style="fontsize:40px; margin-top:10px">60</div>
     </center>
        <div  class="question">${this.data.question}</div> `;
 
@@ -79,37 +100,55 @@ function Startgame(){
 
 }
 
+function setdefaults(){
+    theanswera=defaultcolor;
+    theanswerb=defaultcolor; 
+    theanswerc=defaultcolor;
+    theanswerd=defaultcolor;
+}
+
 function checkanswer(clr){
+    setdefaults();
+    countsnd.pause();
     clearInterval(timers);
     time=60;
     if ( clr == this.data.correctanswer){
+
+        chearsnd.load();
+        chearsnd.play();
         qno++;
         points=points+100*qno.toFixed(0);
         foreuro=points+100*qno.toFixed(0)
         if (clr == 'a'){ theanswera = 'green'}
-        if (clr == 'b'){ theanswerb = 'green'}
-        if (clr == 'c'){ theanswerc = 'green'}
-        if (clr == 'd'){ theanswerd = 'green'}
+        else if (clr == 'b'){ theanswerb = 'green'}
+        else if (clr == 'c'){ theanswerc = 'green'}
+        else if (clr == 'd'){ theanswerd = 'green'}
         question.innerHTML=`
    <center><h2>Έχεις ${points}€. Ερώτηση νούμερο ${qno} για ${foreuro}€</h2>
-     <img src="Millionaire.png" width="140px"><br><br></center>
+     <img src="Millionaire.png" width="140px"><br><br><br></center>
      <div  class="question">${this.data.question}</div> 
    
         `;
         setTimeout(Startgame,5000);
     } else {
-        if (clr == 'a'){ theanswera = 'red'}else{ theanswera='#242424'}
-        if (clr == 'b'){ theanswerb = 'red'}else{ theanswera='#242424'}
-        if (clr == 'c'){ theanswerc = 'red'}else{ theanswera='#242424'}
-        if (clr == 'd'){ theanswerd = 'red'}else{ theanswera='#242424'}
-        if (this.data.correctanswer == 'a'){ theanswera = 'green'}else{ theanswera='#242424'}
-        if (this.data.correctanswer == 'b'){ theanswerb = 'green'}else{ theanswera='#242424'}
-        if (this.data.correctanswer == 'c'){ theanswerc = 'green'}else{ theanswera='#242424'}
-        if (this.data.correctanswer == 'd'){ theanswerd = 'green'}else{ theanswera='#242424'}
+
+ 
+        boosnd.load();
+        boosnd.play()
+        setTimeout(endsong,1500);
+        
+        if (clr == 'a'){ theanswera = 'red'}
+        else if (clr == 'b'){ theanswerb = 'red'}
+        else if (clr == 'c'){ theanswerc = 'red'}
+        else if (clr == 'd'){ theanswerd = 'red'}
+        if (this.data.correctanswer == 'a'){ theanswera = 'green'}
+        else if (this.data.correctanswer == 'b'){ theanswerb = 'green'}
+        else if (this.data.correctanswer == 'c'){ theanswerc = 'green'}
+        else if (this.data.correctanswer == 'd'){ theanswerd = 'green'}
     question.innerHTML=`
    <center><h2> Η σωστή απάντηση είναι το ${this.data.correctanswer}. Έφτασες τα ${points}€</h2>
     <img src="Millionaire.png" width="100px"><br><br></center>
-    <button onclick="intro()">Νέο παιχνίδι</button>
+    <button onclick="location.reload();">Νέο παιχνίδι</button>
      <div  class="question">${this.data.question}</div> `;
         this.data.correctanswer = '';
         points=0;
