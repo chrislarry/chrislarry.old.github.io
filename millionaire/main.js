@@ -1,8 +1,10 @@
 const title=document.getElementById('title');
 const question=document.getElementById('question');
 const answers=document.getElementById('answers');
+const timec=document.getElementById('timec');
+const stats=document.getElementById('stats');
 let i=Math.floor((Math.random() * 5) + 1);
-let theanswer, a, points, p, ctl, qno=1, foreuro, time=60,timers,
+let theanswer, a, points, p, ctl, qno=0, foreuro, time=60,timers,
 theanswera, theanswerb, theanswerc, theanswerd;
 //quest={    "q":"",    "a":"asd",    "b":"asd",    "c":"asd",    "d":"asd",    "ca":"asd",    "ma":""};
 let introsnd = new Audio('snd/intro.mp3');
@@ -33,7 +35,7 @@ function intro(){
     introsnd.play();
     points=0;
 title.innerHTML=`<center><br>
-    Ποιος θέλει να γίνει εκατομμυριούχος<br>
+    Ποιος θέλει να γίνει εκατομμυριούχος<br><br>
     <img src="iq.png" width="180px"></center><br>
     <p>Καλώς ήρθες στο ποιος θέλει να γίνει εκατομμυριούχος.<br>
     Έχεις 60 δευτερόλεπτα να βρεις την απάντηση.<br>
@@ -45,13 +47,13 @@ setTimeout(Startgame,2000)
 function timer(){
     
     if (time >=30){
-        document.getElementById('timer').innerHTML=`<h3 style="color:green;">${time}</h3>`;
+        timec.innerHTML=`<h3 style="color:green;">${time}</h3>`;
     } else if (time<30 && time >10){
-        document.getElementById('timer').innerHTML=`<h3 style="color:yellow">${time}</h3>`;
+        timec.innerHTML=`<h3 style="color:yellow">${time}</h3>`;
     } else if (time <= 0){ 
         checkanswer();
     } else {
-        document.getElementById('timer').innerHTML=`<h3 style="color:red">${time}</h3>`;
+        timec.innerHTML=`<h3 style="color:red">${time}</h3>`;
     }
     
     time--;
@@ -86,11 +88,8 @@ function Startgame(){
     console.log(data);
 
     title.innerHTML='';
-    question.innerHTML=`
-   <center> <h2>Έχεις ${points} € και ${lifes} ζωές. Ερώτηση ${qno}</h2><img src="iq.png" width="80px"><br>
-    <div id="timer" style="fontsize:40px; margin-top:10px">60</div>
-    </center>
-       <div  class="question">${this.data.question}</div> `;
+  statics();
+  question.innerHTML=` <div  class="question">${this.data.question}</div> `;
 
     answers.innerHTML=`<div class="row"><div class="col">
         <button onclick="checkanswer('a')">Α. ${this.data.a}</button>
@@ -103,6 +102,9 @@ function Startgame(){
 });
 timers = setInterval(timer ,1000);
 }
+function statics(){
+    stats.innerHTML=`<center> <h2>πόντοι: ${qno} &nbsp;&nbsp;&nbsp;  ζωές: ${lifes}</h2><img src="iq.png" width="80px"><br></center> `;
+}
 
 function setdefaults(){
     theanswera=defaultcolor;
@@ -112,6 +114,8 @@ function setdefaults(){
 }
 
 function checkanswer(clr){
+    statics();
+    timec.innerHTML='';
     setdefaults();
     countsnd.pause();
     clearInterval(timers);
@@ -126,12 +130,10 @@ function checkanswer(clr){
         else if (clr == 'b'){ theanswerb = 'green'}
         else if (clr == 'c'){ theanswerc = 'green'}
         else if (clr == 'd'){ theanswerd = 'green'}
-        question.innerHTML=`
-   <center><h2>Έχεις ${points}€. Ερώτηση νούμερο ${qno} για ${foreuro}€</h2>
-     <img src="iq.png" width="140px"><br><br><br></center>
-     <div  class="question">${this.data.question}</div>    `;
-        setTimeout(Startgame,5000);
-
+        statics();
+        question.innerHTML=`<div  class="question">${this.data.question}</div>`;
+        //setTimeout(Startgame,5000);
+        title.innerHTML='<button onclick="Startgame()">Επομένη ερώτηση</button>';
     } else {
     
 
@@ -147,8 +149,8 @@ function checkanswer(clr){
         else if (this.data.correctanswer == 'c'){ theanswerc = 'green'}
         else if (this.data.correctanswer == 'd'){ theanswerd = 'green'}
     question.innerHTML=`
-   <center><h2> Η σωστή απάντηση είναι το ${this.data.correctanswer}. Έφτασες τα ${points}€</h2>
-    <img src="Millionaire.png" width="100px"><br><br></center>
+   <center><h2> Η σωστή απάντηση είναι το ${this.data.correctanswer}.</h2>
+   </center>
     
      <div  class="question">${this.data.question}</div> `;
         this.data.correctanswer = '';
@@ -164,7 +166,8 @@ function checkanswer(clr){
         console.log(this.data.correctanswer);
         if (lifes >0 && this.data.correctanswer != clr) {
             lifes--;
-            setTimeout(Startgame ,5000);
+            //setTimeout(Startgame ,5000);
+            title.innerHTML='<button onclick="Startgame()">Επομένη ερώτηση</button>';
         } else if (lifes <=0 && this.data.correctanswer != clr){
             
             question.innerHTML='';
