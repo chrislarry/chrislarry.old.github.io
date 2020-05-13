@@ -14,7 +14,7 @@ let chearsnd = new Audio('snd/chearing.mp3');
 let boosnd = new Audio('snd/boo.mp3');
 let endsnd = new Audio('snd/end.mp3');
 let defaultcolor='#191f46';
-let lifes = 2 , highscore=0, level, tolevel;
+let lifes = 2 , highscore=0, tolevel;
 
 function onload(){
     //getpoint();
@@ -35,13 +35,13 @@ function intro(){
     introsnd.play();
     points=0;
 title.innerHTML=`<center><br>
-    Ποιος θέλει να γίνει εκατομμυριούχος<br><br>
+IQ quiz<br><br>
     <img src="iq.png" width="180px"></center><br>
-    <p>Καλώς ήρθες στο ποιος θέλει να γίνει εκατομμυριούχος.<br>
+    <p>Καλώς ήρθες στο IQ quiz<br>
     Έχεις 60 δευτερόλεπτα να βρεις την απάντηση.<br>
-    Το παιχνίδι ξεκινάει σύντομα.</p>
-`;
-setTimeout(Startgame,2000)
+    Το παιχνίδι ξεκινάει σύντομα.</p>`;
+
+setTimeout(Startgame,5000);
 }
 
 function timer(){
@@ -78,7 +78,7 @@ function Startgame(){
     questionsnd.play();
  setTimeout(countsong,2000);
     
-    i=Math.floor((Math.random() * 8) + 1);
+    i=Math.floor((Math.random() * 36) + 1);
  //   getpoint();
     fetch("questions.json")
                 .then(response => response.json())
@@ -102,8 +102,20 @@ function Startgame(){
 });
 timers = setInterval(timer ,1000);
 }
+
+function levels(){
+    levelp = localStorage.getItem('iqlevel');
+    levelp = levelp+points;
+    localStorage.setItem('iqlevel', level);
+
+    
+}
+
+
 function statics(){
-    stats.innerHTML=`<center> <h2>πόντοι: ${qno} &nbsp;&nbsp;&nbsp;  ζωές: ${lifes}</h2><img src="iq.png" width="80px"><br></center> `;
+    stats.innerHTML=`<center>
+     <h2>πόντοι: ${qno} &nbsp;&nbsp;&nbsp;  ζωές: ${lifes}</h2>
+    <img src="iq.png" width="80px"><br></center><br> `;
 }
 
 function setdefaults(){
@@ -121,6 +133,7 @@ function checkanswer(clr){
     clearInterval(timers);
     time=60;
     if ( clr == this.data.correctanswer){
+        
         chearsnd.load();
         chearsnd.play();
         qno++;
@@ -148,11 +161,7 @@ function checkanswer(clr){
         else if (this.data.correctanswer == 'b'){ theanswerb = 'green'}
         else if (this.data.correctanswer == 'c'){ theanswerc = 'green'}
         else if (this.data.correctanswer == 'd'){ theanswerd = 'green'}
-    question.innerHTML=`
-   <center><h2> Η σωστή απάντηση είναι το ${this.data.correctanswer}.</h2>
-   </center>
-    
-     <div  class="question">${this.data.question}</div> `;
+    question.innerHTML=`<div  class="question">${this.data.question}</div> `;
         this.data.correctanswer = '';
         
     }
@@ -198,7 +207,9 @@ function highscoref(){
 
 function endgame(){
     highscoref();
-    title.innerHTML=`<h1>Millionaire</h1>
+    stats.innerHTML=``;
+
+    title.innerHTML=`<h1>IQ quiz</h1>
     <img src="iq.png" width="140px"><br><br>
     <p>Copyright by Chris Larry<br><br>
     https://chrislarry.github.io<br><br>
