@@ -12,7 +12,7 @@ let chearsnd = new Audio('snd/chearing.mp3');
 let boosnd = new Audio('snd/boo.mp3');
 let endsnd = new Audio('snd/end.mp3');
 let defaultcolor='#191f46';
-let lifes = 2 , highscore=0;
+let lifes = 2 , highscore=0, level, tolevel;
 
 function onload(){
     //getpoint();
@@ -34,7 +34,7 @@ function intro(){
     points=0;
 title.innerHTML=`<center><br>
     Ποιος θέλει να γίνει εκατομμυριούχος<br>
-    <img src="Millionaire.png" width="180px"></center><br>
+    <img src="iq.png" width="180px"></center><br>
     <p>Καλώς ήρθες στο ποιος θέλει να γίνει εκατομμυριούχος.<br>
     Έχεις 60 δευτερόλεπτα να βρεις την απάντηση.<br>
     Το παιχνίδι ξεκινάει σύντομα.</p>
@@ -75,7 +75,7 @@ function Startgame(){
     questionsnd.load();
     questionsnd.play();
  setTimeout(countsong,2000);
-    timers = setInterval(timer ,1000);
+    
     i=Math.floor((Math.random() * 8) + 1);
  //   getpoint();
     fetch("questions.json")
@@ -87,7 +87,7 @@ function Startgame(){
 
     title.innerHTML='';
     question.innerHTML=`
-   <center> <h2>Έχεις ${points} € και ${lifes} ζωές. Ερώτηση ${qno}</h2><img src="Millionaire.png" width="80px"><br>
+   <center> <h2>Έχεις ${points} € και ${lifes} ζωές. Ερώτηση ${qno}</h2><img src="iq.png" width="80px"><br>
     <div id="timer" style="fontsize:40px; margin-top:10px">60</div>
     </center>
        <div  class="question">${this.data.question}</div> `;
@@ -101,7 +101,7 @@ function Startgame(){
             </div></div>
             `;
 });
-
+timers = setInterval(timer ,1000);
 }
 
 function setdefaults(){
@@ -128,7 +128,7 @@ function checkanswer(clr){
         else if (clr == 'd'){ theanswerd = 'green'}
         question.innerHTML=`
    <center><h2>Έχεις ${points}€. Ερώτηση νούμερο ${qno} για ${foreuro}€</h2>
-     <img src="Millionaire.png" width="140px"><br><br><br></center>
+     <img src="iq.png" width="140px"><br><br><br></center>
      <div  class="question">${this.data.question}</div>    `;
         setTimeout(Startgame,5000);
 
@@ -184,7 +184,7 @@ function checkanswer(clr){
 function highscoref(){
    highscore = localStorage.getItem('highscore');
    if (qno>highscore){
-       question.innerHTML='<h2>you have a new high score ' +qno+'<br> Your old highscore was'+highscore+'</h2>';
+       question.innerHTML='<h2>you have a new high score ' +qno+'<br> Your old highscore was '+highscore+'</h2>';
        localStorage.setItem('highscore',qno);
 
     } else {
@@ -196,13 +196,13 @@ function highscoref(){
 function endgame(){
     highscoref();
     title.innerHTML=`<h1>Millionaire</h1>
-    <img src="Millionaire.png" width="140px"><br><br>
+    <img src="iq.png" width="140px"><br><br>
     <p>Copyright by Chris Larry<br><br>
     https://chrislarry.github.io<br><br>
     chris_larry@riseup.net<br><br>
-    <button onclick="location.reload();">Νέο παιχνίδι</button>
+    
 
     `;
  //   question.innerHTML='';
-    answers.innerHTML='';
+    answers.innerHTML='<button onclick="location.reload();">Νέο παιχνίδι</button>';
 }
