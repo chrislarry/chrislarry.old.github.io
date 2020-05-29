@@ -4,7 +4,11 @@ body{
     height: 100%;
     color: #f0eef6;
     font: bold 14px Arial;
-    margin: 0px 0px 0px 0px;
+    margin:0px -10px 0px 0px;
+}
+.stats{
+    text-align: center;
+    align-items: center;
 }
 a{
     color: white;
@@ -19,7 +23,6 @@ a{
     border: 2px solid rgb(255, 255, 255); 
     color: white;
     font-weight: bold;
- 
     margin-top: 500px;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -29,8 +32,8 @@ a{
     text-decoration: none;
     width: 100%;
     height: 30px;
-    padding: 10px 35px 5px 35px;
-    margin: 40px 20px 20px 20px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
     text-align: center;
     font-weight: bold;
     margin-top: 500px;
@@ -53,16 +56,14 @@ a{
 .question{
     color: white;
     text-decoration: none;
-
     padding: 10px 0px 10px 10px;
     margin: 0px 0px 0px 0px;
     text-align: left;
-
     color: white;
     font-weight: bold;
     width: 100%;
+    font: bold 20px Arial;
 
-    font: bold 14px Arial;
 }
 .title{
     text-align: center;
@@ -81,9 +82,9 @@ p{
 }
 button {
     padding: 5px 10px 0px 10px;
-    margin: 10px 20px 20px 20px;
+    margin: 0px 0px 0px 0px;
     width: 100%;
-    height: 80px;
+    height: 100px;
     background: #191f46;
     text-align: center;
     border-radius: 5px;
@@ -91,5 +92,15 @@ button {
     color: white;
     font-weight: bold;
     margin: auto;    
-    font: bold 18px Arial;        
+    font: bold 18px Arial;   
+}
+.position{
+    position: absolute;
+    top:220px;
+    margin: 10px 10px 10px 0px;
+}
+.banner{
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
