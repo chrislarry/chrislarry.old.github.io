@@ -1,0 +1,135 @@
+html{
+    max-width: 520px;
+    align-items: center;
+
+}
+
+body{
+    background-color: #29064f;
+    height: 100%;
+    color: #f0eef6;
+    font: bold 14px Arial;
+    margin:0px -10px 0px 0px;
+    max-width: 520px;
+}
+.stats{
+    text-align: center;
+    align-items: center;
+}
+.button a{
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 30px;
+    background: #242424;
+    padding: 10px 35px 5px 35px;
+    margin: 40px 20px 20px 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 255); 
+    color: white;
+    font-weight: bold;
+    margin-top: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.banner {
+    position: absolute;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 6px;
+    width: 100%;
+    max-width: 520px;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    border: 0;
+    transform: translate(-1%, -1%);
+
+}
+ a{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0px;
+    left: 0;
+   
+}
+
+.link a{
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 30px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container{
+    margin: 0px 0px 0px 0px;
+    height: 380px;
+    width: 100%;
+    max-width: 520px;
+
+
+ 
+
+}
+.inter{
+    position: auto;
+    width: 100%;
+  
+
+}
+.question{
+    color: white;
+    text-decoration: none;
+    padding: 10px 0px 10px 10px;
+    margin: 0px 0px 0px 0px;
+    text-align: left;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    font: bold 20px Arial;
+
+}
+.title{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+h2{
+    text-align: center;
+    font: bold 16px Arial;
+}
+h3{
+    text-align: center;
+    font: bold 60px Arial;
+}
+p{
+    font: bold 20px Arial;
+}
+button {
+    padding: 5px 5px 0px 5px;
+    margin: 0px 0px 0px 0px;
+    width: 90%;
+    height: 90px;
+    background: #191f46;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 255); 
+    color: white;
+    font-weight: bold;
+    
+    font: bold 16px Arial;   
+}
+.position{
+    position: absolute;
+    top:220px;
+    margin: 10px 0px 10px 0px;
+    max-width: 520px;
+    width: 100%;
+}
