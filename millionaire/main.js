@@ -3,7 +3,7 @@ const question=document.getElementById('question');
 const answers=document.getElementById('answers');
 const timec=document.getElementById('timec');
 const stats=document.getElementById('stats');
-let i=Math.floor((Math.random() * 5) + 1);
+let i, lasti;
 let theanswer, a, points, p, ctl, qno=0, foreuro, time=60,timers,
 theanswera, theanswerb, theanswerc, theanswerd;
 //quest={    "q":"",    "a":"asd",    "b":"asd",    "c":"asd",    "d":"asd",    "ca":"asd",    "ma":""};
@@ -16,6 +16,9 @@ let endsnd = new Audio('snd/end.mp3');
 let defaultcolor='#191f46';
 let lifes = 2 , highscore=0, tolevel;
 
+
+
+
 function onload(){
     //getpoint();
 
@@ -25,8 +28,9 @@ function onload(){
 
         } else{
             Startgame();
-            
+ 
         }
+        
 
 }
 
@@ -34,14 +38,17 @@ function intro(){
     introsnd.load();
     introsnd.play();
     points=0;
-title.innerHTML=`<center><br>
+title.innerHTML=`<center>
 IQ quiz<br><br>
     <img src="iq.png" width="180px"></center><br>
-    <p>Καλώς ήρθες στο IQ quiz<br>
-    Έχεις 60 δευτερόλεπτα να βρεις την απάντηση.<br>
-    Το παιχνίδι ξεκινάει σύντομα.</p>`;
+    <p>Καλώς ήρθες στο IQ quiz<br><br>
+    60 δευτερόλεπτα<br><br>
+    3 ζωές<br><br>
+    Μάζεψε όσους πόντους μπορείς <br><br>
+    Ξεπέρασε το ρεκόρ σου<br><br>
+    Το παιχνίδι ξεκινάει σύντομα</p>`;
 
-setTimeout(Startgame,5000);
+setTimeout(Startgame,1000);
 }
 
 function timer(){
@@ -71,21 +78,31 @@ function endsong(){
     endsnd.play();
 }
 
-function Startgame(){
+function Startgame(i){
     introsnd.pause();
     setdefaults();
     questionsnd.load();
     questionsnd.play();
  setTimeout(countsong,2000);
-    
-    i=Math.floor((Math.random() * 36) + 1);
- //   getpoint();
+    banner();
+ 
+
+  //  getpoint();
     fetch("questions.json")
                 .then(response => response.json())
                 .then(data => {
-             this.data=data[i];       
+                    i=Math.floor((Math.random() * data.length) + 1);
+                    if(i==lasti){
+                        i=Math.floor((Math.random() * data.length) + 1);
+                    }
+                    lasti=i;
+
+                    console.log(lasti);
+             this.data=data[i];  
+             this.data.length=data.length;     
              console.log(this.data);
-    console.log(data);
+  //  console.log(data);
+    
 
     title.innerHTML='';
   statics();
@@ -113,9 +130,9 @@ function levels(){
 
 
 function statics(){
-    stats.innerHTML=`<center>
-     <h2>πόντοι: ${qno} &nbsp;&nbsp;&nbsp;  ζωές: ${lifes}</h2>
-    <img src="iq.png" width="80px"><br></center><br> `;
+    stats.innerHTML=`
+     <h2>πόντοι: ${qno} &nbsp;&nbsp;&nbsp;  ζωές: ${lifes}&nbsp;&nbsp;&nbsp;Διαθέσιμες ερωτήσεις: ${this.data.length}</h2>
+    <img src="iq.png" width="80px"><br><Br>`;
 }
 
 function setdefaults(){
@@ -182,10 +199,10 @@ function checkanswer(clr){
             question.innerHTML='';
             answers.innerHTML='';
             title.innerHTML=`
-            Έφτασες τα ${points} ευρώ<br> με ${qno} σωστές απαντήσεις 
+            
             `;
             highscoref();
-
+            setTimeout(lifesrem,5000)
             setTimeout(endsong,1500);
             setTimeout(endgame,5000);     
 
@@ -193,14 +210,30 @@ function checkanswer(clr){
 }
 }
 
+function lifesrem(){
+    if (lifes >0 && this.data.correctanswer != clr) {
+        lifes--;
+        //setTimeout(Startgame ,5000);
+        title.innerHTML='<button onclick="Startgame()">Επομένη ερώτηση</button>';
+    } else if (lifes <=0 && this.data.correctanswer != clr){
+        
+        question.innerHTML='';
+        answers.innerHTML='';
+        title.innerHTML=`
+        <img src="iq.png" width="140px"><br><br>
+        `;
+        highscoref();
+}
+}
+
 function highscoref(){
    highscore = localStorage.getItem('highscore');
    if (qno>highscore){
-       question.innerHTML='<h2>you have a new high score ' +qno+'<br> Your old highscore was '+highscore+'</h2>';
+       question.innerHTML='<h1>you have a new high score ' +qno+'<br> Your old highscore was '+highscore+'</h1>';
        localStorage.setItem('highscore',qno);
 
     } else {
-        question.innerHTML=`<h2>your score is ${qno} <br>your high score is ${highscore}</h2>`;
+        question.innerHTML=`<h1>your score is ${qno} <br>your high score is ${highscore}</h1>`;
 
    }
 }
@@ -209,7 +242,9 @@ function endgame(){
     highscoref();
     stats.innerHTML=``;
 
-    title.innerHTML=`<h1>IQ quiz</h1>
+
+
+    answers.innerHTML=`<h1>IQ quiz</h1>
     <img src="iq.png" width="140px"><br><br>
     <p>Copyright by Chris Larry<br><br>
     https://chrislarry.github.io<br><br>
@@ -217,6 +252,12 @@ function endgame(){
     
 
     `;
+    banner();
+
  //   question.innerHTML='';
     answers.innerHTML='<button onclick="location.reload();">Νέο παιχνίδι</button>';
+}
+
+function banner(){
+    document.getElementById('banner').innerHTML = `<img src="banner.png" width="100%">`;
 }
