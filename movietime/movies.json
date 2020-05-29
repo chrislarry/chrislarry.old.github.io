@@ -1,5 +1,93 @@
 [
     {
+        "id": 175,
+        "title": "The Last Vampyre",
+        "icon": "https://m.media-amazon.com/images/M/MV5BODMyNzMyNTM5NF5BMl5BanBnXkFtZTYwNDkyMTg5._V1_UY268_CR4,0,182,268_AL_.jpg",
+        "plot": "Sherlock Holmes investigates strange and tragic happenings in a village that appear linked to a man who seems to be like a vampire. ",
+        "link": "#",
+        "trailer": "HFX60_incVY"
+    },
+    {
+        "id": 174,
+        "title": "Martyrs",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMjYyOTM2MjcyOF5BMl5BanBnXkFtZTgwMzAwMTA1NzE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "A woman and her childhood friend seek out revenge on those who victimized and abused them. ",
+        "link": "#",
+        "trailer": "hkXXviesj2Y"
+    },
+    {
+        "id": 173,
+        "title": "Stonehenge Apocalypse",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTY4MjkzNDM0N15BMl5BanBnXkFtZTgwNTg4MzA2MDE@._V1_UY268_CR9,0,182,268_AL_.jpg",
+        "plot": "Archeologists come across an Egyptian chamber, causing an electromagnetic pulse, which comes from Stonehenge, that sends destructive shockwaves around the world. When the pyramids are ... ",
+        "link": "#",
+        "trailer": "kiH-H2PnIZg"
+    },
+    {
+        "id": 172,
+        "title": "Μαριονέτες",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMzMxOTMyOTYyMV5BMl5BanBnXkFtZTgwNTc0MTQyMjE@._V1_UY268_CR3,0,182,268_AL_.jpg",
+        "plot": "A journalist returns to a dark, virtually unrecognizable Athens to investigate his best friend's murder. The victim's girlfriend gives him a hand but they soon realize they either have to ... ",
+        "link": "#",
+        "trailer": "iUrPQJe8vFw"
+    },
+    {
+        "id": 171,
+        "title": "Supercollider",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTU4MjY1MjUwNV5BMl5BanBnXkFtZTgwNDUyOTUwMjE@._V1_UY268_CR9,0,182,268_AL_.jpg",
+        "plot": "Ένας επιστήμονας που εργάζεται σε ένα ενεργειακό έργο ανακαλύπτει ότι η οικογένειά του έχει υποστεί παράξενες αλλαγές στην προσωπικότητά τους, ενώ μια σειρά από φυσικές καταστροφές συμβαίνουν σε ολόκληρο τον κόσμο. Συνειδητοποιεί ότι η δουλειά του ώθησε κατά λάθος τον πλανήτη σε χρόνο επτά δευτερολέπτων - και η απώλεια αυτών των λίγων στιγμών είχε καταστροφικές επιπτώσεις στον κόσμο και στην ανθρώπινη φυλή",
+        "link": "#",
+        "trailer": "dS1_ykYcVTw"
+    },
+    {
+        "id": 170,
+        "title": "Frozen",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTc5MTg0ODgxMF5BMl5BanBnXkFtZTcwODEzOTYwMw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Λίγο πριν νυχτώσει, τρεις σκιέρ αποφασίζουν να κάνουν μια τελευταία βόλτα στην νυχτερινή πίστα ενός χιονοδρομικού κέντρου. Στην μέση της διαδρομής, το τελεφερίκ σταματά, το φώτα σβήνουν και το χιονοδρομικό κέντρο κλείνει για μια εβδομάδα. Είναι αποκλεισμένοι, αλλά αυτό δεν είναι το χειρότερο που θα μπορούσε να τους συμβεί.",
+        "link": "#",
+        "trailer": "KFo5kmCRnok"
+    },
+    {
+        "id": 169,
+        "title": "Wildling",
+        "icon": "https://m.media-amazon.com/images/M/MV5BYjM2MGVmN2MtMDc3Ny00Nzk0LWFhMGUtNGQ0MDM5OTc5NDZlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Η Anna είναι μια έφηβη κοπέλα που από βρεφική ηλικία βρίσκεται στα χέρια ενός άνδρα που φωνάζει μπαμπά, ο οποίος την κρατάει κυριολεκτικά αιχμάλωτη στη μέση του δάσους, μιλώντας της για τα τρομακτικά άγρια πλάσματα που ζουν γύρω τους. Κάποια στιγμή όμως έρχεται η ώρα που η αστυνομία της κοντινής πόλης την ανακαλύπτει, και η Anna για πρώτη φορά έρχεται σε επαφή με τον έξω κόσμο.Μέχρι να βρεθεί η αληθινή της ταυτότητα, την παίρνει υπό την προστασία της η αστυνομικός Ellen Cooper, με τη κοπέλα να μη μπορεί να εγκλιματισθεί με το νέο της περιβάλλον, και σταδιακά να βγαίνει στη επιφάνεια ένας άλλος, άγριος… εαυτός",
+        "link": "#",
+        "trailer": "cOgVqw_NUQg"
+    },
+    {
+        "id": 168,
+        "title": "Enemy Lines",
+        "icon": "https://m.media-amazon.com/images/M/MV5BNjIyNzU5ZDAtODNkOS00YjU4LTk5YmMtOGVkNDY1YjA0YmI1XkEyXkFqcGdeQXVyODY0NTMxNTE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Η πλοκή εκτυλίσσεται με φόντο την κατεχόμενη Πολωνία εν μέσω του Β’ Παγκοσμίου Πολέμου, όπου μία ειδική ομάδα στρατιωτών πραγματοποιεί μία παράτολμη αποστολή διάσωσης κατά την οποία θα πρέπει να διεισδύσουν στην περιοχή του εχθρού και να ελευθερώσουν έναν πυρηνικό επιστήμονα από τους Ναζί.",
+        "link": "#",
+        "trailer": "2eSMV8PwlgU"
+    },
+    {
+        "id": 167,
+        "title": "10.5: Apocalypse ",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTg3NzIyOTE2OV5BMl5BanBnXkFtZTcwNDYxMzgzMQ@@._V1_UY268_CR43,0,182,268_AL_.jpg",
+        "plot": "A massive earthquake creates a chain of events that threaten two of the largest nuclear reactors. ",
+        "link": "#",
+        "trailer": "3GY1oOVdsFw"
+    },
+    {
+        "id": 166,
+        "title": "In Time",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMjA3NzI1ODc1MV5BMl5BanBnXkFtZTcwMzI5NjQwNg@@._V1_UY268_CR5,0,182,268_AL_.jpg",
+        "plot": "In a future where people stop aging at 25, but are engineered to live only one more year, having the means to buy your way out of the situation is a shot at immortal youth. Here, Will Salas finds himself accused of murder and on the run with a hostage - a connection that becomes an important part of the way against the system. ",
+        "link": "#",
+        "trailer": "qt8IAzlV5ZE"
+    },
+    {
+        "id": 165,
+        "title": "The Whistleblower",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTkwNzU4MDk1OF5BMl5BanBnXkFtZTcwMjIyMjg4NQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "A drama based on the experiences of Kathryn Bolkovac, a Nebraska cop who served as a peacekeeper in post-war Bosnia and outed the U.N. for covering up a sex trafficking scandal. ",
+        "link": "#",
+        "trailer": "EP8te0LNpXI"
+    },
+    {
         "id": 164,
         "title": "CATASTROIKA",
         "icon": "https://m.media-amazon.com/images/M/MV5BODUwMjcyYzItMzRmYi00ZTlhLWE2MDctNTVlYjk4NzMzOGRkXkEyXkFqcGdeQXVyNzg5OTk2OA@@._V1_UY268_CR3,0,182,268_AL_.jpg",
