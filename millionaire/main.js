@@ -131,7 +131,7 @@ function levels(){
 
 function statics(){
     stats.innerHTML=`
-     <h2>πόντοι: ${qno} &nbsp;&nbsp;&nbsp;  ζωές: ${lifes}&nbsp;&nbsp;&nbsp;Διαθέσιμες ερωτήσεις: ${this.data.length}</h2>
+     <h2>πόντοι: ${qno} &nbsp;&nbsp;&nbsp;  ζωές: ${lifes}&nbsp;&nbsp;&nbsp; ερωτήσεις: ${this.data.length}</h2>
     <img src="iq.png" width="80px"><br><Br>`;
 }
 
@@ -214,7 +214,7 @@ function lifesrem(){
     if (lifes >0 && this.data.correctanswer != clr) {
         lifes--;
         //setTimeout(Startgame ,5000);
-        title.innerHTML='<button onclick="Startgame()">Επομένη ερώτηση</button>';
+        title.innerHTML='<button onclick="Startgame()" width="100%">Επομένη ερώτηση</button>';
     } else if (lifes <=0 && this.data.correctanswer != clr){
         
         question.innerHTML='';
@@ -229,11 +229,11 @@ function lifesrem(){
 function highscoref(){
    highscore = localStorage.getItem('highscore');
    if (qno>highscore){
-       question.innerHTML='<h1>you have a new high score ' +qno+'<br> Your old highscore was '+highscore+'</h1>';
+       question.innerHTML='<h1>  Έσπασες το παλιό σου ρεκόρ, το καινούριο είναι ' +qno+' πόντοι.<br> Το παλιό σου ρεκόρ ήταν  '+highscore+' πόντοι.</h1>';
        localStorage.setItem('highscore',qno);
 
     } else {
-        question.innerHTML=`<h1>your score is ${qno} <br>your high score is ${highscore}</h1>`;
+        question.innerHTML=`<h1>Απάντησες σωστά σε ${qno} ερωτήσεις <br>Το ρεκόρ σου είναι ${highscore}</h1>`;
 
    }
 }
@@ -259,5 +259,5 @@ function endgame(){
 }
 
 function banner(){
-    document.getElementById('banner').innerHTML = `<img src="banner.png" width="100%">`;
+    document.getElementById('banner').innerHTML = `<a href="https://chrislarry.github.io" class="banner"><img src="banner.png" class="banner"></a>`;
 }
