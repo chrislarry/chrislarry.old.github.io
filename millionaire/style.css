@@ -92,7 +92,7 @@ body{
     text-align: left;
     color: white;
     font-weight: bold;
-    width: 100%;
+    width: 90%;
     font: bold 20px Arial;
 
 }
@@ -108,6 +108,10 @@ h2{
 h3{
     text-align: center;
     font: bold 60px Arial;
+}
+h4{
+    text-align: center;
+    font: bold 24px Arial;
 }
 p{
     font: bold 20px Arial;

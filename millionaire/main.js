@@ -229,11 +229,11 @@ function lifesrem(){
 function highscoref(){
    highscore = localStorage.getItem('highscore');
    if (qno>highscore){
-       question.innerHTML='<h1>  Έσπασες το παλιό σου ρεκόρ, το καινούριο είναι ' +qno+' πόντοι.<br> Το παλιό σου ρεκόρ ήταν  '+highscore+' πόντοι.</h1>';
+       question.innerHTML='<h4>Έσπασες το παλιό σου ρεκόρ, το καινούριο είναι ' +qno+' πόντοι.<br><br> Το παλιό σου ρεκόρ ήταν  '+highscore+' πόντοι.</h4>';
        localStorage.setItem('highscore',qno);
 
     } else {
-        question.innerHTML=`<h1>Απάντησες σωστά σε ${qno} ερωτήσεις <br>Το ρεκόρ σου είναι ${highscore}</h1>`;
+        question.innerHTML=`<h4>Απάντησες σωστά σε ${qno} ερωτήσεις.<br><br> Το ρεκόρ σου είναι ${highscore} ερωτήσεις.</h4><br>`;
 
    }
 }
