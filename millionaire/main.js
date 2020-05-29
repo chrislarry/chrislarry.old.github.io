@@ -259,5 +259,5 @@ function endgame(){
 }
 
 function banner(){
-    document.getElementById('banner').innerHTML = `<a href="https://chrislarry.github.io" class="banner"><img src="banner.png" class="banner"></a>`;
+    document.getElementById('banner').innerHTML = `<img src="banner.png" class="banner">`;
 }
