@@ -2,7 +2,7 @@ html{
     align-items: center;
     margin:0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
-
+    max-width: 450px;
 }
 
 body{
@@ -39,6 +39,7 @@ body{
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
     width: 100%;
+    max-width: 450px;
     align-items: center;
     bottom: 0;
     left: 0;
