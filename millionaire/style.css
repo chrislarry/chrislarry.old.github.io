@@ -2,7 +2,8 @@ html{
     align-items: center;
     margin:0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
-    max-width: 450px;
+    max-width: 345px;
+    max-height: 600px;;
 }
 
 body{
@@ -23,7 +24,7 @@ body{
     width: 100%;
     height: 30px;
     background: #242424;
-    padding: 10px 35px 5px 35px;
+    padding: 50px 35px 5px 35px;
     margin: 40px 20px 20px 20px;
     text-align: center;
     border-radius: 5px;
@@ -39,7 +40,7 @@ body{
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
     width: 100%;
-    max-width: 450px;
+    max-width: 360px;
     align-items: center;
     bottom: 0;
     left: 0;
@@ -72,6 +73,7 @@ body{
 .container{
     margin: 0px 0px 0px 0px;
     height: 450px;
+    max-height: 600px;
     width: 100%;
  }
 .inter{
@@ -130,6 +132,6 @@ button {
     position: absolute;
     top:220px;
     margin: 0px 0px 0px 0px;
-    max-width: 420px;
-    width: 100%;
+    max-width: 314px;
+    width: 950%;
 }

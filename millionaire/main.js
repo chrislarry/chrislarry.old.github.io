@@ -47,8 +47,8 @@ IQ quiz<br><br>
     Μάζεψε όσους πόντους μπορείς <br><br>
     Ξεπέρασε το ρεκόρ σου<br><br>
     Το παιχνίδι ξεκινάει σύντομα</p>`;
-
-setTimeout(Startgame,1000);
+    banner();
+setTimeout(Startgame,5000);
 }
 
 function timer(){
@@ -259,5 +259,23 @@ function endgame(){
 }
 
 function banner(){
-    document.getElementById('banner').innerHTML = `<img src="banner.png" class="banner">`;
+    let banner = document.getElementById('banner'); 
+    let ran = Math.random();
+    let image, url;
+    console.log(ran);
+    if (ran > 0.2 && ran < 0.5){
+        image= 'reception.jpg';
+        url='https://irishotel.net/';
+    } else if (ran > 0.5 && ran < 0.75){
+            image= 'pylh.jpg';
+            url='https://pylh.eu/';
+    } else if (ran > 0.75){
+        image= 'dream.jpg';
+        url='http://www.dreamsites.gr/'; 
+    }else{
+        image= 'banner.png';
+        url='https://chrislarry.github.io';
+    }
+    banner.innerHTML = `<img src="${image}" onclick="window.open('${url}')" class="banner">`;
+
 }
