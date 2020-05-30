@@ -1,5 +1,93 @@
 [
     {
+        "id": 192,
+        "title": "Admiral",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTM1OTgwOTgxNF5BMl5BanBnXkFtZTcwNzUwNDQ3MQ@@._V1_UY268_CR3,0,182,268_AL_.jpg",
+        "plot": " Η ταινία αυτή διηγείται τη ζωή του Ρώσου Ναύαρχου Αλέξανδρου Κολτσάκ, ήρωα του Ρωσικού Εμφυλίου Πολέμου και ηγέτη του Λευκού Στρατού είναι ένας αληθινός ήρωας πολέμου και αγαπημένος σύζυγος και πατέρας. Μια μέρα συναντά την Άννα, τον έρωτα της ζωής του και τη σύζυγο του καλύτερου φίλου του. Η επανάσταση στην καρδιά του αντιμετωπίζει την επανάσταση στη χώρα του. ",
+        "link": "#",
+        "trailer": "kTyHHzBWQ9U"
+    },
+    {
+        "id": 191,
+        "title": "Manhattan Night",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMjQwMDE4NzQ5N15BMl5BanBnXkFtZTgwNzM0NDA3ODE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "A reporter becomes involved with a mysterious woman while investigating her late husband's death. ",
+        "link": "#",
+        "trailer": "I0izHa_7qBA"
+    },
+    {
+        "id": 190,
+        "title": "Bounty Hunter in Trinity",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTk1NTRkZDgtYjhlZS00MWMxLThjNzEtZjU2Mjc3YjQ1NzZmL2ltYWdlXkEyXkFqcGdeQXVyNTM3MDMyMDQ@._V1_UY268_CR9,0,182,268_AL_.jpg",
+        "plot": "The townsfolk of Trinity decide to hire a notorious bounty hunter to protect them from a fierce band of Mexican outlaws who are terrorizing the area. He discovers the true person behind the.",
+        "link": "#",
+        "trailer": "44vscHnct4w"
+    },
+    {
+        "id": 189,
+        "title": "I Live for Your Death",
+        "icon": "https://m.media-amazon.com/images/M/MV5BYTY0ODRjYTUtMmU3Mi00YzFhLWE0YWMtZjlhMWVmMzI3NGIzXkEyXkFqcGdeQXVyMTE2NzA0Ng@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Mike Sturges and his younger brother, Roy, are sentenced to Yuma Penitentiary on a trumped-up train robbery charge. Both endure cruel treatment before Mike escapes to extract revenge on their enemies. ",
+        "link": "#",
+        "trailer": "MHvsrK_myz4"
+    },
+    {
+        "id": 188,
+        "title": "I Live for Your Death",
+        "icon": "https://m.media-amazon.com/images/M/MV5BYTY0ODRjYTUtMmU3Mi00YzFhLWE0YWMtZjlhMWVmMzI3NGIzXkEyXkFqcGdeQXVyMTE2NzA0Ng@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Mike Sturges and his younger brother, Roy, are sentenced to Yuma Penitentiary on a trumped-up train robbery charge. Both endure cruel treatment before Mike escapes to extract revenge on their enemies. ",
+        "link": "#",
+        "trailer": "MHvsrK_myz4"
+    },
+    {
+        "id": 187,
+        "title": "Doom",
+        "icon": "https://m.media-amazon.com/images/M/MV5BN2QwMzZiYmUtNGZhMC00ZjA2LWI2MDYtOWEyNDA4MzYwMTBiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Space Marines are sent to investigate strange events at a research facility on Mars but find themselves at the mercy of genetically enhanced killing machines.",
+        "link": "#",
+        "trailer": "q3FpM5UQSKo"
+    },
+    {
+        "id": 186,
+        "title": "Inside",
+        "icon": "https://m.media-amazon.com/images/M/MV5BNTgyODRlNjQtMGZhNS00ZTA3LTgyNjgtNDYwNWM1ZDI0ODMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY268_CR7,0,182,268_AL_.jpg",
+        "plot": "A melancholic, fetishistic gunfighter is drawn into a vengeful and tragic kidnapping plot by his widowed ex-lover. ",
+        "link": "#",
+        "trailer": "mecoDG06tpQ"
+    },
+    {
+        "id": 185,
+        "title": "Cemetery Without Crosses",
+        "icon": "https://m.media-amazon.com/images/M/MV5BNmI4MzE3ZWEtMGI3NS00OWYwLWFkMTgtNzEwMmZkMmFhMjk3L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "A melancholic, fetishistic gunfighter is drawn into a vengeful and tragic kidnapping plot by his widowed ex-lover. ",
+        "link": "#",
+        "trailer": "tyi5kgzY8dQ"
+    },
+    {
+        "id": 184,
+        "title": "M",
+        "icon": "https://m.media-amazon.com/images/M/MV5BZGE3NjdmNDAtZjgyZS00YzRlLWE1MDItZTFmOTJhZWQyYTA3XkEyXkFqcGdeQXVyNTk1MTk0MDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Μια σειρά από δολοφονίες μικρών κοριτσιών έχουν αναστατώσει την κοινωνία του Λος Άντζελες και η αδυναμία εντοπισμού του δράστη επιφέρει κύμα αντιδράσεων και οργής των πολιτών κατά της αστυνομίας, η οποία θα περιοριστεί μόνο σε μία σειρά συστάσεων προς τους γονείς για την προστασία των παιδιών τους.",
+        "link": "#",
+        "trailer": "JzQ08ZFfM2c"
+    },
+    {
+        "id": 183,
+        "title": "The California Kid ",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTU0NjA3NjQxOV5BMl5BanBnXkFtZTcwODk4ODU5Mw@@._V1_UY268_CR3,0,182,268_AL_.jpg",
+        "plot": "Η μικρή πόλη Κλάρκσμπερκ της Καλιφόρνιας φημίζεται για τον αυστηρό έλεγχο που επικρατεί στο όριο ταχύτητας των διερχόμενων οχημάτων. Ο ψυχικά διαταραγμένος τοπικός σερίφης Ρόι που έχασε στο παρελθόν γυναίκα και παιδί από ασυνείδητο οδηγό, εκτελεί το καθήκον του με εξαιρετικά υπερβάλλοντα ζήλο, υπό την πλήρη ανοχή - συνεργασία της δικαστικής αρχής. Ως εκ τούτου οι κλήσεις πέφτουν σαν χαλάζι, τα οχήματα κατάσχονται, αλλά υπάρχει και κάτι τραγικό: Οι μη συμμορφούμενοι οδηγοί καταδιώκονται από τον σερίφη και βρίσκουν τον θάνατο στον γκρεμό, όταν τους βγάζει εκτός δρόμου σε μια επικίνδυνη στροφή, αποδίδοντάς το σαν ατύχημα.",
+        "link": "#",
+        "trailer": "RyXWIM4IEzY"
+    },
+    {
+        "id": 182,
+        "title": "Nothing But the Night",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTY4MzE5Nzk3MF5BMl5BanBnXkFtZTgwNzIyODk1MDE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Ένας αστυνομικός και ένας επιστήμονας ερευνούν σειρά ανεξήγητων θανάτων των μελών του Διοικητικού Συμβουλίου ενός ορφανοτροφείου...",
+        "link": "#",
+        "trailer": "vlarXkX7mPc"
+    },
+    {
         "id": 181,
         "title": "Belief: The Possession of Janet Moses",
         "icon": "https://m.media-amazon.com/images/M/MV5BNWRlYmRmOGUtMjVkZS00YjE4LTk5NmQtNjBmOTA3NzhjN2VkXkEyXkFqcGdeQXVyMTA0NDUxODQ@._V1_UX182_CR0,0,182,268_AL_.jpg",
