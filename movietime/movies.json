@@ -1,5 +1,29 @@
 [
     {
+        "id": 195,
+        "title": "Gone But Not Forgotten",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMjE1NjI5NDM5Ml5BMl5BanBnXkFtZTcwMzM4ODA0MQ@@._V1_UY268_CR2,0,182,268_AL_.jpg",
+        "plot": "Ένας κατά συρροήν δολοφόνος επανεμφανίζεται χρόνια μετά την τελευταία δολοφονία. Μια συνήγορος υπεράσπισης αρχίζει να υποψιάζεται ότι μπορεί να είναι το επόμενο θύμα του και ότι ο τελευταίος πελάτης της μπορεί με κάποιο τρόπο να έχει σχέση με την υπόθεση.",
+        "link": "#",
+        "trailer": "lGaV-Oi103I"
+    },
+    {
+        "id": 194,
+        "title": "Bear Island",
+        "icon": "https://m.media-amazon.com/images/M/MV5BODI1YmIzMGYtZWFhZi00OWRlLWIyZmQtZTIxNmQ0OTdmNDFhXkEyXkFqcGdeQXVyMjI4MjA5MzA@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Υπόθεση: Η αφιλόξενη νήσος των Άρκτων, ένα απομακρυσμένο και καλυμμένο από πάγο νησί στα ανοιχτά της Νορβηγίας, είναι ο προορισμός μιας επιστημονικής αποστολής του Ο.Η.Ε. με αντικείμενο τη κλιματική αλλαγή. Αλλά για τον Δρ. Λάνζινγκ, ο πρωταρχικός στόχος είναι να μάθει τι απέγινε ο εκλιπών πατέρας του, μέλος πολεμικό υποβρηχίου των Ναζί, που έχασε τη ζωή του στο νησί. Όμως, τα πολλά ύποπτα ατυχήματα, καθώς και η δολοφονία του καπετάνιου που λαμβάνουν χώρα, τον αναγκάζουν να \"συστρατευθεί\" με τη Δρ. Λιντκυιστ, μια παθιασμένη ερευνήτρια, και να αναζητήσουν τα σκοτεινά κίνητρα αυτών των ενεργειών. Γνωρίζουν, όμως, ότι ο κύκλος όσων μπορούν να εμπιστευτούν τελειώνει στους ίδιους. ",
+        "link": "#",
+        "trailer": "OeU7qUFss-c"
+    },
+    {
+        "id": 193,
+        "title": "Black Water",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMTk1MDgzNTQ3OV5BMl5BanBnXkFtZTgwMzk1NjU1NTM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Μετά από μια αποτυχημένη αποστολή, ο Wheeler αιχμαλωτίζεται από την CIA και κρατείται σε ένα υποβρύχιο με σκοπό να του πάρουν πληροφορίες. Αλλά δεν μπορούν να φανταστούν τι τους περιμένει όταν θα βρεθούν αντιμέτωποι με τον αδίστακτο Marco που είναι συμπατριώτης με τον Wheeler...",
+        "link": "#",
+        "trailer": "D9SxX-Tm3dQ"
+    },
+    {
         "id": 192,
         "title": "Admiral",
         "icon": "https://m.media-amazon.com/images/M/MV5BMTM1OTgwOTgxNF5BMl5BanBnXkFtZTcwNzUwNDQ3MQ@@._V1_UY268_CR3,0,182,268_AL_.jpg",
@@ -25,11 +49,11 @@
     },
     {
         "id": 189,
-        "title": "I Live for Your Death",
-        "icon": "https://m.media-amazon.com/images/M/MV5BYTY0ODRjYTUtMmU3Mi00YzFhLWE0YWMtZjlhMWVmMzI3NGIzXkEyXkFqcGdeQXVyMTE2NzA0Ng@@._V1_UX182_CR0,0,182,268_AL_.jpg",
-        "plot": "Mike Sturges and his younger brother, Roy, are sentenced to Yuma Penitentiary on a trumped-up train robbery charge. Both endure cruel treatment before Mike escapes to extract revenge on their enemies. ",
+        "title": "Oscar",
+        "icon": "https://m.media-amazon.com/images/M/MV5BMjRhYjg3YWEtOTYzZS00ZWY5LWJkNmEtYWE0YmQ3NDY2OWZlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        "plot": "Ο υπ’ αριθμό 1 γκάνγκστερ του Σικάγου Άντζελο Προβολόνε υπόσχεται στον πατέρα του, τη στιγμή που αυτός πεθαίνει, ότι θα εγκαταλείψει τις εγκληματικές του δραστηριότητες και θα προσπαθήσει σκληρά να γίνει έντιμος πολίτης. Πολύ σύντομα, όμως, θα αντιληφθεί ότι κακώς έδωσε αυτή την υπόσχεση , καθώς η προσπάθεια να ακολουθήσει τον ίσιο δρόμο είναι στρωμένη από παντού με εμπόδια.",
         "link": "#",
-        "trailer": "MHvsrK_myz4"
+        "trailer": "8IwGoPNiu1w"
     },
     {
         "id": 188,
