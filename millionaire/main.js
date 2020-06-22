@@ -4,7 +4,7 @@ const answers=document.getElementById('answers');
 const timec=document.getElementById('timec');
 const stats=document.getElementById('stats');
 let i, lasti;
-let theanswer, a, points, p, ctl, qno=0, foreuro, time=60,timers,
+let theanswer, a, points, p, ctl, qno=0, foreuro, time=30,timers,
 theanswera, theanswerb, theanswerc, theanswerd;
 //quest={    "q":"",    "a":"asd",    "b":"asd",    "c":"asd",    "d":"asd",    "ca":"asd",    "ma":""};
 let introsnd = new Audio('snd/intro.mp3');
@@ -41,11 +41,11 @@ function intro(){
 title.innerHTML=`<center>
 IQ quiz<br><br>
     <img src="iq.png" width="180px"></center><br>
-    <p>Καλώς ήρθες στο IQ quiz<br><br>
-    60 δευτερόλεπτα<br><br>
-    3 ζωές<br><br>
-    Μάζεψε όσους πόντους μπορείς <br><br>
-    Ξεπέρασε το ρεκόρ σου<br><br>
+    <p>Καλώς ήρθες στο IQ quiz<br>
+    30 δευτερόλεπτα<br>
+    3 ζωές<br>
+    Μάζεψε όσους πόντους μπορείς <br>
+    Ξεπέρασε το ρεκόρ σου<br>
     Το παιχνίδι ξεκινάει σύντομα</p>`;
     banner();
 setTimeout(Startgame,5000);
@@ -53,9 +53,9 @@ setTimeout(Startgame,5000);
 
 function timer(){
     
-    if (time >=30){
+    if (time >=20){
         timec.innerHTML=`<h3 style="color:green;">${time}</h3>`;
-    } else if (time<30 && time >10){
+    } else if (time<20 && time >10){
         timec.innerHTML=`<h3 style="color:yellow">${time}</h3>`;
     } else if (time <= 0){ 
         checkanswer();
@@ -148,7 +148,7 @@ function checkanswer(clr){
     setdefaults();
     countsnd.pause();
     clearInterval(timers);
-    time=60;
+    time=30;
     if ( clr == this.data.correctanswer){
         
         chearsnd.load();
@@ -276,6 +276,7 @@ function banner(){
         image= 'banner.png';
         url='https://chrislarry.github.io';
     }
-    banner.innerHTML = `<img src="${image}" onclick="window.open('${url}')" class="banner">`;
+    banner.innerHTML = `<img src="${image}" height="10
+    0" onclick="window.open('${url}')" class="banner">`;
 
 }
