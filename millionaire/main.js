@@ -276,7 +276,6 @@ function banner(){
         image= 'banner.png';
         url='https://chrislarry.github.io';
     }
-    banner.innerHTML = `<img src="${image}" height="10
-    0" onclick="window.open('${url}')" class="banner">`;
+    banner.innerHTML = `<img src="${image}" height="90" onclick="window.open('${url}')" class="banner">`;
 
 }
