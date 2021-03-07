@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <title>Atom Radio</title>
+    <title>Hard Rock radio</title>
 
 <script type="text/javascript" src="./jquery.js"></script>
 
@@ -51,7 +51,7 @@ margin: auto;
     background-color: transparent;
   box-shadow: 5px 5px 20px rgba(0,0, 0, 0.4);
   font-weight: bold; 
-    color:white;
+    text-color:white;
 
 }
 h6 {
@@ -93,104 +93,58 @@ hr{
 	  border: 1px solid white;
   border-radius: 1px;
   opacity: 0.7;
-  clear: both;
-  z-index: 3;
 }
 
 img{
   opacity: 1.0;
 }
-.header{
-  box-shadow: 5px 5px 20px rgba(0,0, 0, 0.4);
-  overflow: hidden;
-   position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 550px; /* Full width */
-  height: 120px;
-  background: url(img/menubanner.jpg);
-  z-index: 1;
-
-}
-.right {
-  position: absolute;
-  right: 0px;
-  width: 140px;
-  border: 0px solid #ffffff;
-  padding: 10px;
-}
-.main {
-  margin-top: 120px; /* Add a top margin to avoid content overlay */
-}
   </style>
-
-
+<script>
+function title(){
+	fetch('title.txt')
+  .then(response => response.text())
+  .then(text => document.getElementById('title').innerHTML=text)
+	}
+setInterval("title();",22000); 
+</script>
   <body>
 
 
-	  <div class="header">
+
+
 <div class="row">
 	<div class="col-3">
-&nbsp;&nbsp;&nbsp;<img src="img/logo.png" ></div><div class="col-9">
-<audio id="myAudio">
-    <source src="http://freeuk30.listen2myradio.com:6212/stream" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+		<img src="img/logo.png" ></div>		<div class="col-9">
+ 
+<br> <h6>&nbsp;Play Live&nbsp;&nbsp; <audio preload="none" autoplay controls src="http://freeuk2.listen2myradio.com:4491/stream" /></audio></h6>
+<hr>
+<pre id="title"> Playing now  </pre>
+	</div></div></div>
+		  <hr>			  	
+	<div width=100%></center>
+			
 
 
-<div class="right">
-<input type="image" src="img/play.png" onclick="playAudio()" type="button">
-<input type="image" src="img/stop.png" onclick="pauseAudio()" type="button"> </div>
-<br><br><br><span id="title">Live Radio </span>
-<script>
-var x = document.getElementById("myAudio"); 
-
-function playAudio() { 
-  x.play(); 
-} 
-
-function pauseAudio() { 
-  x.pause(); 
-} 
-</script>
-
-	</div></div>
-			  	
-	<div width=100%>
-  </div></div>
-  	<div class="main">
-		<hr>
 		<div class="banner">	
-	<h2>&nbsp;Jazz Music </h2>
-	<img src="img/jazz.jpg" width="550">
-	<p>
+			<img class="banner" src="https://jadio.radio12345.com/banner_images/3245790/386/459/9541975924645filebaner.jpg"width="550px"></div>
+	</div>
+	<hr>
 
-	Jazz & smooth Jazz.
-</p>
-	<hr></div>
 		<div class="banner">	
-	<h2>&nbsp;Electro Music </h2>
+	<h2>&nbsp;Electro Music from 8:00 till 18:00</h2>
 	<img src="img/costes.jpg" width="550">
 	<p>
 
-	Lounge electronica.
+	Every day from 8:00 till 18:00 Lounge electronica.
 </p>
 	<hr></div>
 
 		<div class="banner">	
-
-<h2>&nbsp;Rock music</h2>
+	<h2>&nbsp;Rock music at 18:00</h2>
 	<img src="img/rock.jpg" width="550">
 	<p>
- Best Rock Of All Time. 
+Every day at 18:00 Best Rock Of All Time. 
 	</p></div>
-	<hr>
-		<div class="banner">	
-	<h2>&nbsp;Reggae Music</h2>
-	<img src="img/reggae.jpg" width="550">
-	<p>
-Best of Reggae Music 
-	</p></div>
-
 	<hr>
 		<div class="banner">	
 	<h2>&nbsp;Sat & Sun Rock with Chris at 20:00</h2>
@@ -198,9 +152,15 @@ Best of Reggae Music
 	<p>
 Saturdays and Sundays Rock with Chris at 20:00. Greek, oldies and new rock music. Get your drink and join.
 	</p></div>
-	
-<!--
-<hr>
+	<hr>
+
+		<div class="banner">	
+	<h2>&nbsp;Sat & Sun Kids Music from 8:00</h2>
+	<img src="img/kids.jpg" width="550">
+	<p>
+Saterdays and Sundays Kids music from 8:00.
+	</p></div>
+	<hr>
 
 
 
@@ -222,11 +182,10 @@ hi all
 	</center><p>
 hello world
 </p>
-</div></div></div>
--->
+</div></div></div></div>
 <hr>
 <h6>Copyright Chris Larry ® 2021</h6>
-<hr></div>
+<hr>
   </body>
 
 </script>

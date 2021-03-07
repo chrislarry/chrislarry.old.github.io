@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Hard Rock radio</title>
+
+<script type="text/javascript" src="./jquery.js"></script>
+
+
+   <style>
+audio { 
+  width: 200px; 
+  box-shadow: 5px 5px 20px rgba(0,0, 0, 0.4);
+  border-radius: 90px;
+  transform: scale(1.05);
+}
+.icon img {
+	border-radius: 50%;
+  box-shadow: 5px 5px 20px rgba(0,0, 0, 0.4);
+
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+embed {
+	height:20px;
+}
+hr{
+	width=80%;
+}
+  </style>
+<script>
+function title(){
+	fetch('title.txt')
+  .then(response => response.text())
+  .then(text => document.getElementById('title').innerHTML=text)
+	}
+setInterval("title();",22000); 
+</script>
+  <body>
+
+
+<div class="container">
+<div class="center">
+	 
+		  <br> <h4>Play Live Radio&nbsp;&nbsp;&nbsp;
+				  <audio preload="none" autoplay="autoplay" controls src="http://freeuk2.listen2myradio.com:4491/stream" /></audio></h4>
+		  <hr>			  </div></div>
+	
+	<center><div width=100%><pre id="title">Playing:  </pre></center>
+			
+</div><img src="https://jadio.radio12345.com/banner_images/3245790/386/459/9541975924645filebaner.jpg"width="550px">
+<div class="center">
+	<hr>
+	<h2>Now Hotel Costes</h2>
+	<img src="img/costes.jpg" width="550">
+	<p>
+
+	A lounge electronica remix compilation series by french DJ Stéphane Pompougnac. The series is named after the Paris hotel where Pompougnac became resident DJ in the late 90's.
+
+The series was started in 1999. Volume 1 is titled "Café Costes" and Volume 2 "La suite". From there on the volumes were numbered.
+More 	</p>
+	<hr>
+
+	<h2>Later Rock playlist</h2>
+	<img src="https://media.istockphoto.com/vectors/rock-and-roll-banner-rock-and-roll-in-the-form-of-an-electric-guitar-vector-id1010461224?s=612x612" width="550">
+	<p>
+Classic old and new rock music
+
+	</p>
+	<hr>
+	<h2>At 8 Rock selection from Chris Larry</h2>
+	<img src="img/acdc.jpg" width="550">
+	<p>
+We will start with blues and will see. Get your drink and listen.
+	</p>
+	<hr>
+
+
+
+	<h2>Who we are</h2>
+	<hr>
+<div class="container">
+<div class="row">
+	<div class="col">
+<div class="icon">
+	<center><h3>Xristos</h3>
+	<img class="icon" src="https://scontent.fath7-1.fna.fbcdn.net/v/t1.0-9/44219178_2161636234159089_34290456250548224_n.jpg?_nc_cat=109&ccb=3&_nc_sid=174925&_nc_eui2=AeGJak0fi6zjCh6Gxpz67UDnp3GEDLXLW16ncYQMtctbXpEch5jEwsETgtsVTGZ3X10yaijUi0Yc_ymjLoF3CEKK&_nc_ohc=T3QaQOelvEMAX-TXLz2&_nc_ht=scontent.fath7-1.fna&oh=a9d63c51ebdff3a41478c1b40783f112&oe=604E840F" width="100">
+	</center>	<p>
+hi all
+	</p>
+</div></div><div class="col">
+<div class="icon">
+	<center>	<h3>Ioanna</h3>
+<img src="https://scontent.fath7-1.fna.fbcdn.net/v/t1.0-9/79078346_10219376574861264_3065445165633110016_o.jpg?_nc_cat=100&ccb=3&_nc_sid=174925&_nc_eui2=AeErwCCkUs9lHeQ1tzh6E3TFmr3rlghr7_GaveuWCGvv8V7dKuFSQ9ypsB-VtO0psmHJdROw-KJ5HLJA_9uA9yQ8&_nc_ohc=bJae8YJteMcAX-onYY_&_nc_ht=scontent.fath7-1.fna&oh=31a0c64bbcba4e4a8445a02b1b1a6c1c&oe=604E9F9D" width="100">
+	</center><p>
+hello world
+</p>
+</div></div></div></div>
+<hr>
+<h6>Copyright Chris Larry ® 2021</h6>
+<hr>
+  </body>
+
+</script>
+</html>
